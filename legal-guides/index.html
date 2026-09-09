@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practical Sri Lankan legal guides written around the real questions people face in everyday life.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Legal Guides | Pradhara Kotambage</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .guides-hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(112deg, #faf6ef 0%, #f4ebdf 60%, #e5eee9 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .guides-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 7px;
+      background: linear-gradient(var(--terracotta), var(--gold), var(--teal));
+    }
+    .guides-hero-inner {
+      min-height: 420px;
+      display: grid;
+      grid-template-columns: 1.18fr .82fr;
+      gap: 64px;
+      align-items: center;
+      padding: 72px 0;
+    }
+    .guides-hero h1 {
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: .98;
+      margin: 0 0 24px;
+      letter-spacing: -.03em;
+    }
+    .guides-hero .lead {
+      max-width: 760px;
+      font-size: 1.22rem;
+      color: #334957;
+    }
+    .hero-principle {
+      background: rgba(255,253,249,.78);
+      border: 1px solid rgba(23,50,77,.10);
+      padding: 30px 32px;
+      box-shadow: 0 10px 28px rgba(23,50,77,.05);
+    }
+    .hero-principle .rule {
+      display: block;
+      width: 44px;
+      border-top: 3px solid var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero-principle p {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      line-height: 1.55;
+    }
+
+    .guides-main { background: #fbf8f2; }
+    .intro-band {
+      padding: 54px 0 18px;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+    .intro-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 28px 30px;
+    }
+    .intro-card h2 {
+      font-size: 1.65rem;
+      margin: 0 0 12px;
+    }
+    .intro-card p { margin: 0; color: #4b5c65; }
+    .intro-card:first-child { border-top: 4px solid var(--terracotta); }
+    .intro-card:last-child { border-top: 4px solid var(--teal); }
+
+    .guide-section { padding: 58px 0 12px; }
+    .guide-section + .guide-section { padding-top: 70px; }
+    .section-kicker {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: .77rem;
+      font-weight: 800;
+      color: var(--terracotta);
+    }
+    .guide-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 12px;
+    }
+    .section-intro {
+      max-width: 760px;
+      color: #53636b;
+      margin: 0 0 30px;
+    }
+
+    .featured-guides {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .featured-guide {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 28px 26px 26px;
+      min-height: 335px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 22px rgba(23,50,77,.055);
+    }
+    .featured-guide:nth-child(1) { border-top: 6px solid var(--terracotta); }
+    .featured-guide:nth-child(2) { border-top: 6px solid var(--gold); }
+    .featured-guide:nth-child(3) { border-top: 6px solid #648ca5; }
+    .status {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eee9df;
+      color: #665d50;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 800;
+    }
+    .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .featured-guide h3 {
+      font-size: 1.6rem;
+      line-height: 1.18;
+      margin: 20px 0 14px;
+    }
+    .featured-guide p { color: #4b5c65; }
+    .guide-note {
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--ink-2);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .situation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .situation-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 26px 24px 24px;
+      min-height: 260px;
+    }
+    .situation-card:nth-child(1) { border-top: 4px solid var(--terracotta); }
+    .situation-card:nth-child(2) { border-top: 4px solid var(--gold); }
+    .situation-card:nth-child(3) { border-top: 4px solid #648ca5; }
+    .situation-card:nth-child(4) { border-top: 4px solid #829a67; }
+    .situation-card:nth-child(5) { border-top: 4px solid var(--teal); }
+    .situation-card:nth-child(6) { border-top: 4px solid #8b7a9a; }
+    .situation-card h3 {
+      font-size: 1.42rem;
+      margin: 0 0 11px;
+      line-height: 1.2;
+    }
+    .situation-card p {
+      margin: 0;
+      color: #53636b;
+    }
+    .examples {
+      margin-top: 17px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+      font-size: .9rem;
+      color: #66747c;
+    }
+
+    .coming-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 22px;
+    }
+    .coming-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #f7f2e9;
+      border: 1px solid #e2dbcf;
+      padding: 20px 22px;
+    }
+    .coming-num {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #e8edf0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+    .coming-item h3 {
+      margin: 1px 0 6px;
+      font-size: 1.18rem;
+    }
+    .coming-item p { margin: 0; color: #596970; font-size: .93rem; }
+
+    .information-note {
+      margin: 72px 0 78px;
+      background: linear-gradient(135deg, #e7f0f2, #eef3eb);
+      border: 1px solid #d3e0df;
+      border-left: 6px solid var(--teal);
+      padding: 32px 34px;
+    }
+    .information-note h2 {
+      font-size: 1.55rem;
+      margin: 0 0 10px;
+    }
+    .information-note p { margin: 0; max-width: 930px; color: #43565f; }
+
+    @media (max-width: 1000px) {
+      .guides-hero-inner { grid-template-columns: 1fr; gap: 28px; }
+      .featured-guides, .situation-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .guides-hero-inner { min-height: auto; padding: 56px 0; }
+      .guides-hero h1 { font-size: clamp(2.8rem, 14vw, 4rem); }
+      .intro-grid, .featured-guides, .situation-grid, .coming-list { grid-template-columns: 1fr; }
+      .featured-guide { min-height: auto; }
+      .guide-section { padding-top: 48px; }
+      .information-note { margin: 50px 0 58px; padding: 26px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Pradhara Kotambage home">
+        <span class="brand-name">Pradhara Kotambage</span>
+        <span class="brand-subtitle">Legal Knowledge &amp; Dispute Resolution</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a href="../about/">About</a>
+        <a class="active" href="./">Legal Guides</a>
+        <a href="../law-in-practice/">Law in Practice <span lang="si">| නීතිය ප්‍රායෝගිකව</span></a>
+        <a href="../dispute-resolution/">Dispute Resolution</a>
+        <a href="../legal-resources/">Legal Resources</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="guides-main">
+    <section class="guides-hero">
+      <div class="container guides-hero-inner">
+        <div>
+          <p class="eyebrow">Legal Guides</p>
+          <h1>Start with the problem, not the legal category.</h1>
+          <p class="lead">These guides are written around the questions people actually face — a letter that has arrived, money that has not been paid, a case that has been filed, a workplace problem, or a family-law question.</p>
+        </div>
+        <aside class="hero-principle">
+          <span class="rule"></span>
+          <p>Understand what the law means, what usually happens next, and the important questions to consider.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="intro-band">
+      <div class="container intro-grid">
+        <article class="intro-card">
+          <h2>Written for ordinary readers</h2>
+          <p>The aim is plain, practical explanation. Legal terminology is used where it matters, but the starting point is always the real-life situation rather than the name of a statute or branch of law.</p>
+        </article>
+        <article class="intro-card">
+          <h2>General information, not individual advice</h2>
+          <p>Every dispute turns on its own facts, documents, dates and applicable law. These guides are intended to improve legal understanding; they do not determine what any particular person should do in a specific matter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <div class="container">
+        <p class="section-kicker">First guides</p>
+        <h2>Practical questions being prepared</h2>
+        <p class="section-intro">The first set focuses on situations that frequently cause uncertainty before a person knows what legal category the problem belongs to.</p>
+
+        <div class="featured-guides">
+          <article class="featured-guide">
+            <span class="status">In preparation</span>
+            <h3>What to Do After Receiving a Letter of Demand</h3>
+            <p>What a Letter of Demand generally means, why the contents and dates matter, what should be checked, and what may happen if the dispute continues.</p>
+            <div class="guide-note">Sri Lanka · Practical legal literacy</div>
+          </article>
+
+          <article class="featured-guide">
+            <span class="status">In preparation</span>
+            <h3>Someone Owes You Money: What Legal Options Are Available in Sri Lanka?</h3>
+            <p>A practical overview of documents, demands, negotiation, settlement and court proceedings when money remains unpaid.</p>
+            <div class="guide-note">Sri Lanka · Money claims</div>
+          </article>
+
+          <article class="featured-guide">
+            <span class="status">In preparation</span>
+            <h3>What Actually Happens After a Civil Case Is Filed in Sri Lanka?</h3>
+            <p>A plain-language guide to the stages of a civil action, from filing and summons through pleadings, trial and judgment.</p>
+            <div class="guide-note">Sri Lanka · Civil court process</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <div class="container">
+        <p class="section-kicker">Browse by situation</p>
+        <h2>What are you trying to understand?</h2>
+        <p class="section-intro">As the library grows, guides will be grouped according to the kind of situation the reader is facing.</p>
+
+        <div class="situation-grid">
+          <article class="situation-card">
+            <h3>Letters, notices &amp; demands</h3>
+            <p>Understanding formal letters, notices, demands and what they may require from the person receiving them.</p>
+            <div class="examples">Examples: Letters of Demand · notices · responses · time limits</div>
+          </article>
+
+          <article class="situation-card">
+            <h3>Money, debts &amp; unpaid claims</h3>
+            <p>Practical legal questions that arise when money is owed, payments are disputed, or an obligation remains unfulfilled.</p>
+            <div class="examples">Examples: unpaid debts · recovery options · documents · settlement</div>
+          </article>
+
+          <article class="situation-card">
+            <h3>Going to court</h3>
+            <p>What court documents and procedures mean, what the main stages are, and why particular procedural steps matter.</p>
+            <div class="examples">Examples: summons · pleadings · trial · judgment · appeals</div>
+          </article>
+
+          <article class="situation-card">
+            <h3>Work &amp; employment</h3>
+            <p>Legal-literacy guides about workplace disputes, termination, disciplinary processes and common employment questions.</p>
+            <div class="examples">Examples: termination · notice · disciplinary inquiries · Labour Tribunal</div>
+          </article>
+
+          <article class="situation-card">
+            <h3>Family &amp; personal law</h3>
+            <p>Questions about marriage, legal capacity, family relationships and other personal-law issues that affect everyday life.</p>
+            <div class="examples">Examples: marriage requirements · age · legal status · family questions</div>
+          </article>
+
+          <article class="situation-card">
+            <h3>Land, property &amp; possession</h3>
+            <p>Future guides explaining common questions about ownership, possession, boundaries, land disputes and related court processes.</p>
+            <div class="examples">Examples: ownership · possession · boundaries · partition · land disputes</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <div class="container">
+        <p class="section-kicker">Also planned</p>
+        <h2>Next questions in the library</h2>
+        <p class="section-intro">These titles will be developed gradually. Publication will favour accuracy and usefulness over volume.</p>
+
+        <div class="coming-list">
+          <article class="coming-item">
+            <span class="coming-num">01</span>
+            <div>
+              <h3>Can a Person Under 16 Legally Marry in Sri Lanka?</h3>
+              <p>A careful explanation of the applicable legal framework and important distinctions.</p>
+            </div>
+          </article>
+
+          <article class="coming-item">
+            <span class="coming-num">02</span>
+            <div>
+              <h3>What Can You Do if Your Employer Terminates You Without Proper Notice?</h3>
+              <p>An overview of the questions, time limits and legal avenues that may become relevant.</p>
+            </div>
+          </article>
+
+          <article class="coming-item">
+            <span class="coming-num">03</span>
+            <div>
+              <h3>What Does a Court Summons Actually Mean?</h3>
+              <p>What receiving summons indicates and why ignoring court documents can have consequences.</p>
+            </div>
+          </article>
+
+          <article class="coming-item">
+            <span class="coming-num">04</span>
+            <div>
+              <h3>Settlement Before Trial: What Does It Mean?</h3>
+              <p>How settlement can arise during a dispute and what should be understood before an agreement is reached.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="information-note">
+        <h2>A note about legal information</h2>
+        <p>The law may change, and the result of a legal problem can depend on facts that a general guide cannot address. Where a guide refers to legislation, procedure or an important legal rule, the aim will be to identify the relevant source and keep the material under review.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-name">Pradhara Kotambage</div>
+        <div class="footer-title">Attorney-at-Law | Sri Lanka</div>
+        <p class="footer-tagline">Clear law. Informed choices. Constructive resolution.</p>
+      </div>
+      <div class="disclaimer">
+        <p><strong>General information only.</strong> Material on this website is intended for general legal information and legal literacy. It is not legal advice for any particular matter. Reading or using this website does not by itself create an Attorney-at-Law/client relationship.</p>
+        <p class="footer-links"><a href="../privacy/">Privacy</a><span>·</span><a href="../terms/">Terms</a><span>·</span><a href="../legal-resources/">Legal Resources</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
