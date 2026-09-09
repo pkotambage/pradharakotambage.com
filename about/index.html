@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Pradhara Kotambage, Attorney-at-Law in Sri Lanka, and the purpose of this legal knowledge and dispute resolution website.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>About | Pradhara Kotambage</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(110deg, #faf6ef 0%, #f3eadc 62%, #e3ece7 100%);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 7px;
+      background: linear-gradient(var(--terracotta), var(--gold), var(--teal));
+    }
+    .about-hero-inner {
+      min-height: 400px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 70px;
+      align-items: center;
+      padding: 70px 0;
+    }
+    .about-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1;
+      margin: 0 0 24px;
+      letter-spacing: -.025em;
+    }
+    .about-hero .lead {
+      font-size: 1.3rem;
+      color: #304452;
+      max-width: 720px;
+    }
+    .identity-card {
+      background: rgba(255,253,249,.78);
+      border: 1px solid rgba(23,50,77,.12);
+      padding: 30px;
+      box-shadow: 0 10px 28px rgba(23,50,77,.06);
+    }
+    .identity-card .name {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .identity-card .title { color: var(--ink-2); font-weight: 650; }
+    .identity-card .rule { width: 44px; border-top: 3px solid var(--gold); margin: 22px 0; }
+    .identity-card p { margin: 0; color: #45555f; }
+
+    .about-body { background: #fbf8f2; }
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, .65fr);
+      gap: 70px;
+      align-items: start;
+    }
+    .prose { max-width: 780px; }
+    .prose h2 { font-size: 2.15rem; margin: 0 0 18px; }
+    .prose h2:not(:first-child) { margin-top: 50px; }
+    .prose p { font-size: 1.06rem; color: #394c57; }
+    .prose .opening { font-size: 1.2rem; color: #2c4351; }
+
+    .about-side { display: grid; gap: 22px; }
+    .side-note {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 6px 18px rgba(23,50,77,.045);
+    }
+    .side-note:nth-child(1) { border-top: 4px solid var(--terracotta); }
+    .side-note:nth-child(2) { border-top: 4px solid var(--teal); background: #f1f6f2; }
+    .side-note h3 { margin: 0 0 12px; font-size: 1.35rem; }
+    .side-note p { margin: 0; color: #45545d; font-size: .97rem; }
+
+    .principles {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .principle {
+      padding: 30px 28px;
+      min-height: 190px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .principle:nth-child(1) { border-top: 5px solid var(--terracotta); }
+    .principle:nth-child(2) { border-top: 5px solid #648ca5; }
+    .principle:nth-child(3) { border-top: 5px solid var(--teal); }
+    .principle h3 { margin: 0 0 10px; font-size: 1.35rem; }
+    .principle p { margin: 0; color: #495a64; }
+
+    @media (max-width: 900px) {
+      .about-hero-inner, .about-layout { grid-template-columns: 1fr; gap: 34px; }
+      .about-hero-inner { min-height: auto; padding: 55px 0; }
+      .principles { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Pradhara Kotambage home">
+        <span class="brand-name">Pradhara Kotambage</span>
+        <span class="brand-subtitle">Legal Knowledge &amp; Dispute Resolution</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a class="active" href="./">About</a>
+        <a href="../legal-guides/">Legal Guides</a>
+        <a href="../law-in-practice/">Law in Practice <span lang="si">| නීතිය ප්‍රායෝගිකව</span></a>
+        <a href="../dispute-resolution/">Dispute Resolution</a>
+        <a href="../legal-resources/">Legal Resources</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container about-hero-inner">
+        <div>
+          <p class="eyebrow">About</p>
+          <h1>Law explained with clarity and context.</h1>
+          <p class="lead">This website is built around a simple idea: legal information is most useful when it begins with the real problem a person is facing, rather than with a technical legal category.</p>
+        </div>
+
+        <aside class="identity-card" aria-label="Professional identification">
+          <div class="name">Pradhara Kotambage</div>
+          <div class="title">Attorney-at-Law | Sri Lanka</div>
+          <div class="rule"></div>
+          <p>Legal knowledge, practical explanation and a growing professional focus on constructive approaches to dispute resolution.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about-body">
+      <div class="container about-layout">
+        <article class="prose">
+          <h2>About me</h2>
+          <p class="opening">I am Pradhara Kotambage, an Attorney-at-Law in Sri Lanka. My professional work has principally involved civil and commercial disputes, litigation and court practice.</p>
+          <p>My academic background includes a B.Sc. in Physical Science from the University of Colombo, followed by legal studies at Sri Lanka Law College. I was admitted as an Attorney-at-Law in Sri Lanka in January 2017.</p>
+          <p>Years of working with legal disputes have also strengthened my interest in how disagreements can be understood, managed and resolved before they become unnecessarily prolonged. Alongside litigation, my professional interests increasingly include negotiation, settlement, mediation and arbitration.</p>
+
+          <h2>Why this website exists</h2>
+          <p>People rarely experience the law as neatly separated subjects such as civil procedure, labour law or the law of obligations. A legal problem usually begins in a much more ordinary way: a letter arrives, money is not paid, employment ends unexpectedly, a disagreement grows, or a court case has begun and the process is difficult to understand.</p>
+          <p>The purpose of this website is to make Sri Lankan law easier to understand in those real-life situations. The Legal Guides are therefore organised around practical questions, with an emphasis on explaining what the law generally means, what usually happens in practice, and what distinctions may matter.</p>
+
+          <h2>Law, practice and dispute resolution</h2>
+          <p>The website also looks beyond legal rules alone. <em>Law in Practice | නීතිය ප්‍රායෝගිකව</em> is intended to explore how law operates in actual situations, including the practical realities that may not always be obvious from reading legislation or a textbook.</p>
+          <p>The Dispute Resolution section develops a related theme: not every disagreement is best understood only in terms of winning and losing a case. Negotiation, settlement, mediation and arbitration each have different purposes and limitations. For now, these pages are primarily educational, and the section will develop gradually alongside my continuing professional work and study in dispute resolution.</p>
+        </article>
+
+        <aside class="about-side">
+          <section class="side-note">
+            <h3>Purpose first</h3>
+            <p>This is primarily a legal literacy and knowledge platform. Its aim is to explain law clearly, not to market legal services through promotional claims.</p>
+          </section>
+
+          <section class="side-note">
+            <h3>General information</h3>
+            <p>Material on this website is general legal information. It is not legal advice for a particular matter, and using the website does not by itself create an Attorney-at-Law/client relationship.</p>
+          </section>
+        </aside>
+      </div>
+
+      <div class="container principles" aria-label="Website principles">
+        <article class="principle">
+          <h3>Clear law</h3>
+          <p>Explain legal rules in language that ordinary readers can understand without stripping away important distinctions.</p>
+        </article>
+        <article class="principle">
+          <h3>Informed choices</h3>
+          <p>Help readers understand processes, options and limitations so that legal problems are less mysterious.</p>
+        </article>
+        <article class="principle">
+          <h3>Constructive resolution</h3>
+          <p>Make room for approaches to disputes that include negotiation, settlement, mediation and arbitration as well as litigation.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-name">Pradhara Kotambage</div>
+        <div class="footer-title">Attorney-at-Law | Sri Lanka</div>
+        <p class="footer-tagline">Clear law. Informed choices. Constructive resolution.</p>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>General information only.</strong> Material on this website is intended for general legal information and legal literacy. It is not legal advice for any particular matter. Reading or using this website does not by itself create an Attorney-at-Law/client relationship.</p>
+        <p class="footer-links"><a href="../privacy/">Privacy</a><span>·</span><a href="../terms/">Terms</a><span>·</span><a href="../legal-resources/">Legal Resources</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
