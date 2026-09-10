@@ -50,34 +50,57 @@
   font-size: 1.18rem;
 }
 .article-content .question-line { font-family: Georgia, "Times New Roman", serif; color: var(--ink); font-size: 1.17rem; }
-.article-callout {
+
+/* Standard related-guide callout used throughout all articles */
+.article-callout,
+.related-block {
   margin: 30px 0;
   padding: 24px 26px;
   background: linear-gradient(135deg, #e9f0f1, #eef2e8);
   border: 1px solid #d3dedc;
   border-left: 5px solid var(--teal);
 }
-.article-callout p:last-child { margin-bottom: 0; }
-.article-callout a {
+.article-callout p:last-child,
+.related-block > *:last-child { margin-bottom: 0; }
+.article-callout a,
+.related-block a {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
-.article-callout a:hover { text-decoration-thickness: 2px; }
-.related-block { margin-top: 58px; padding-top: 34px; border-top: 1px solid var(--line); }
-.related-block h2 { margin-top: 0; }
-.related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.related-link, .related-coming {
-  display: block;
-  padding: 17px 18px;
-  border: 1px solid #ddd9d0;
-  background: var(--paper);
-  line-height: 1.4;
+.article-callout a:hover,
+.related-block a:hover { text-decoration-thickness: 2px; }
+.article-content .related-block h2 {
+  margin: 0 0 12px;
+  font-family: inherit;
+  font-size: 1.06rem;
+  line-height: 1.5;
+  color: var(--charcoal);
+  font-weight: 700;
 }
-.related-link { font-weight: 700; }
-.related-link:hover { border-color: var(--gold); text-decoration: none; }
+.related-grid { display: block; }
+.related-link,
+.related-coming {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+.related-link { font-weight: 400; }
+.related-link:hover { border-color: transparent; }
 .related-coming { color: #6c777c; }
-.related-coming small { display: block; margin-top: 5px; color: #8a918f; text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; font-weight: 800; }
+.related-coming small {
+  display: inline;
+  margin: 0 0 0 5px;
+  color: #8a918f;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
 .author-note {
   margin-top: 52px;
   padding: 26px 28px;
@@ -103,6 +126,6 @@
   .article-hero-inner { padding: 48px 0 44px; }
   .article-hero h1 { font-size: clamp(2.35rem, 11vw, 3.35rem); }
   .article-shell { padding-top: 42px; }
-  .related-grid { grid-template-columns: 1fr; }
   .article-content { font-size: 1rem; }
+  .article-callout, .related-block { padding: 21px 22px; }
 }
