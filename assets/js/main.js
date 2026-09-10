@@ -18,27 +18,24 @@ document.querySelectorAll('.guide-card').forEach((card) => {
   }
 });
 
-// Published short guides should be directly linked wherever they appear in the main money-recovery guide.
-if (window.location.pathname.includes('/legal-guides/someone-owes-you-money/')) {
-  document.querySelectorAll('.article-content p').forEach((paragraph) => {
-    if (paragraph.textContent.includes('I Lent Money Without a Written Agreement. Can I Still Recover It?')) {
-      paragraph.innerHTML = '<strong>Related guides:</strong> <a class="related-inline-link" href="../no-written-agreement-loan-recovery/">“I Lent Money Without a Written Agreement. Can I Still Recover It?”</a> · <span>“Why Oral Agreements Can Be Dangerous When Land or Property Is Involved”</span> <em>(coming soon)</em>';
-    }
+// Keep every in-article “Related guides” section visually consistent.
+const articleContent = document.querySelector('.article-content');
+
+if (articleContent) {
+  articleContent.querySelectorAll(':scope > p').forEach((paragraph) => {
+    const firstStrong = paragraph.querySelector(':scope > strong:first-child');
+    if (!firstStrong) return;
+
+    const label = firstStrong.textContent.trim().replace(/:$/, '').toLowerCase();
+    if (label !== 'related guide' && label !== 'related guides') return;
+
+    let bodyHtml = paragraph.innerHTML
+      .replace(/^<strong>Related guides?:<\/strong>\s*/i, '')
+      .replace(/\s·\s/g, '<br>');
+
+    const box = document.createElement('div');
+    box.className = 'article-callout related-guides-inline';
+    box.innerHTML = `<p><strong>Related guides</strong></p><p>${bodyHtml}</p>`;
+    paragraph.replaceWith(box);
   });
-}
-
-// Make inline related-guide links visibly identifiable without requiring hover.
-document.querySelectorAll('.related-inline-link').forEach((link) => {
-  link.style.textDecoration = 'underline';
-  link.style.textUnderlineOffset = '3px';
-});
-
-// Add newly published short guides to the Legal Guides quick-answer section.
-const quickGrid = document.querySelector('.quick-grid');
-if (quickGrid && !quickGrid.querySelector('[data-guide="no-written-agreement-loan-recovery"]')) {
-  const card = document.createElement('article');
-  card.className = 'quick-card';
-  card.dataset.guide = 'no-written-agreement-loan-recovery';
-  card.innerHTML = '<p class="quick-label">Informal loans · Short guide</p><h3>I Lent Money Without a Written Agreement. Can I Still Recover It?</h3><p>Why an informal loan may still be recoverable, what evidence can matter, and why waiting too long can be risky.</p><a href="./no-written-agreement-loan-recovery/">Read the short guide →</a>';
-  quickGrid.appendChild(card);
 }
