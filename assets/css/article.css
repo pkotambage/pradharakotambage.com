@@ -1,0 +1,102 @@
+/* Shared styles for Legal Guide articles */
+.article-main { background: #fbf8f2; }
+.article-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(112deg, #faf6ef 0%, #f4ebdf 60%, #e5eee9 100%);
+  border-bottom: 1px solid var(--line);
+}
+.article-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 7px;
+  background: linear-gradient(var(--terracotta), var(--gold), var(--teal));
+}
+.article-hero-inner { max-width: 940px; padding: 64px 0 58px; }
+.breadcrumbs { margin: 0 0 24px; font-size: .9rem; color: #64737b; }
+.breadcrumbs a { color: var(--ink-2); font-weight: 700; }
+.article-hero h1 {
+  font-size: clamp(2.55rem, 5.4vw, 4.55rem);
+  line-height: 1.03;
+  letter-spacing: -.025em;
+  margin: 0 0 22px;
+}
+.article-dek { max-width: 820px; margin: 0; font-size: 1.2rem; color: #3f535e; }
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin-top: 26px;
+  color: #61717a;
+  font-size: .88rem;
+}
+.article-meta strong { color: var(--ink); }
+.article-shell { width: min(calc(100% - 40px), 900px); margin: 0 auto; padding: 58px 0 84px; }
+.article-content { font-size: 1.06rem; line-height: 1.8; }
+.article-content > p:first-child { font-size: 1.12rem; }
+.article-content h2 { font-size: clamp(1.7rem, 3.3vw, 2.25rem); margin: 48px 0 15px; line-height: 1.15; }
+.article-content h3 { font-size: 1.35rem; margin: 34px 0 10px; }
+.article-content p { margin: 0 0 19px; }
+.article-content ul, .article-content ol { margin: 8px 0 24px; padding-left: 25px; }
+.article-content li { margin: 6px 0; }
+.article-content blockquote {
+  margin: 26px 0;
+  padding: 20px 24px;
+  background: #f4eee4;
+  border-left: 5px solid var(--gold);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.18rem;
+}
+.article-content .question-line { font-family: Georgia, "Times New Roman", serif; color: var(--ink); font-size: 1.17rem; }
+.article-callout {
+  margin: 30px 0;
+  padding: 24px 26px;
+  background: linear-gradient(135deg, #e9f0f1, #eef2e8);
+  border: 1px solid #d3dedc;
+  border-left: 5px solid var(--teal);
+}
+.article-callout p:last-child { margin-bottom: 0; }
+.related-block { margin-top: 58px; padding-top: 34px; border-top: 1px solid var(--line); }
+.related-block h2 { margin-top: 0; }
+.related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.related-link, .related-coming {
+  display: block;
+  padding: 17px 18px;
+  border: 1px solid #ddd9d0;
+  background: var(--paper);
+  line-height: 1.4;
+}
+.related-link { font-weight: 700; }
+.related-link:hover { border-color: var(--gold); text-decoration: none; }
+.related-coming { color: #6c777c; }
+.related-coming small { display: block; margin-top: 5px; color: #8a918f; text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; font-weight: 800; }
+.author-note {
+  margin-top: 52px;
+  padding: 26px 28px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--terracotta);
+}
+.author-note h2 { margin: 0 0 7px; font-size: 1.35rem; }
+.author-note p { margin: 0; color: #53636b; }
+.article-disclaimer {
+  margin-top: 26px;
+  padding: 20px 22px;
+  background: #f5f0e7;
+  border-left: 4px solid var(--gold);
+  color: #5a666c;
+  font-size: .92rem;
+}
+.article-disclaimer p { margin: 0; }
+.article-back { margin-top: 34px; font-weight: 700; }
+.source-note { margin-top: 30px; font-size: .86rem; color: #6a777d; }
+.source-note a { text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 720px) {
+  .article-hero-inner { padding: 48px 0 44px; }
+  .article-hero h1 { font-size: clamp(2.35rem, 11vw, 3.35rem); }
+  .article-shell { padding-top: 42px; }
+  .related-grid { grid-template-columns: 1fr; }
+  .article-content { font-size: 1rem; }
+}
