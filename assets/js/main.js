@@ -44,6 +44,10 @@ if (articleContent) {
     {
       title: 'The Debtor Has Asked for More Time – Should You Agree?',
       href: '../debtor-asked-for-more-time/'
+    },
+    {
+      title: 'How Long Can You Wait Before Taking Legal Action to Recover a Debt?',
+      href: '../how-long-to-recover-debt/'
     }
   ];
 
@@ -61,17 +65,40 @@ if (articleContent) {
           span.replaceWith(link);
         }
       });
+
       body.innerHTML = body.innerHTML.replace(/\s*<em>\(coming soon\)<\/em>/i, '');
     });
   });
+
+  // Replace bottom-of-article “coming soon” cards when the related guide is now published.
+  articleContent.querySelectorAll('.related-coming').forEach((item) => {
+    const cleanText = item.textContent.replace(/\s*Coming soon\s*/i, '').trim();
+    if (cleanText === 'How Long Can You Wait Before Taking Legal Action to Recover a Debt?') {
+      const link = document.createElement('a');
+      link.className = 'related-link';
+      link.href = '../how-long-to-recover-debt/';
+      link.textContent = cleanText;
+      item.replaceWith(link);
+    }
+  });
 }
 
-// Add the latest published short guide to the Legal Guides quick-answer section.
+// Add newly published short guides to the Legal Guides quick-answer section.
 const quickGrid = document.querySelector('.quick-grid');
-if (quickGrid && !quickGrid.querySelector('[data-guide="debtor-asked-for-more-time"]')) {
-  const card = document.createElement('article');
-  card.className = 'quick-card';
-  card.dataset.guide = 'debtor-asked-for-more-time';
-  card.innerHTML = '<p class="quick-label">Repayment · Short guide</p><h3>The Debtor Has Asked for More Time – Should You Agree?</h3><p>When an extension may be sensible, what should be recorded, and why repeated promises should not be allowed to drift indefinitely.</p><a href="./debtor-asked-for-more-time/">Read the short guide →</a>';
-  quickGrid.appendChild(card);
+if (quickGrid) {
+  if (!quickGrid.querySelector('[data-guide="debtor-asked-for-more-time"]')) {
+    const card = document.createElement('article');
+    card.className = 'quick-card';
+    card.dataset.guide = 'debtor-asked-for-more-time';
+    card.innerHTML = '<p class="quick-label">Repayment · Short guide</p><h3>The Debtor Has Asked for More Time – Should You Agree?</h3><p>When an extension may be sensible, what should be recorded, and why repeated promises should not be allowed to drift indefinitely.</p><a href="./debtor-asked-for-more-time/">Read the short guide →</a>';
+    quickGrid.appendChild(card);
+  }
+
+  if (!quickGrid.querySelector('[data-guide="how-long-to-recover-debt"]')) {
+    const card = document.createElement('article');
+    card.className = 'quick-card';
+    card.dataset.guide = 'how-long-to-recover-debt';
+    card.innerHTML = '<p class="quick-label">Prescription · Short guide</p><h3>How Long Can You Wait Before Taking Legal Action to Recover a Debt?</h3><p>Why there is no single time limit for every debt, and why the nature of the claim and the date the right to sue arose both matter.</p><a href="./how-long-to-recover-debt/">Read the short guide →</a>';
+    quickGrid.appendChild(card);
+  }
 }
