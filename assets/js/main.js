@@ -48,6 +48,10 @@ if (articleContent) {
     {
       title: 'How Long Can You Wait Before Taking Legal Action to Recover a Debt?',
       href: '../how-long-to-recover-debt/'
+    },
+    {
+      title: 'Why Oral Agreements Can Be Dangerous When Land or Property Is Involved',
+      href: '../oral-agreements-land-property/'
     }
   ];
 
@@ -101,4 +105,15 @@ if (quickGrid) {
     card.innerHTML = '<p class="quick-label">Prescription · Short guide</p><h3>How Long Can You Wait Before Taking Legal Action to Recover a Debt?</h3><p>Why there is no single time limit for every debt, and why the nature of the claim and the date the right to sue arose both matter.</p><a href="./how-long-to-recover-debt/">Read the short guide →</a>';
     quickGrid.appendChild(card);
   }
+}
+
+// Surface newly published main guides on the Legal Guides landing page.
+const featuredGuides = document.querySelector('.featured-guides');
+if (featuredGuides && !featuredGuides.querySelector('[data-guide="oral-agreements-land-property"]')) {
+  const card = document.createElement('article');
+  card.className = 'featured-guide';
+  card.dataset.guide = 'oral-agreements-land-property';
+  card.style.borderTop = '6px solid var(--teal)';
+  card.innerHTML = '<span class="status published">Published</span><h3><a href="./oral-agreements-land-property/">Why Oral Agreements Can Be Dangerous When Land or Property Is Involved</a></h3><p>Why promises, plain-paper agreements, advances, possession and family understandings do not automatically replace the legal formalities required for land transactions.</p><a class="read-link" href="./oral-agreements-land-property/">Read the guide →</a><div class="guide-note">Sri Lanka · Land &amp; property</div>';
+  featuredGuides.appendChild(card);
 }
