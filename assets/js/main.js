@@ -11,10 +11,19 @@ if (menuToggle && siteNav) {
 // Home-page guide cards should take readers straight to published articles.
 document.querySelectorAll('.guide-card').forEach((card) => {
   const title = card.querySelector('h3');
+  const description = card.querySelector('p');
   const link = card.querySelector('a');
 
   if (title && link && title.textContent.trim() === 'Someone owes you money?') {
     link.href = 'legal-guides/someone-owes-you-money/';
+  }
+
+  if (title && link && title.textContent.trim() === 'Can a person under 16 legally marry in Sri Lanka?') {
+    title.textContent = 'Why Oral Agreements Can Be Dangerous When Land or Property Is Involved';
+    if (description) {
+      description.textContent = 'Why promises, plain-paper agreements, advances, possession and family understandings do not automatically replace the legal formalities required for land transactions.';
+    }
+    link.href = 'legal-guides/oral-agreements-land-property/';
   }
 });
 
