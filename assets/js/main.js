@@ -111,6 +111,37 @@ if (articleContent) {
       item.replaceWith(link);
     }
   });
+
+  // Shared article-ending blocks. These are injected once at site level so every Legal Guide stays consistent.
+  const articleBack = articleContent.querySelector(':scope > .article-back');
+  const insertionPoint = articleBack || null;
+  const isSinhala = document.documentElement.lang.toLowerCase().startsWith('si');
+
+  if (!articleContent.querySelector(':scope > .author-note')) {
+    const authorNote = document.createElement('section');
+    authorNote.className = 'author-note';
+
+    if (isSinhala) {
+      authorNote.innerHTML = '<h2>කතුවරයා ගැන</h2><p><strong>Pradhara Kotambage</strong> ශ්‍රී ලංකාවේ Attorney-at-Lawවරයෙකි. මෙම Legal Guides ව්‍යාපෘතිය ප්‍රායෝගික නීති දැනුවත්භාවය සහ දෛනික ගැටලු වලදී මිනිසුන් මුහුණ දෙන ප්‍රශ්න පැහැදිලිව විස්තර කිරීම කෙරෙහි අවධානය යොමු කරයි.</p>';
+    } else {
+      authorNote.innerHTML = '<h2>About the author</h2><p><strong>Pradhara Kotambage</strong> is an Attorney-at-Law in Sri Lanka. This Legal Guides project focuses on practical legal literacy and clear explanations of the questions people encounter in everyday disputes.</p>';
+    }
+
+    articleContent.insertBefore(authorNote, insertionPoint);
+  }
+
+  if (!articleContent.querySelector(':scope > .article-disclaimer')) {
+    const disclaimer = document.createElement('div');
+    disclaimer.className = 'article-disclaimer';
+
+    if (isSinhala) {
+      disclaimer.innerHTML = '<p><strong>සාමාන්‍ය තොරතුරු පමණි.</strong> මෙම ලිපිය සාමාන්‍ය නීතිමය තොරතුරු සපයයි. සුදුසු නීතිමය සහනය එක් එක් කරුණට අදාළ කරුණු සහ ලේඛන මත රඳා පවතී. මෙම මාර්ගෝපදේශය කියවීමෙන් පමණක් Attorney-at-Law/client relationship එකක් ඇති නොවේ.</p>';
+    } else {
+      disclaimer.innerHTML = '<p><strong>General information only.</strong> This article provides general legal information. The appropriate legal remedy depends on the facts and documents relating to each individual matter. Reading this guide does not by itself create an Attorney-at-Law/client relationship.</p>';
+    }
+
+    articleContent.insertBefore(disclaimer, insertionPoint);
+  }
 }
 
 // Add newly published short guides to the Legal Guides quick-answer section.
