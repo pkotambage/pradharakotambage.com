@@ -10,7 +10,7 @@ if (menuToggle && siteNav) {
 
 // Keep core website wording consistent wherever this introductory sentence appears.
 const oldProblemIntro = 'Legal problems rarely arrive in neat legal categories. They arrive as letters, unpaid money, workplace problems, family questions and disputes.';
-const newProblemIntro = 'Legal problems rarely arrive in neat legal categories. They arrive as letters, unpaid money, workplace problems, family issues and disputes, and land problems.';
+const newProblemIntro = 'Legal problems rarely arrive in neat legal categories. They arrive as letters, unpaid money, workplace problems, family issues and disputes, and land disputes.';
 document.querySelectorAll('p').forEach((paragraph) => {
   if (paragraph.textContent.trim() === oldProblemIntro) {
     paragraph.textContent = newProblemIntro;
