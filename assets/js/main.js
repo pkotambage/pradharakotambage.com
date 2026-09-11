@@ -8,7 +8,7 @@ if (menuToggle && siteNav) {
   });
 }
 
-// Home-page guide cards should take readers straight to published articles.
+// Home-page guide cards should reflect the current guide plan and take readers straight to published articles.
 document.querySelectorAll('.guide-card').forEach((card) => {
   const title = card.querySelector('h3');
   const description = card.querySelector('p');
@@ -25,7 +25,21 @@ document.querySelectorAll('.guide-card').forEach((card) => {
     }
     link.href = 'legal-guides/oral-agreements-land-property/';
   }
+
+  if (title && title.textContent.trim() === 'Employer terminated you without proper notice?') {
+    title.textContent = 'What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?';
+    if (description) {
+      description.textContent = 'A practical guide to the legal questions, procedures and possible remedies that may arise when employment is terminated unfairly or without proper procedure.';
+    }
+  }
 });
+
+// Keep “Received a Letter of Demand?” as the final home-page guide card without changing the order of the others.
+const homeGuideCards = Array.from(document.querySelectorAll('.guide-card'));
+const letterOfDemandCard = homeGuideCards.find((card) => card.querySelector('h3')?.textContent.trim() === 'Received a Letter of Demand?');
+if (letterOfDemandCard?.parentElement) {
+  letterOfDemandCard.parentElement.appendChild(letterOfDemandCard);
+}
 
 // Keep every in-article “Related guides” section visually consistent.
 const articleContent = document.querySelector('.article-content');
