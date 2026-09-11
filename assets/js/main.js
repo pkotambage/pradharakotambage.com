@@ -122,7 +122,7 @@ if (articleContent) {
     authorNote.className = 'author-note';
 
     if (isSinhala) {
-      authorNote.innerHTML = '<h2>කතුවරයා ගැන</h2><p><strong>Pradhara Kotambage</strong> ශ්‍රී ලංකාවේ Attorney-at-Lawවරයෙකි. මෙම Legal Guides ව්‍යාපෘතිය ප්‍රායෝගික නීති දැනුවත්භාවය සහ දෛනික ගැටලු වලදී මිනිසුන් මුහුණ දෙන ප්‍රශ්න පැහැදිලිව විස්තර කිරීම කෙරෙහි අවධානය යොමු කරයි.</p>';
+      authorNote.innerHTML = '<h2>කතුවරයා ගැන</h2><p><strong>ප්‍රධාර කොටඹගේ</strong> නීතිඥවරයෙකි. මෙම Legal Guides ව්‍යාපෘතිය ප්‍රායෝගික නීති දැනුවත්භාවය සහ දෛනික ගැටලු වලදී මිනිසුන් මුහුණ දෙන ප්‍රශ්න පැහැදිලිව විස්තර කිරීම කෙරෙහි අවධානය යොමු කරයි.</p>';
     } else {
       authorNote.innerHTML = '<h2>About the author</h2><p><strong>Pradhara Kotambage</strong> is an Attorney-at-Law in Sri Lanka. This Legal Guides project focuses on practical legal literacy and clear explanations of the questions people encounter in everyday disputes.</p>';
     }
