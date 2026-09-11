@@ -8,6 +8,15 @@ if (menuToggle && siteNav) {
   });
 }
 
+// Keep core website wording consistent wherever this introductory sentence appears.
+const oldProblemIntro = 'Legal problems rarely arrive in neat legal categories. They arrive as letters, unpaid money, workplace problems, family questions and disputes.';
+const newProblemIntro = 'Legal problems rarely arrive in neat legal categories. They arrive as letters, unpaid money, workplace problems, family issues and disputes, and land problems.';
+document.querySelectorAll('p').forEach((paragraph) => {
+  if (paragraph.textContent.trim() === oldProblemIntro) {
+    paragraph.textContent = newProblemIntro;
+  }
+});
+
 // Home-page guide cards should reflect the current guide plan and take readers straight to published articles.
 document.querySelectorAll('.guide-card').forEach((card) => {
   const title = card.querySelector('h3');
