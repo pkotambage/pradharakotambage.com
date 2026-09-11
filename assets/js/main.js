@@ -31,6 +31,9 @@ document.querySelectorAll('.guide-card').forEach((card) => {
     if (description) {
       description.textContent = 'A practical guide to the legal questions, procedures and possible remedies that may arise when employment is terminated unfairly or without proper procedure.';
     }
+    if (link) {
+      link.href = 'legal-guides/unfair-termination-proper-procedure/';
+    }
   }
 });
 
@@ -139,4 +142,28 @@ if (featuredGuides && !featuredGuides.querySelector('[data-guide="oral-agreement
   card.style.borderTop = '6px solid var(--teal)';
   card.innerHTML = '<span class="status published">Published</span><h3><a href="./oral-agreements-land-property/">Why Oral Agreements Can Be Dangerous When Land or Property Is Involved</a></h3><p>Why promises, plain-paper agreements, advances, possession and family understandings do not automatically replace the legal formalities required for land transactions.</p><a class="read-link" href="./oral-agreements-land-property/">Read the guide →</a><div class="guide-note">Sri Lanka · Land &amp; property</div>';
   featuredGuides.appendChild(card);
+}
+
+if (featuredGuides && !featuredGuides.querySelector('[data-guide="unfair-termination-proper-procedure"]')) {
+  const card = document.createElement('article');
+  card.className = 'featured-guide';
+  card.dataset.guide = 'unfair-termination-proper-procedure';
+  card.style.borderTop = '6px solid #829a67';
+  card.innerHTML = '<span class="status published">Published</span><h3><a href="./unfair-termination-proper-procedure/">What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?</a></h3><p>A practical guide to the first legal questions, possible remedies and important time limits when employment is terminated.</p><a class="read-link" href="./unfair-termination-proper-procedure/">Read the guide →</a><a class="read-link" href="../si/legal-guides/unfair-termination-proper-procedure/" lang="si">සිංහලෙන් කියවන්න →</a><div class="guide-note">Sri Lanka · Work &amp; employment · English &amp; සිංහල</div>';
+  featuredGuides.appendChild(card);
+}
+
+// Remove the employment guide from the planned list now that it has been published, then keep numbering tidy.
+const comingList = document.querySelector('.coming-list');
+if (comingList) {
+  comingList.querySelectorAll('.coming-item').forEach((item) => {
+    const heading = item.querySelector('h3')?.textContent.trim();
+    if (heading === 'What Can You Do if Your Employer Terminates You Without Proper Notice?' || heading === 'What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?') {
+      item.remove();
+    }
+  });
+
+  comingList.querySelectorAll('.coming-num').forEach((num, index) => {
+    num.textContent = String(index + 1).padStart(2, '0');
+  });
 }
