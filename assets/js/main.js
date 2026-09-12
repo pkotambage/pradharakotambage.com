@@ -23,6 +23,10 @@ document.querySelectorAll('.guide-card').forEach((card) => {
   const description = card.querySelector('p');
   const link = card.querySelector('a');
 
+  if (title && link && title.textContent.trim() === 'Received a Letter of Demand?') {
+    link.href = 'legal-guides/what-to-do-after-receiving-letter-of-demand/';
+  }
+
   if (title && link && title.textContent.trim() === 'Someone owes you money?') {
     link.href = 'legal-guides/someone-owes-you-money/';
   }
