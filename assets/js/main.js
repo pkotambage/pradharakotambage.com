@@ -91,6 +91,10 @@ if (articleContent) {
     {
       title: 'Why Oral Agreements Can Be Dangerous When Land or Property Is Involved',
       href: '../oral-agreements-land-property/'
+    },
+    {
+      title: 'If a Labour Tribunal Finds Your Termination Unfair, Will You Automatically Get Your Job Back — and How Is Compensation Decided?',
+      href: '../labour-tribunal-reinstatement-compensation/'
     }
   ];
 
@@ -155,6 +159,20 @@ if (articleContent) {
 
     articleContent.insertBefore(disclaimer, insertionPoint);
   }
+
+  // When the Labour Tribunal compensation guide is referenced in an existing related-guides box, turn it into a live link.
+  const labourCompensationEnglish = 'If a Labour Tribunal Finds Your Termination Unfair, Will You Automatically Get Your Job Back — and How Is Compensation Decided?';
+  const labourCompensationSinhala = 'කම්කරු විනිශ්චය සභාව ඔබගේ සේවා අවසන් කිරීම අසාධාරණ බව තීරණය කළොත්, ඔබට අනිවාර්යයෙන්ම රැකියාව නැවත ලැබෙනවාද — වන්දි තීරණය කරන්නේ කොහොමද?';
+
+  articleContent.querySelectorAll('.article-callout p, .related-block p').forEach((paragraph) => {
+    const text = paragraph.textContent.trim();
+    if (!paragraph.querySelector('a') && text.startsWith(labourCompensationEnglish)) {
+      paragraph.innerHTML = `<a href="../labour-tribunal-reinstatement-compensation/">${labourCompensationEnglish}</a> — published`;
+    }
+    if (!paragraph.querySelector('a') && text.startsWith(labourCompensationSinhala)) {
+      paragraph.innerHTML = `<a href="../labour-tribunal-reinstatement-compensation/">${labourCompensationSinhala}</a> — පළ කර ඇත`;
+    }
+  });
 }
 
 // Add newly published short guides to the Legal Guides quick-answer section.
@@ -194,6 +212,15 @@ if (featuredGuides && !featuredGuides.querySelector('[data-guide="unfair-termina
   card.dataset.guide = 'unfair-termination-proper-procedure';
   card.style.borderTop = '6px solid #829a67';
   card.innerHTML = '<span class="status published">Published</span><h3><a href="./unfair-termination-proper-procedure/">What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?</a></h3><p>A practical guide to the first legal questions, possible remedies and important time limits when employment is terminated.</p><a class="read-link" href="./unfair-termination-proper-procedure/">Read the guide →</a><a class="read-link" href="../si/legal-guides/unfair-termination-proper-procedure/" lang="si">සිංහලෙන් කියවන්න →</a><div class="guide-note">Sri Lanka · Work &amp; employment · English &amp; සිංහල</div>';
+  featuredGuides.appendChild(card);
+}
+
+if (featuredGuides && !featuredGuides.querySelector('[data-guide="labour-tribunal-reinstatement-compensation"]')) {
+  const card = document.createElement('article');
+  card.className = 'featured-guide';
+  card.dataset.guide = 'labour-tribunal-reinstatement-compensation';
+  card.style.borderTop = '6px solid #8b7a9a';
+  card.innerHTML = '<span class="status published">Published</span><h3><a href="./labour-tribunal-reinstatement-compensation/">If a Labour Tribunal Finds Your Termination Unfair, Will You Automatically Get Your Job Back — and How Is Compensation Decided?</a></h3><p>Why unfair termination does not automatically mean reinstatement, and the factors a Labour Tribunal may consider when deciding compensation.</p><a class="read-link" href="./labour-tribunal-reinstatement-compensation/">Read the guide →</a><a class="read-link" href="../si/legal-guides/labour-tribunal-reinstatement-compensation/" lang="si">සිංහලෙන් කියවන්න →</a><div class="guide-note">Sri Lanka · Labour Tribunal remedies · English &amp; සිංහල</div>';
   featuredGuides.appendChild(card);
 }
 
