@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Law in Practice explores how legal rules and dispute-resolution processes are experienced in real-life situations through practical explanations and fictional scenarios.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Law in Practice | නීතිය ප්‍රායෝගිකව | Pradhara Kotambage</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .practice-hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(110deg, #faf6ef 0%, #f3eadc 58%, #e3ece7 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .practice-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 7px;
+      background: linear-gradient(var(--terracotta), var(--gold), var(--teal));
+    }
+    .practice-hero-inner {
+      min-height: 410px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr);
+      gap: 64px;
+      align-items: center;
+      padding: 68px 0;
+    }
+    .practice-hero h1 {
+      margin: 0 0 22px;
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      line-height: 1.05;
+      letter-spacing: -.025em;
+    }
+    .practice-hero h1 span {
+      display: block;
+      margin-top: 12px;
+      color: var(--ink-2);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: .42em;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .practice-hero .lead {
+      max-width: 760px;
+      margin: 0;
+      color: #304452;
+      font-size: 1.25rem;
+    }
+    .practice-focus {
+      padding: 30px;
+      background: rgba(255, 253, 249, .82);
+      border: 1px solid rgba(23, 50, 77, .12);
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 10px 28px rgba(23, 50, 77, .06);
+    }
+    .practice-focus .question {
+      margin: 0 0 8px;
+      color: var(--terracotta);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .practice-focus p:last-child {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      line-height: 1.45;
+    }
+
+    .practice-main {
+      padding: 72px 0 86px;
+      background: #fbf8f2;
+    }
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      align-items: stretch;
+    }
+    .language-panel {
+      padding: 34px 36px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(23, 50, 77, .05);
+    }
+    .language-panel:first-child { border-top: 5px solid var(--terracotta); }
+    .language-panel:last-child {
+      border-top: 5px solid var(--teal);
+      background: linear-gradient(180deg, #f4f8f5, #fffdf9 46%);
+    }
+    .language-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #586872;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .language-panel h2 {
+      margin: 0 0 18px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .language-panel p {
+      color: #3d4e58;
+      font-size: 1.05rem;
+    }
+    .language-panel p:last-child { margin-bottom: 0; }
+
+    .future-section { margin-top: 58px; }
+    .future-section h2 {
+      margin: 0 0 22px;
+      font-size: 2.15rem;
+    }
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .future-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 112px;
+      padding: 25px 28px 23px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+    .future-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: var(--dusty-blue);
+    }
+    .future-card:nth-child(2)::before { background: var(--teal); }
+    .future-card:nth-child(3)::before { background: var(--gold); }
+    .future-card:nth-child(4)::before { background: var(--terracotta); }
+    .future-card h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.32rem;
+      line-height: 1.35;
+    }
+    .development-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin-top: 40px;
+      padding: 26px 28px;
+      background: linear-gradient(135deg, #eef4f6, #f7faf8);
+      border: 1px solid #d6e2e5;
+      border-left: 6px solid var(--teal);
+    }
+    .development-note p {
+      max-width: 760px;
+      margin: 0;
+      color: #41515b;
+    }
+    .development-note .primary-link {
+      flex: 0 0 auto;
+      margin: 0;
+    }
+
+    @media (max-width: 850px) {
+      .practice-hero-inner, .language-grid { grid-template-columns: 1fr; }
+      .practice-hero-inner { min-height: auto; gap: 32px; padding: 54px 0; }
+      .future-grid { grid-template-columns: 1fr; }
+      .development-note { align-items: flex-start; flex-direction: column; }
+      .practice-main { padding: 54px 0 68px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Pradhara Kotambage home">
+        <span class="brand-name">Pradhara Kotambage</span>
+        <span class="brand-subtitle">Legal Knowledge &amp; Dispute Resolution</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a href="../about/">About</a>
+        <a href="../legal-guides/">Legal Guides</a>
+        <a class="active" href="./">Law in Practice <span lang="si">| නීතිය ප්‍රායෝගිකව</span></a>
+        <a href="../dispute-resolution/">Dispute Resolution</a>
+        <a href="../legal-resources/">Legal Resources</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="practice-hero">
+      <div class="container practice-hero-inner">
+        <div>
+          <p class="eyebrow">Law in Practice</p>
+          <h1>Where legal rules meet real-life decisions.<span lang="si">නීතිය සැබෑ ජීවිතයේදී ක්‍රියාත්මක වන ආකාරය</span></h1>
+          <p class="lead">Practical explanations and fictional scenarios about how legal and dispute-resolution processes are experienced in real situations.</p>
+        </div>
+
+        <aside class="practice-focus" aria-label="Purpose of Law in Practice">
+          <p class="question">The practical question</p>
+          <p>What actually happens when a person goes through the process?</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="practice-main">
+      <div class="container">
+        <div class="language-grid">
+          <article class="language-panel">
+            <span class="language-label">English</span>
+            <h2>Law beyond legal rules</h2>
+            <p>Law does not operate only through legislation, judgments and legal principles. People experience it through letters, documents, conversations, negotiations, court proceedings, delays and difficult decisions.</p>
+            <p>This section will explore what legal and dispute-resolution processes look like in real situations. It will use practical explanations, examples and fictional scenarios to help readers understand how disputes develop, what choices may arise and how different decisions can affect the outcome.</p>
+          </article>
+
+          <article class="language-panel" lang="si">
+            <span class="language-label">සිංහල</span>
+            <h2>නීතිය සැබෑ ජීවිතයේදී</h2>
+            <p>නීතිය යනු පනත්, නඩු තීන්දු සහ නීතිමය මූලධර්ම පමණක් නොවේ. සැබෑ ජීවිතයේදී එය ලිපි, ලේඛන, සාකච්ඡා, අධිකරණ ක්‍රියාමාර්ග, ප්‍රමාද සහ වැදගත් තීරණ හරහා අත්විඳින්නට සිදුවේ.</p>
+            <p>මෙම කොටසින් නීතිමය සහ ආරවුල් විසඳීමේ ක්‍රියාවලි ප්‍රායෝගිකව සිදුවන ආකාරය සරල විස්තර, උදාහරණ සහ උපකල්පිත සිද්ධි මගින් පැහැදිලි කිරීමට අදහස් කරයි.</p>
+          </article>
+        </div>
+
+        <section class="future-section" aria-labelledby="future-heading">
+          <h2 id="future-heading">Future content will include:</h2>
+          <div class="future-grid">
+            <article class="future-card"><h3>What happens during legal and dispute-resolution processes</h3></article>
+            <article class="future-card"><h3>Negotiation, settlement and mediation in practice</h3></article>
+            <article class="future-card"><h3>Common mistakes made when a dispute begins</h3></article>
+            <article class="future-card"><h3>Fictional scenarios illustrating practical choices and consequences</h3></article>
+          </div>
+        </section>
+
+        <div class="development-note">
+          <p><strong>This section is being developed gradually.</strong> <span lang="si">මෙම කොටස ක්‍රමානුකූලව සංවර්ධනය කෙරේ.</span> In the meantime, visit the Legal Guides for the legal information currently available.</p>
+          <a class="primary-link" href="../legal-guides/">Browse Legal Guides</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-name">Pradhara Kotambage</div>
+        <div class="footer-title">Attorney-at-Law | Sri Lanka</div>
+        <p class="footer-tagline">Clear law. Informed choices. Constructive resolution.</p>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>General information only.</strong> Material on this website is intended for general legal information and legal literacy. It is not legal advice for any particular matter. Reading or using this website does not by itself create an Attorney-at-Law/client relationship.</p>
+        <p class="footer-links"><a href="../privacy/">Privacy</a><span>·</span><a href="../terms/">Terms</a><span>·</span><a href="../legal-resources/">Legal Resources</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
