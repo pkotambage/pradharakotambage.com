@@ -31,6 +31,10 @@ document.querySelectorAll('.guide-card').forEach((card) => {
     link.href = 'legal-guides/someone-owes-you-money/';
   }
 
+  if (title && link && title.textContent.trim() === 'What happens after a civil case is filed?') {
+    link.href = 'legal-guides/what-happens-after-civil-case-filed/';
+  }
+
   if (title && link && title.textContent.trim() === 'Can a person under 16 legally marry in Sri Lanka?') {
     title.textContent = 'Why Oral Agreements Can Be Dangerous When Land or Property Is Involved';
     if (description) {
@@ -47,6 +51,58 @@ document.querySelectorAll('.guide-card').forEach((card) => {
     if (link) {
       link.href = 'legal-guides/unfair-termination-proper-procedure/';
     }
+  }
+});
+
+// Add the published Sinhala version inside each of the five Common legal questions cards.
+const homeGuideSinhala = {
+  'Received a Letter of Demand?': {
+    title: 'Letter of Demand එකක් ලැබුණාම මොකක්ද කරන්න ඕන?',
+    href: 'si/legal-guides/what-to-do-after-receiving-letter-of-demand/'
+  },
+  'Someone owes you money?': {
+    title: 'කෙනෙක් ඔබට මුදල් ගෙවන්න තියෙනවා නම්: ශ්‍රී ලංකාවේ ඔබට තිබෙන නීතිමය විකල්ප මොනවාද?',
+    href: 'si/legal-guides/someone-owes-you-money/'
+  },
+  'What happens after a civil case is filed?': {
+    title: 'ශ්‍රී ලංකාවේ සිවිල් නඩුවක් ගොනු කළාට පස්සේ ඇත්තටම මොකද වෙන්නේ?',
+    href: 'si/legal-guides/what-happens-after-civil-case-filed/'
+  },
+  'Why Oral Agreements Can Be Dangerous When Land or Property Is Involved': {
+    title: 'නිශ්චල දේපල සම්බන්ධ Oral Agreements අවදානම් වෙන්නේ ඇයි?',
+    href: 'si/legal-guides/oral-agreements-land-property/'
+  },
+  'What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?': {
+    title: 'ඔබගේ සේවායෝජකයා අසාධාරණ ලෙස හෝ නිසි ක්‍රියාපටිපාටියක් නොමැතිව ඔබගේ සේවය අවසන් කළා නම් ඔබට කළ හැක්කේ මොනවාද?',
+    href: 'si/legal-guides/unfair-termination-proper-procedure/'
+  }
+};
+
+document.querySelectorAll('.guide-card').forEach((card) => {
+  const title = card.querySelector('h3');
+  if (!title) return;
+
+  const sinhala = homeGuideSinhala[title.textContent.trim()];
+  if (!sinhala || card.querySelector('.guide-card-si')) return;
+
+  const sinhalaTitle = document.createElement('p');
+  sinhalaTitle.className = 'guide-card-si';
+  sinhalaTitle.lang = 'si';
+  sinhalaTitle.innerHTML = `<strong>${sinhala.title}</strong>`;
+  sinhalaTitle.style.marginTop = '10px';
+  sinhalaTitle.style.marginBottom = '10px';
+  title.insertAdjacentElement('afterend', sinhalaTitle);
+
+  const englishLink = Array.from(card.querySelectorAll('a')).find((anchor) => !anchor.classList.contains('guide-card-si-link'));
+  if (englishLink) {
+    const sinhalaLink = document.createElement('a');
+    sinhalaLink.className = 'guide-card-si-link';
+    sinhalaLink.lang = 'si';
+    sinhalaLink.href = sinhala.href;
+    sinhalaLink.textContent = 'සිංහලෙන් කියවන්න →';
+    sinhalaLink.style.display = 'block';
+    sinhalaLink.style.marginTop = '7px';
+    englishLink.insertAdjacentElement('afterend', sinhalaLink);
   }
 });
 
