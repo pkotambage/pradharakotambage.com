@@ -1,1 +1,0 @@
-The active preview image is repaired separately via Git object API.
