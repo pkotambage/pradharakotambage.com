@@ -122,6 +122,14 @@
 .article-back { margin-top: 34px; font-weight: 700; }
 .source-note { margin-top: 30px; font-size: .86rem; color: #6a777d; }
 .source-note a { text-decoration: underline; text-underline-offset: 2px; }
+.article-language-switch { margin-top:18px; display:flex; gap:8px; align-items:center; font-size:.9rem; font-weight:800; }
+.article-language-switch a,.article-language-switch span { display:inline-block; padding:7px 11px; border:1px solid var(--line); background:rgba(255,255,255,.65); }
+.article-language-switch span { background:var(--ink); color:#fff; border-color:var(--ink); }
+.article-table-wrap { overflow-x:auto; margin:26px 0 32px; }
+.article-content table { width:100%; border-collapse:collapse; background:#fffdf9; font-size:.96rem; line-height:1.55; }
+.article-content th,.article-content td { padding:13px 15px; border:1px solid #d8d1c5; text-align:left; vertical-align:top; }
+.article-content th { background:#eaf0ee; color:var(--ink); }
+.article-content .series-nav { margin-top:42px; }
 @media (max-width: 720px) {
   .article-hero-inner { padding: 48px 0 44px; }
   .article-hero h1 { font-size: clamp(2.35rem, 11vw, 3.35rem); }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An introduction to negotiation, settlement, mediation and arbitration, and Pradhara Kotambage's growing professional interest in constructive dispute resolution.">
+  <meta name="description" content="Practical English and Sinhala guides to mediation, preparing for mediation, and Sri Lanka's Mediation (Civil and Commercial Disputes) Act, No. 13 of 2026.">
   <link rel="icon" type="image/svg+xml" href="https://pradharakotambage.com/favicon.svg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pradhara Kotambage">
@@ -93,7 +93,7 @@
     }
     .resolution-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
     .resolution-card {
@@ -115,8 +115,7 @@
     .resolution-card:nth-child(2)::before { background: var(--teal); }
     .resolution-card:nth-child(3)::before { background: var(--gold); }
     .resolution-card:nth-child(4)::before { background: var(--terracotta); }
-    .resolution-card:nth-child(5)::before { background: #829a67; }
-    .resolution-card:nth-child(5) { grid-column: 1 / -1; }
+    .resolution-card:nth-child(3)::before { background: var(--gold); }
     .resolution-card h3 {
       margin: 0 0 8px;
       font-size: 1.42rem;
@@ -134,11 +133,12 @@
       color: #41515b;
     }
     .development-note p { margin: 0; }
+    .resolution-card a { display:inline-block; margin-top:16px; font-weight:800; }
+    .language-switch { margin-top:22px; font-weight:800; }
 
     @media (max-width: 820px) {
       .resolution-hero-inner { grid-template-columns: 1fr; gap: 32px; min-height: auto; padding: 54px 0; }
       .resolution-grid { grid-template-columns: 1fr; }
-      .resolution-card:nth-child(5) { grid-column: auto; }
       .resolution-main { padding: 54px 0 68px; }
     }
   </style>
@@ -186,35 +186,31 @@
       <div class="container resolution-copy">
         <p>Dispute resolution includes a range of approaches through which parties may attempt to resolve disagreements more efficiently, practically and constructively. Depending on the circumstances, these may include <strong>negotiation, settlement, mediation and arbitration</strong>.</p>
 
-        <p>My professional interest is increasingly focused on these methods of resolving disputes, particularly mediation and other consensual approaches that allow parties to identify their real concerns, explore practical solutions and, where possible, reach agreements without unnecessary conflict.</p>
+        <p>This section begins with a connected series of practical guides on mediation: what it is, how to prepare for it, and the new legal framework introduced in Sri Lanka in 2026.</p>
+        <p class="language-switch"><strong>English</strong> &nbsp;|&nbsp; <a href="../si/dispute-resolution/" lang="si">සිංහල</a></p>
 
-        <h2>This section will gradually develop into a practical resource on:</h2>
+        <h2>Mediation guides</h2>
 
         <div class="resolution-grid">
           <article class="resolution-card">
-            <h3>Negotiation &amp; Settlement</h3>
-            <p>How parties may explore practical solutions and work towards an agreed outcome.</p>
+            <h3>What Is Mediation?</h3>
+            <p>How mediation differs from arbitration and litigation, and the situations in which it may help resolve a dispute.</p>
+            <a href="what-is-mediation/">Read the guide →</a>
           </article>
           <article class="resolution-card">
-            <h3>Mediation</h3>
-            <p>How a neutral process can help parties communicate, identify concerns and consider possible agreements.</p>
+            <h3>Preparing for Mediation</h3>
+            <p>A practical guide to what parties should — and should not — do before and during mediation.</p>
+            <a href="preparing-for-mediation/">Read the guide →</a>
           </article>
           <article class="resolution-card">
-            <h3>Arbitration</h3>
-            <p>An introduction to private adjudication and how it differs from mediation and court proceedings.</p>
-          </article>
-          <article class="resolution-card">
-            <h3>Choosing an Appropriate Method</h3>
-            <p>Why the nature of the dispute, the parties' needs and the desired outcome may point towards different processes.</p>
-          </article>
-          <article class="resolution-card">
-            <h3>Before and During Litigation</h3>
-            <p>Practical approaches to resolving disputes before court proceedings begin or while litigation is continuing.</p>
+            <h3>Sri Lanka's New Civil and Commercial Mediation Law</h3>
+            <p>A practical explanation of Act No. 13 of 2026, including confidentiality, prescription, settlements and court enforcement.</p>
+            <a href="civil-commercial-mediation-act-sri-lanka/">Read the guide →</a>
           </article>
         </div>
 
         <div class="development-note">
-          <p><strong>Further guides and resources will be added</strong> as this area of the website develops.</p>
+          <p><strong>Sinhala editions:</strong> the first two guides are available now. Space has been reserved for the Sinhala version of the Act guide, which will be added after final review.</p>
         </div>
       </div>
     </section>
