@@ -301,6 +301,20 @@ a:hover { text-decoration: underline; }
 .disclaimer strong { color: white; }
 .footer-links { display: flex; gap: 12px; margin-top: 24px; }
 .site-footer a { color: #f3f7f9; }
+.facebook-footer-link { display: inline-flex; align-items: center; gap: 4px; }
+.facebook-footer-link svg { width: 17px; height: 17px; fill: currentColor; }
+
+.facebook-follow { margin-top: 32px; padding: 28px 30px; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: #edf5f8; border: 1px solid #c8dde5; border-left: 5px solid #1877f2; }
+.facebook-follow h2 { margin: 4px 0 8px; }
+.facebook-follow p { margin: 0; }
+.facebook-button { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; color: #fff; background: #17324d; border-radius: 4px; font-weight: 700; text-decoration: none; }
+.facebook-button:hover, .facebook-button:focus-visible { background: #214765; }
+.facebook-button svg { width: 21px; height: 21px; fill: currentColor; }
+
+@media (max-width: 680px) {
+  .footer-links { flex-wrap: wrap; }
+  .facebook-follow { align-items: flex-start; flex-direction: column; padding: 24px; }
+}
 
 @media (max-width: 1120px) {
   .menu-toggle { display: block; margin-left: auto; }
