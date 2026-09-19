@@ -153,10 +153,28 @@
     .development-note p { margin: 0; }
     .resolution-card a { display:inline-block; margin-top:16px; font-weight:800; }
     .language-switch { margin-top:22px; font-weight:800; }
+    .approaches-card {
+      margin-top: 30px;
+      padding: 26px 28px;
+      background: linear-gradient(135deg, #eef4f6, #f8faf8);
+      border: 1px solid #d6e2e5;
+      border-left: 6px solid var(--teal);
+    }
+    .approaches-card h2 {
+      margin: 0 0 18px;
+      font-size: 1.55rem;
+    }
+    .approaches-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+    }
+    .approaches-list p { margin: 0; }
 
     @media (max-width: 820px) {
       .resolution-hero-inner { grid-template-columns: 1fr; gap: 32px; min-height: auto; padding: 54px 0; }
       .resolution-grid { grid-template-columns: 1fr; }
+      .approaches-list { grid-template-columns: 1fr; }
       .resolution-main { padding: 54px 0 68px; }
     }
   </style>
@@ -202,10 +220,20 @@
 
     <section class="resolution-main">
       <div class="container resolution-copy">
-        <p>Dispute resolution includes a range of approaches through which parties may attempt to resolve disagreements more efficiently, practically and constructively. Depending on the circumstances, these may include <strong>negotiation, settlement, mediation and arbitration</strong>.</p>
+        <p>Disputes may be addressed in different ways depending on their nature, the parties' objectives and the applicable law.</p>
 
         <p>This section begins with a connected series of practical guides on mediation: what it is, how to prepare for it, and the new legal framework introduced in Sri Lanka in 2026.</p>
         <p class="language-switch"><strong>English</strong> &nbsp;|&nbsp; <a href="../si/dispute-resolution/" lang="si">සිංහල</a></p>
+
+        <aside class="approaches-card" aria-labelledby="approaches-heading">
+          <h2 id="approaches-heading">Ways disputes may be resolved</h2>
+          <div class="approaches-list">
+            <p><strong>Negotiation</strong> — the parties communicate directly to try to reach an agreement.</p>
+            <p><strong>Settlement</strong> — the parties agree on terms that bring the dispute to an end.</p>
+            <p><strong>Mediation</strong> — a neutral mediator helps the parties communicate and explore a mutually acceptable resolution.</p>
+            <p><strong>Arbitration</strong> — an arbitrator considers the dispute and makes a decision, usually under an arbitration agreement.</p>
+          </div>
+        </aside>
 
         <h2>Mediation guides</h2>
 
@@ -231,9 +259,6 @@
           </article>
         </div>
 
-        <div class="development-note">
-          <p><strong>Sinhala editions:</strong> the first two guides are available now. Space has been reserved for the Sinhala version of the Act guide, which will be added after final review.</p>
-        </div>
       </div>
     </section>
   </main>
