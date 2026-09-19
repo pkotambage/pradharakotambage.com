@@ -8,6 +8,25 @@ if (menuToggle && siteNav) {
   });
 }
 
+// Connect the official Facebook page from the site-wide footer.
+document.querySelectorAll('.site-footer .footer-links').forEach((links) => {
+  if (links.querySelector('a[href*="facebook.com/lawinpractice.lk"]')) return;
+
+  const separator = document.createElement('span');
+  separator.textContent = '·';
+  separator.setAttribute('aria-hidden', 'true');
+
+  const facebookLink = document.createElement('a');
+  facebookLink.className = 'facebook-footer-link';
+  facebookLink.href = 'https://www.facebook.com/lawinpractice.lk';
+  facebookLink.target = '_blank';
+  facebookLink.rel = 'noopener noreferrer';
+  facebookLink.setAttribute('aria-label', 'Law in Practice on Facebook (opens in a new tab)');
+  facebookLink.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V7c0-.7.5-1 1.2-1H17V3h-2.6C11.7 3 10 4.6 10 7.1v1.4H7V12h3v9h4v-9h2.7l.5-3.5H14Z"/></svg><span>Facebook</span>';
+
+  links.append(separator, facebookLink);
+});
+
 // Keep every in-article “Related guides” section visually consistent.
 const articleContent = document.querySelector('.article-content');
 
