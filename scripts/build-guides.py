@@ -18,6 +18,19 @@ CATEGORIES = [
     ("dispute-resolution", "Dispute Resolution", "Negotiation, settlement, mediation and arbitration."),
 ]
 
+# Small interface icons, matching the six symbols in the approved layout.
+ICONS = {
+    "civil-litigation": '<path d="M12 3v18M5 6h14M3 7l-2 6h4L3 7Zm18 0-2 6h4l-2-6ZM5 6l-2 1m16-1 2 1M7 21h10"/><path d="M1 13c0 2 4 2 4 0m14 0c0 2 4 2 4 0"/>',
+    "land-property": '<path d="m3 10 9-6 9 6M4 10h16M5 20h14M3 22h18M7 10v10m5-10v10m5-10v10"/>',
+    "employment-labour": '<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13c4 2 14 2 18 0M12 13v3"/>',
+    "family-personal-law": '<circle cx="8" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20v-2a6 6 0 0 1 12 0v2m1-7a6 6 0 0 1 7 6v1"/>',
+    "contracts-recovery": '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',
+    "dispute-resolution": '<path d="m2 12 4-4 4 2 2-2 2 2 4-2 4 4-5 6-4-3-3 3-4-3-2 2-2-2zM7 10l4 4a2 2 0 0 0 3 0l1-1M3 11l-1-1m19 1 1-1"/>',
+}
+
+def icon(slug):
+    return f'<span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[slug]}</svg></span>'
+
 # Slug, title, category, description, English URL, Sinhala URL (if published).
 GUIDES = [
  ("what-to-do-after-receiving-letter-of-demand", "What to Do After Receiving a Letter of Demand in Sri Lanka", "contracts-recovery", "Understand the claim, check the facts and preserve documents before responding."),
@@ -56,6 +69,10 @@ CSS = """
  .library-grid {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
  .library-topic,.library-guide {background:#fffdf9; border:1px solid #d9d4ca; padding:24px 26px}
  .library-topic {display:block; border-top:4px solid #527c77; text-decoration:none}
+ .topic-icon {display:grid; place-items:center; width:52px; height:52px; margin:0 0 17px; border-radius:12px; background:#e7f0f2; color:#315f69}
+ .topic-icon svg {width:28px; height:28px}
+ .library-topic:nth-child(2) .topic-icon,.library-topic:nth-child(5) .topic-icon {background:#f3e9da; color:#8a5c38}
+ .library-topic:nth-child(3) .topic-icon,.library-topic:nth-child(6) .topic-icon {background:#e4ede7; color:#3f6c58}
  .library-topic h3,.library-guide h3 {font-size:1.38rem; line-height:1.25; margin:0 0 9px}
  .library-topic p,.library-guide p {margin:0; color:#4b5c65}
  .library-topic small {display:block; margin-top:14px; color:#53636b; font-size:.88rem}
@@ -82,7 +99,7 @@ def write(route, title, description, body):
     target=ROOT/route.strip('/')/'index.html'; target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(document(title,description,route,body),encoding='utf-8')
 
-topics=''.join(f'<a class="library-topic" href="/legal-guides/topics/{slug}/"><h3>{escape(name)}</h3><p>{escape(desc)}</p><small>{sum(g[2]==slug for g in GUIDES)} published {"guide" if sum(g[2]==slug for g in GUIDES)==1 else "guides"}</small></a>' for slug,name,desc in CATEGORIES)
+topics=''.join(f'<a class="library-topic" href="/legal-guides/topics/{slug}/">{icon(slug)}<h3>{escape(name)}</h3><p>{escape(desc)}</p><small>{sum(g[2]==slug for g in GUIDES)} published {"guide" if sum(g[2]==slug for g in GUIDES)==1 else "guides"}</small></a>' for slug,name,desc in CATEGORIES)
 def published_on(g):
     article=ROOT/path_for(g).strip('/')/'index.html'
     match=re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})"',article.read_text(encoding='utf-8'))
