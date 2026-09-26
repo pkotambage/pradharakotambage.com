@@ -18,6 +18,15 @@ CATEGORIES = [
     ("dispute-resolution", "Dispute Resolution", "Negotiation, settlement, mediation and arbitration."),
 ]
 
+SINHALA_TOPICS = {
+    "civil-litigation": "සිවිල් නඩු කටයුතු",
+    "land-property": "ඉඩම් හා දේපළ",
+    "employment-labour": "සේවා හා කම්කරු නීතිය",
+    "family-personal-law": "පවුල් හා පෞද්ගලික නීතිය",
+    "contracts-recovery": "ගිවිසුම් හා මුදල් අයකර ගැනීම",
+    "dispute-resolution": "ආරවුල් විසඳීම",
+}
+
 # Small interface icons, matching the six symbols in the approved layout.
 ICONS = {
     "civil-litigation": '<path d="M12 3v18M5 6h14M3 7l-2 6h4L3 7Zm18 0-2 6h4l-2-6ZM5 6l-2 1m16-1 2 1M7 21h10"/><path d="M1 13c0 2 4 2 4 0m14 0c0 2 4 2 4 0"/>',
@@ -74,6 +83,7 @@ CSS = """
  .library-topic:nth-child(2) .topic-icon,.library-topic:nth-child(5) .topic-icon {background:#f3e9da; color:#8a5c38}
  .library-topic:nth-child(3) .topic-icon,.library-topic:nth-child(6) .topic-icon {background:#e4ede7; color:#3f6c58}
  .library-topic h3,.library-guide h3 {font-size:1.38rem; line-height:1.25; margin:0 0 9px}
+ .topic-sinhala {display:block; margin:-2px 0 12px; color:#315f69; font-size:1rem; line-height:1.55; font-weight:600}
  .library-topic p,.library-guide p {margin:0; color:#4b5c65}
  .library-topic small {display:block; margin-top:14px; color:#53636b; font-size:.88rem}
  .library-topic:hover,.library-topic:focus-visible,.library-guide:hover {border-color:#a3694d}
@@ -99,7 +109,7 @@ def write(route, title, description, body):
     target=ROOT/route.strip('/')/'index.html'; target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(document(title,description,route,body),encoding='utf-8')
 
-topics=''.join(f'<a class="library-topic" href="/legal-guides/topics/{slug}/">{icon(slug)}<h3>{escape(name)}</h3><p>{escape(desc)}</p><small>{sum(g[2]==slug for g in GUIDES)} published {"guide" if sum(g[2]==slug for g in GUIDES)==1 else "guides"}</small></a>' for slug,name,desc in CATEGORIES)
+topics=''.join(f'<a class="library-topic" href="/legal-guides/topics/{slug}/">{icon(slug)}<h3>{escape(name)}</h3><span class="topic-sinhala" lang="si">{SINHALA_TOPICS[slug]}</span><p>{escape(desc)}</p><small>{sum(g[2]==slug for g in GUIDES)} published {"guide" if sum(g[2]==slug for g in GUIDES)==1 else "guides"}</small></a>' for slug,name,desc in CATEGORIES)
 def published_on(g):
     article=ROOT/path_for(g).strip('/')/'index.html'
     match=re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})"',article.read_text(encoding='utf-8'))
