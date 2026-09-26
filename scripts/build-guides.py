@@ -65,8 +65,10 @@ def sinhala_for(g): return g[5] if len(g)>5 else f"/si/legal-guides/{g[0]}/"
 def links(g):
     si = sinhala_for(g)
     return f'<div class="language-links"><a href="{path_for(g)}">English</a>' + (f'<a href="{si}" lang="si">සිංහල</a>' if si else '') + '</div>'
-def card(g):
-    return f'<article class="library-guide" data-search="{escape((g[1]+" "+g[3]).lower(),quote=True)}"><h3><a href="{path_for(g)}">{escape(g[1])}</a></h3><p>{escape(g[3])}</p>{links(g)}</article>'
+def card(g, illustrated=False):
+    art = (f'<img class="guide-art" src="/assets/images/guides/{g[0]}.webp" alt="" width="720" height="480" loading="lazy" decoding="async">' if illustrated else '')
+    style = ' illustrated-guide' if illustrated else ''
+    return f'<article class="library-guide{style}" data-search="{escape((g[1]+" "+g[3]).lower(),quote=True)}">{art}<div class="guide-copy"><h3><a href="{path_for(g)}">{escape(g[1])}</a></h3><p>{escape(g[3])}</p>{links(g)}</div></article>'
 
 CSS = """
  .library-page {background:#fbf8f2; min-height:70vh; padding:52px 0 76px}
@@ -89,13 +91,16 @@ CSS = """
  .library-topic:hover,.library-topic:focus-visible,.library-guide:hover {border-color:#a3694d}
  .library-list {display:grid; gap:12px}
  .library-guide {border-left:4px solid #527c77}
+ .illustrated-guide {display:grid; grid-template-columns:190px minmax(0,1fr); gap:23px; align-items:center; padding:16px 20px}
+ .guide-art {display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:3px; background:#e7f0f2}
+ .guide-copy {min-width:0}
  .language-links {display:flex; gap:18px; margin-top:16px; font-weight:700}
  .language-links a {text-decoration:underline; text-underline-offset:3px}
  .library-crumb {margin:0 0 18px; font-size:.94rem}
  .library-search {display:block; width:100%; max-width:680px; padding:14px 16px; font:inherit; border:1px solid #889da6; background:white; color:#17324d; border-radius:3px}
  .library-count {color:#53636b; margin:12px 0 22px}
  .library-note {border-left:4px solid #527c77; background:#e7f0f2; padding:16px 20px; margin-top:44px; max-width:830px}
- @media(max-width:700px){.library-page {padding:34px 0 58px}.library-grid{grid-template-columns:1fr}.library-topic,.library-guide{padding:20px}}
+ @media(max-width:700px){.library-page {padding:34px 0 58px}.library-grid{grid-template-columns:1fr}.library-topic,.library-guide{padding:20px}.illustrated-guide{grid-template-columns:1fr;gap:16px;padding:14px}.illustrated-guide .guide-art{max-height:220px}}
 """
 
 def document(title, description, url, body):
@@ -121,7 +126,7 @@ write('/legal-guides/', 'Legal Guides | Pradhara Kotambage','Browse Sri Lankan l
 for slug,name,desc in CATEGORIES:
     group=[g for g in GUIDES if g[2]==slug]
     content=f'''<p class="library-crumb"><a href="/legal-guides/">Legal Guides</a> / {escape(name)}</p><h1>{escape(name)}</h1><p class="library-intro">{escape(desc)}</p>'''
-    if group: content+=f'<section class="library-section"><h2>Guides in this topic</h2><div class="library-list">{"".join(card(g) for g in group)}</div></section>'
+    if group: content+=f'<section class="library-section"><h2>Guides in this topic</h2><div class="library-list">{"".join(card(g, illustrated=True) for g in group)}</div></section>'
     else: content+='<p>Guides on this topic are being prepared. <a href="/legal-guides/all/">Browse the published guides</a>.</p>'
     if slug=='dispute-resolution': content+='<p class="library-note">Explore the <a href="/dispute-resolution/">Dispute Resolution section</a> for more context on these approaches.</p>'
     write(f'/legal-guides/topics/{slug}/',f'{name} Guides | Pradhara Kotambage',f'{desc} Practical guides to Sri Lankan law.',content)
