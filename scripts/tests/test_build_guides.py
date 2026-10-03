@@ -17,7 +17,7 @@ class DirectoryBuildTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / 'source'
-        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '__pycache__'))
+        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '__pycache__', 'node_modules', 'test-results', 'playwright-report'))
 
     def run_build(self, *args):
         return subprocess.run([sys.executable, str(self.root / 'scripts/build-guides.py'), *map(str, args)], capture_output=True, text=True)
