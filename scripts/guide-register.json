@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "recent_limit": 6,
+  "categories": [
+    {
+      "id": "civil-litigation",
+      "name": "Civil Litigation",
+      "sinhala_name": "සිවිල් නඩු කටයුතු",
+      "description": "Court procedure, evidence and appeals."
+    },
+    {
+      "id": "land-property",
+      "name": "Land & Property",
+      "sinhala_name": "ඉඩම් හා දේපළ",
+      "description": "Ownership, agreements and land disputes."
+    },
+    {
+      "id": "employment-labour",
+      "name": "Employment & Labour",
+      "sinhala_name": "සේවා හා කම්කරු නීතිය",
+      "description": "Termination, workplace rights and Labour Tribunal proceedings."
+    },
+    {
+      "id": "family-personal-law",
+      "name": "Family & Personal Law",
+      "sinhala_name": "පවුල් හා පෞද්ගලික නීතිය",
+      "description": "Marriage, divorce, maintenance and family matters.",
+      "topic_template": "guides-family-topic.html.tpl"
+    },
+    {
+      "id": "contracts-recovery",
+      "name": "Contracts & Recovery",
+      "sinhala_name": "ගිවිසුම් හා මුදල් අයකර ගැනීම",
+      "description": "Agreements, debts, cheques and legal demands."
+    },
+    {
+      "id": "dispute-resolution",
+      "name": "Dispute Resolution",
+      "sinhala_name": "ආරවුල් විසඳීම",
+      "description": "Negotiation, settlement, mediation and arbitration."
+    }
+  ],
+  "guides": [
+    {
+      "id": "mediation-assisted-negotiation",
+      "title": "Mediation Is Assisted Negotiation",
+      "category": "dispute-resolution",
+      "topic_order": 1,
+      "description": "How a mediator assists negotiation, explores interests and helps parties make their own decisions.",
+      "published": "2026-09-27",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/mediation-assisted-negotiation/",
+          "title": "Mediation Is Assisted Negotiation: What Does That Mean?",
+          "description": "How does a mediator assist negotiation? Learn why interests matter, how mediation can move between stages, and who decides whether to agree."
+        },
+        "si": {
+          "url": "/si/dispute-resolution/mediation-assisted-negotiation/",
+          "title": "සමථකරණය යනු සහාය ඇතිව සිදු කරන සාකච්ඡාවකි: එයින් අදහස් කරන්නේ කුමක්ද?",
+          "description": "සමථකරණයේදී සමථකාරවරයා සාකච්ඡාවට සහාය වන්නේ කෙසේද, පාර්ශ්වයන්ගේ අවශ්‍යතා වැදගත් වන්නේ ඇයි සහ එකඟතාව තීරණය කරන්නේ කවුද?"
+        }
+      },
+      "keywords": [
+        "mediation",
+        "mediator",
+        "negotiation",
+        "settlement",
+        "dispute",
+        "සමථ",
+        "සමථකරණය",
+        "සමථකරණ",
+        "සාකච්ඡා",
+        "ආරවුල්",
+        "ආරවුල"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-is-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": "සමථකරණය යනු සහාය ඇතිව සිදු කරන සාකච්ඡාවකි",
+      "topic_description": "How a mediator helps parties understand their interests and explore options."
+    },
+    {
+      "id": "divorce-without-unnecessary-conflict",
+      "title": "Divorce Without Unnecessary Conflict",
+      "category": "family-personal-law",
+      "topic_order": 0,
+      "description": "Legal options, children and financial arrangements when a marriage comes to an end.",
+      "published": "2026-09-26",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/divorce-without-unnecessary-conflict/",
+          "title": "Divorce Without Unnecessary Conflict: Understanding Your Legal Options in Sri Lanka",
+          "description": "A practical introduction to lawful divorce, children, financial arrangements and reducing avoidable conflict."
+        },
+        "si": {
+          "url": "/si/legal-guides/divorce-without-unnecessary-conflict/",
+          "title": "අනවශ්‍ය ගැටුම්වලින් තොරව දික්කසාදයක් ලබාගත හැකිද?",
+          "description": "දික්කසාද නීතිය, දරුවන්, මූල්‍ය වගකීම් සහ අනවශ්‍ය ගැටුම් අවම කිරීම පිළිබඳ ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "divorce",
+        "family",
+        "marriage",
+        "separation",
+        "පවුල්",
+        "පවුල",
+        "විවාහ",
+        "දික්කසාද",
+        "දික්කසාදය"
+      ],
+      "image": {
+        "src": "/assets/images/family-law-amicable-separation.svg",
+        "alt": "Family Law editorial illustration",
+        "width": "720",
+        "height": "420"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": "අනවශ්‍ය ගැටුම්වලින් තොරව දික්කසාදයක් ලබාගත හැකිද?"
+    },
+    {
+      "id": "mutual-consent-divorce-sri-lanka",
+      "title": "Can Both Spouses Agree to Divorce in Sri Lanka?",
+      "category": "family-personal-law",
+      "topic_order": 1,
+      "description": "Mutual consent, uncontested proceedings, pleadings and evidence.",
+      "published": "2026-09-26",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/mutual-consent-divorce-sri-lanka/",
+          "title": "Can Both Spouses Agree to Divorce in Sri Lanka?",
+          "description": "Mutual consent, uncontested divorce, pleadings, evidence, children and financial claims explained."
+        },
+        "si": {
+          "url": "/si/legal-guides/mutual-consent-divorce-sri-lanka/",
+          "title": "දෙදෙනාම එකඟ වුවහොත් ශ්‍රී ලංකාවේ දික්කසාදයක් ලබාගත හැකිද?",
+          "description": "අන්‍යෝන්‍ය එකඟතාව, විවාදයකින් තොර නඩු, පැමිණිල්ල, උත්තරය, සාක්ෂි, දරුවන් සහ මූල්‍ය ඉල්ලීම් පිළිබඳ පැහැදිලි කිරීමක්."
+        }
+      },
+      "keywords": [
+        "divorce",
+        "family",
+        "marriage",
+        "separation",
+        "පවුල්",
+        "පවුල",
+        "විවාහ",
+        "දික්කසාද",
+        "දික්කසාදය"
+      ],
+      "image": {
+        "src": "/assets/images/family-law-uncontested-divorce.svg",
+        "alt": "Family Law editorial illustration",
+        "width": "720",
+        "height": "420"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": "දෙදෙනාම එකඟ වුවහොත් ශ්‍රී ලංකාවේ දික්කසාදයක් ලබාගත හැකිද?"
+    },
+    {
+      "id": "what-to-do-after-receiving-letter-of-demand",
+      "title": "What to Do After Receiving a Letter of Demand in Sri Lanka",
+      "category": "contracts-recovery",
+      "topic_order": 0,
+      "description": "Understand the claim, check the facts and preserve documents before responding.",
+      "published": "2026-09-12",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/what-to-do-after-receiving-letter-of-demand/",
+          "title": "What to Do After Receiving a Letter of Demand in Sri Lanka",
+          "description": "Received a Letter of Demand in Sri Lanka? Learn what to check, which documents to preserve, what to avoid, and when to obtain legal advice."
+        },
+        "si": {
+          "url": "/si/legal-guides/what-to-do-after-receiving-letter-of-demand/",
+          "title": "Letter of Demand එකක් ලැබුණාම මොකක්ද කරන්න ඕන?",
+          "description": "Letter of Demand එකක් ලැබුණාම claim එක තේරුම් ගැනීම, documents සුරක්ෂිත කිරීම, timeline එකක් සකස් කිරීම සහ ඉදිරියට කළ යුතු දේ ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "letter",
+        "demand",
+        "notice",
+        "legal",
+        "නීතිඥ",
+        "ලිපිය",
+        "ලිපි",
+        "ඉල්ලීම",
+        "ඉල්ලීම්"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-to-do-after-receiving-letter-of-demand.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "how-to-respond-to-letter-of-demand",
+      "title": "How Should You Respond to a Letter of Demand in Sri Lanka?",
+      "category": "contracts-recovery",
+      "topic_order": 1,
+      "description": "Consider what to accept or dispute and whether to propose settlement.",
+      "published": "2026-09-12",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/how-to-respond-to-letter-of-demand/",
+          "title": "How Should You Respond to a Letter of Demand in Sri Lanka?",
+          "description": "How should you respond to a Letter of Demand in Sri Lanka? Understand denials, admissions, requests for information, settlement and court documents."
+        },
+        "si": {
+          "url": "/si/legal-guides/how-to-respond-to-letter-of-demand/",
+          "title": "Letter of Demand එකකට පිළිතුරු දෙන්නේ කොහොමද?",
+          "description": "Letter of Demand එකකට පිළිතුරු දෙන්නේ කොහොමද? Denials, admissions, information requests, settlement සහ court documents ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "understand",
+        "denials,",
+        "admissions,",
+        "requests",
+        "for",
+        "information,",
+        "settlement",
+        "and",
+        "court",
+        "documents.",
+        "information",
+        "requests,",
+        "සහ",
+        "documents",
+        "ගැන",
+        "ප්‍රායෝගික",
+        "මාර්ගෝපදේශයක්.",
+        "letter",
+        "demand",
+        "notice",
+        "legal",
+        "නීතිඥ",
+        "ලිපිය",
+        "ලිපි",
+        "ඉල්ලීම",
+        "ඉල්ලීම්"
+      ],
+      "image": {
+        "src": "/assets/images/guides/how-to-respond-to-letter-of-demand.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "someone-owes-you-money",
+      "title": "Someone Owes You Money: What Legal Options Are Available in Sri Lanka?",
+      "category": "contracts-recovery",
+      "topic_order": 2,
+      "description": "Evidence, demands, negotiation and court proceedings when money remains unpaid.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/someone-owes-you-money/",
+          "title": "Someone Owes You Money: What Legal Options Are Available in Sri Lanka?",
+          "description": "Someone owes you money in Sri Lanka? A practical guide to evidence, WhatsApp messages, cheques, Letters of Demand, settlement, court action and recovery."
+        },
+        "si": {
+          "url": "/si/legal-guides/someone-owes-you-money/",
+          "title": "කෙනෙක් ඔබට මුදල් ගෙවන්න තියෙනවා නම්: ශ්‍රී ලංකාවේ ඔබට තිබෙන නීතිමය විකල්ප මොනවාද?",
+          "description": "කෙනෙකු ඔබට මුදල් ගෙවිය යුතු නම් ශ්‍රී ලංකාවේ ලබාගත හැකි නීතිමය විකල්ප, සාක්ෂි සහ ඉදිරි පියවර සරලව පැහැදිලි කරයි."
+        }
+      },
+      "keywords": [
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/someone-owes-you-money.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "what-happens-after-civil-case-filed",
+      "title": "What Actually Happens After a Civil Case Is Filed in Sri Lanka?",
+      "category": "civil-litigation",
+      "topic_order": 0,
+      "description": "From filing and summons through pleadings, trial and judgment.",
+      "published": "2026-09-11",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/what-happens-after-civil-case-filed/",
+          "title": "What Actually Happens After a Civil Case Is Filed in Sri Lanka?",
+          "description": "What happens after a civil case is filed in Sri Lanka? A practical guide to plaint, summons, answer, issues, evidence, trial, submissions, judgment and enforcement."
+        },
+        "si": {
+          "url": "/si/legal-guides/what-happens-after-civil-case-filed/",
+          "title": "ශ්‍රී ලංකාවේ සිවිල් නඩුවක් ගොනු කළාට පස්සේ ඇත්තටම මොකද වෙන්නේ?",
+          "description": "ශ්‍රී ලංකාවේ සිවිල් නඩුවක් ගොනු කිරීමෙන් පසු සිදුවන ප්‍රධාන අදියර, අධිකරණ ක්‍රියාවලිය සහ ඉදිරි පියවර සරලව පැහැදිලි කරයි."
+        }
+      },
+      "keywords": [
+        "civil",
+        "case",
+        "court",
+        "litigation",
+        "evidence",
+        "සිවිල්",
+        "නඩු",
+        "නඩුව",
+        "අධිකරණ",
+        "සාක්ෂි",
+        "සාක්ෂිය"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-happens-after-civil-case-filed.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "whatsapp-messages-prove-debt",
+      "title": "Can WhatsApp Messages Be Used to Prove a Debt?",
+      "category": "civil-litigation",
+      "topic_order": 1,
+      "description": "The context and original conversation behind a screenshot may matter.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/whatsapp-messages-prove-debt/",
+          "title": "Can WhatsApp Messages Be Used to Prove a Debt?",
+          "description": "Can WhatsApp messages prove a debt in Sri Lanka? A short practical guide to screenshots, context, preserving chats and supporting electronic evidence."
+        },
+        "si": {
+          "url": "/si/legal-guides/whatsapp-messages-prove-debt/",
+          "title": "WhatsApp Messages භාවිතා කරලා ණයක් ඔප්පු කරන්න පුළුවන්ද?",
+          "description": "WhatsApp messages භාවිතා කරලා ණයක් ඔප්පු කරන්න පුළුවන්ද? Screenshots, context, original messages සහ supporting evidence ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "screenshots,",
+        "context,",
+        "original",
+        "messages",
+        "සහ",
+        "supporting",
+        "evidence",
+        "ගැන",
+        "ප්‍රායෝගික",
+        "මාර්ගෝපදේශයක්.",
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම",
+        "civil",
+        "case",
+        "court",
+        "litigation",
+        "සිවිල්",
+        "නඩු",
+        "නඩුව",
+        "අධිකරණ",
+        "සාක්ෂි",
+        "සාක්ෂිය"
+      ],
+      "image": {
+        "src": "/assets/images/guides/whatsapp-messages-prove-debt.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "call-recordings-admission-of-debt",
+      "title": "“He Admitted the Debt on the Phone” – What About Call Recordings?",
+      "category": "civil-litigation",
+      "topic_order": 2,
+      "description": "Authenticity, context and preservation of a recorded admission.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/call-recordings-admission-of-debt/",
+          "title": "“He Admitted the Debt on the Phone” – What About Call Recordings?",
+          "description": "Can a call recording help prove a debt in Sri Lanka? A short practical guide to admissions, context, authenticity and preserving the original recording."
+        },
+        "si": {
+          "url": "/si/legal-guides/call-recordings-admission-of-debt/",
+          "title": "“Call එකේදී එයා ණය පිළිගත්තා” — Call Recordings වලින් මොකද වෙන්නේ?",
+          "description": "Call recording එකකින් ණයක් ඔප්පු කරන්න පුළුවන්ද? Admission එකේ අර්ථය, context, authenticity සහ original recording එක සුරක්ෂිත කිරීම ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම",
+        "civil",
+        "case",
+        "court",
+        "litigation",
+        "evidence",
+        "සිවිල්",
+        "නඩු",
+        "නඩුව",
+        "අධිකරණ",
+        "සාක්ෂි",
+        "සාක්ෂිය"
+      ],
+      "image": {
+        "src": "/assets/images/guides/call-recordings-admission-of-debt.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "no-written-agreement-loan-recovery",
+      "title": "I Lent Money Without a Written Agreement. Can I Still Recover It?",
+      "category": "contracts-recovery",
+      "topic_order": 3,
+      "description": "Other evidence may matter when there is no written loan agreement.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/no-written-agreement-loan-recovery/",
+          "title": "I Lent Money Without a Written Agreement. Can I Still Recover It?",
+          "description": "Lent money without a written agreement in Sri Lanka? A short practical guide to proving an informal loan, supporting evidence and prescription."
+        },
+        "si": {
+          "url": "/si/legal-guides/no-written-agreement-loan-recovery/",
+          "title": "ලිඛිත Agreement එකක් නැතුව මම මුදල් ණයට දුන්නා — ඒ මුදල් තවමත් අයකරගන්න පුළුවන්ද?",
+          "description": "ලිඛිත agreement එකක් නැතුව මුදල් ණයට දුන්නා නම් ඒ මුදල් අයකරගන්න පුළුවන්ද? සාක්ෂි, bank transfers, messages සහ prescription ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/no-written-agreement-loan-recovery.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "old-cheque-still-useful",
+      "title": "I Have a Cheque That Is One or Two Years Old – Is It Still Useful?",
+      "category": "contracts-recovery",
+      "topic_order": 4,
+      "description": "An old cheque, the underlying debt and legal time limits.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/old-cheque-still-useful/",
+          "title": "I Have a Cheque That Is One or Two Years Old – Is It Still Useful?",
+          "description": "Have a cheque that is one or two years old in Sri Lanka? A short practical guide to stale cheques, the underlying debt, evidence and prescription."
+        },
+        "si": {
+          "url": "/si/legal-guides/old-cheque-still-useful/",
+          "title": "මගේ ළඟ අවුරුද්දක් හෝ දෙකක් පරණ Cheque එකක් තියෙනවා — ඒක තවමත් ප්‍රයෝජනවත්ද?",
+          "description": "අවුරුද්දක් හෝ දෙකක් පරණ cheque එකක් තවමත් ප්‍රයෝජනවත්ද? Banking presentation, underlying debt, evidence සහ prescription ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/old-cheque-still-useful.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "debtor-asked-for-more-time",
+      "title": "The Debtor Has Asked for More Time – Should You Agree?",
+      "category": "contracts-recovery",
+      "topic_order": 5,
+      "description": "Points to consider before extending payment time.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/debtor-asked-for-more-time/",
+          "title": "The Debtor Has Asked for More Time – Should You Agree?",
+          "description": "A debtor has asked for more time to pay in Sri Lanka? A short practical guide to extensions, instalments, acknowledgments, part payments and prescription risks."
+        },
+        "si": {
+          "url": "/si/legal-guides/debtor-asked-for-more-time/",
+          "title": "Debtor තවත් කාලයක් ඉල්ලනවා — ඔබ එකඟ විය යුතුද?",
+          "description": "Debtor තවත් කාලයක් ඉල්ලනවා නම් එකඟ විය යුතුද? Extensions, instalments, acknowledgments, part payments සහ prescription risks ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/debtor-asked-for-more-time.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "how-long-to-recover-debt",
+      "title": "How Long Can You Wait Before Trying to Recover a Debt?",
+      "category": "contracts-recovery",
+      "topic_order": 6,
+      "description": "How delay may affect evidence and legal time limits.",
+      "published": "2026-09-10",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/how-long-to-recover-debt/",
+          "title": "How Long Can You Wait Before Taking Legal Action to Recover a Debt?",
+          "description": "How long can you wait before taking legal action to recover a debt in Sri Lanka? A short practical guide to prescription periods and when time may begin to run."
+        },
+        "si": {
+          "url": "/si/legal-guides/how-long-to-recover-debt/",
+          "title": "Debt එකක් අයකරගැනීමට නීතිමය පියවර ගන්න කලින් කොපමණ කාලයක් බලාගෙන ඉන්න පුළුවන්ද?",
+          "description": "Debt එකක් අයකරගැනීමට නීතිමය පියවර ගන්න කලින් කොපමණ කාලයක් බලාගෙන ඉන්න පුළුවන්ද? Prescription periods සහ time limits ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "prescription",
+        "periods",
+        "සහ",
+        "time",
+        "limits",
+        "ගැන",
+        "ප්‍රායෝගික",
+        "මාර්ගෝපදේශයක්.",
+        "debt",
+        "loan",
+        "money",
+        "recovery",
+        "repayment",
+        "ණය",
+        "මුදල්",
+        "අයකර",
+        "අයකරගැනීම",
+        "ගෙවීම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/how-long-to-recover-debt.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "oral-agreements-land-property",
+      "title": "Why Oral Agreements Can Be Dangerous When Land or Property Is Involved",
+      "category": "land-property",
+      "topic_order": 0,
+      "description": "Why informal arrangements may not meet legal formalities for land.",
+      "published": "2026-09-11",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/oral-agreements-land-property/",
+          "title": "Why Oral Agreements Can Be Dangerous When Land or Property Is Involved",
+          "description": "Learn why oral promises and informal agreements may not satisfy Sri Lankan legal requirements for land and property transactions."
+        },
+        "si": {
+          "url": "/si/legal-guides/oral-agreements-land-property/",
+          "title": "නිශ්චල දේපල සම්බන්ධ Oral Agreements අවදානම් වෙන්නේ ඇයි?",
+          "description": "නිශ්චල දේපල සම්බන්ධ වාචික පොරොන්දු සහ සාමාන්‍ය ලියවිලි ප්‍රමාණවත් නොවිය හැක්කේ ඇයිද යන්න ශ්‍රී ලංකා නීතිය අනුව සරලව පැහැදිලි කරයි."
+        }
+      },
+      "keywords": [
+        "land",
+        "property",
+        "oral",
+        "agreement",
+        "ඉඩම්",
+        "ඉඩම",
+        "දේපළ",
+        "දේපල",
+        "ගිවිසුම්",
+        "ගිවිසුම"
+      ],
+      "image": {
+        "src": "/assets/images/guides/oral-agreements-land-property.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "unfair-termination-proper-procedure",
+      "title": "What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?",
+      "category": "employment-labour",
+      "topic_order": 0,
+      "description": "Questions, procedures and remedies following termination.",
+      "published": "2026-09-11",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/unfair-termination-proper-procedure/",
+          "title": "What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?",
+          "description": "What can you do if your employer terminates you unfairly or without proper procedure in Sri Lanka? A practical guide to reasons, procedure, remedies and time limits."
+        },
+        "si": {
+          "url": "/si/legal-guides/unfair-termination-proper-procedure/",
+          "title": "ඔබගේ සේවායෝජකයා අසාධාරණ ලෙස හෝ නිසි ක්‍රියාපටිපාටියක් නොමැතිව ඔබගේ සේවය අවසන් කළා නම් ඔබට කළ හැක්කේ මොනවාද?",
+          "description": "සේවායෝජකයා අසාධාරණ ලෙස හෝ නිසි ක්‍රියාපටිපාටියක් නොමැතිව සේවය අවසන් කළා නම් සලකා බැලිය යුතු ප්‍රධාන නීතිමය ප්‍රශ්න, සහන සහ කාලසීමා ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "employment",
+        "labour",
+        "labor",
+        "termination",
+        "workplace",
+        "job",
+        "compensation",
+        "සේවා",
+        "සේවය",
+        "රැකියා",
+        "රැකියාව",
+        "කම්කරු",
+        "වන්දි"
+      ],
+      "image": {
+        "src": "/assets/images/guides/unfair-termination-proper-procedure.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "labour-tribunal-reinstatement-compensation",
+      "title": "Reinstatement or Compensation: What Can a Labour Tribunal Order?",
+      "category": "employment-labour",
+      "topic_order": 1,
+      "description": "The main forms of relief in a Labour Tribunal application.",
+      "published": "2026-09-12",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/labour-tribunal-reinstatement-compensation/",
+          "title": "If a Labour Tribunal Finds Your Termination Unfair, Will You Automatically Get Your Job Back — and How Is Compensation Decided?",
+          "description": "How do Sri Lankan Labour Tribunals decide reinstatement or compensation after an unfair termination? Understand the factors and possible remedies."
+        },
+        "si": {
+          "url": "/si/legal-guides/labour-tribunal-reinstatement-compensation/",
+          "title": "කම්කරු විනිශ්චය සභාව ඔබගේ සේවා අවසන් කිරීම අසාධාරණ බව තීරණය කළොත්, ඔබට අනිවාර්යයෙන්ම රැකියාව නැවත ලැබෙනවාද — වන්දි තීරණය කරන්නේ කොහොමද?",
+          "description": "කම්කරු විනිශ්චය සභාවක් සේවා අවසන් කිරීම අසාධාරණ බව තීරණය කළොත් නැවත රැකියාව අනිවාර්යද සහ වන්දි තීරණය කරන්නේ කොහොමද යන්න ගැන ප්‍රායෝගික මාර්ගෝපදේශයක්."
+        }
+      },
+      "keywords": [
+        "employment",
+        "labour",
+        "labor",
+        "termination",
+        "workplace",
+        "job",
+        "compensation",
+        "සේවා",
+        "සේවය",
+        "රැකියා",
+        "රැකියාව",
+        "කම්කරු",
+        "වන්දි"
+      ],
+      "image": {
+        "src": "/assets/images/guides/labour-tribunal-reinstatement-compensation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "what-is-mediation",
+      "title": "What Is Mediation?",
+      "category": "dispute-resolution",
+      "topic_order": 0,
+      "description": "How mediation differs from arbitration and litigation, and when it may help.",
+      "published": "2026-09-19",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/what-is-mediation/",
+          "title": "What Is Mediation, and When Can It Help Resolve a Dispute?",
+          "description": "Learn what mediation is, how it differs from arbitration and litigation, and when it may provide a practical way to resolve a dispute."
+        },
+        "si": {
+          "url": "/si/dispute-resolution/what-is-mediation/",
+          "title": "සමථකරණය යනු කුමක්ද? ආරවුලක් විසඳා ගැනීමට එය සුදුසු වන්නේ කවදාද?",
+          "description": "සමථකරණය යනු කුමක්ද, එය නඩු පැවරීමෙන් සහ බේරුම්කරණයෙන් වෙනස් වන්නේ කෙසේද සහ එය සුදුසු විය හැකි ආරවුල් පිළිබඳ සරල හැඳින්වීමක්."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "mediator",
+        "negotiation",
+        "settlement",
+        "dispute",
+        "සමථ",
+        "සමථකරණය",
+        "සමථකරණ",
+        "සාකච්ඡා",
+        "ආරවුල්",
+        "ආරවුල"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-is-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "preparing-for-mediation",
+      "title": "Preparing for Mediation",
+      "category": "dispute-resolution",
+      "topic_order": 2,
+      "description": "What parties should and should not do before and during mediation.",
+      "published": "2026-09-19",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/preparing-for-mediation/",
+          "title": "Preparing for Mediation: What to Do and What Not to Do",
+          "description": "A practical guide to preparing for mediation, participating effectively and avoiding common mistakes before signing a settlement."
+        },
+        "si": {
+          "url": "/si/dispute-resolution/preparing-for-mediation/",
+          "title": "සමථකරණයකට සූදානම් වීම: කළ යුතු සහ නොකළ යුතු දේ",
+          "description": "සමථකරණයකට පෙර සහ අතරතුර කළ යුතු හා නොකළ යුතු දේ සහ නිරවුල් කිරීමේ ගිවිසුමක් අත්සන් කිරීමට පෙර සලකා බැලිය යුතු කරුණු."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "mediator",
+        "negotiation",
+        "settlement",
+        "dispute",
+        "සමථ",
+        "සමථකරණය",
+        "සමථකරණ",
+        "සාකච්ඡා",
+        "ආරවුල්",
+        "ආරවුල"
+      ],
+      "image": {
+        "src": "/assets/images/guides/preparing-for-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    },
+    {
+      "id": "civil-commercial-mediation-act-sri-lanka",
+      "title": "Sri Lanka's New Civil and Commercial Mediation Law",
+      "category": "dispute-resolution",
+      "topic_order": 3,
+      "description": "A guide to Act No. 13 of 2026 and its practical implications.",
+      "published": "2026-09-19",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/civil-commercial-mediation-act-sri-lanka/",
+          "title": "Sri Lanka’s New Civil and Commercial Mediation Law: What Does It Mean for Resolving Disputes?",
+          "description": "A practical guide to Sri Lanka’s Mediation (Civil and Commercial Disputes) Act, No. 13 of 2026, including confidentiality, prescription and enforcement."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "mediator",
+        "negotiation",
+        "settlement",
+        "dispute",
+        "සමථ",
+        "සමථකරණය",
+        "සමථකරණ",
+        "සාකච්ඡා",
+        "ආරවුල්",
+        "ආරවුල"
+      ],
+      "image": {
+        "src": "/assets/images/guides/civil-commercial-mediation-act-sri-lanka.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null
+    }
+  ]
+}
