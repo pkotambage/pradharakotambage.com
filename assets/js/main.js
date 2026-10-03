@@ -1,6 +1,19 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 
+// Make article search reachable from every page's main navigation.
+if (siteNav && !siteNav.querySelector('.article-search-nav')) {
+  const searchLink = document.createElement('a');
+  searchLink.className = 'article-search-nav';
+  searchLink.href = '/legal-guides/all/';
+  searchLink.textContent = 'Search articles';
+  if (window.location.pathname.replace(/index\.html$/, '') === '/legal-guides/all/') {
+    searchLink.classList.add('active');
+    searchLink.setAttribute('aria-current', 'page');
+  }
+  siteNav.append(searchLink);
+}
+
 if (menuToggle && siteNav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = siteNav.classList.toggle('open');
