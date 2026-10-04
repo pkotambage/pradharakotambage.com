@@ -18,7 +18,7 @@ async function setup(page) {
 
 test('no analytics before consent or after decline; allow is persistent and sanitized; withdrawal removes cookies', async ({ page, context }) => {
   const tags = await setup(page);
-  await page.goto('https://pradharakotambage.com/?q=private-search#private-fragment');
+  await page.goto('https://pradharakotambage.com/?q=private-search&utm_source=whatsapp&utm_medium=social&utm_campaign=guide_october#private-fragment');
   await expect(page.getByRole('button', {name: 'Decline analytics', exact:true})).toBeVisible();
   expect(tags).toHaveLength(0);
   await page.getByRole('button', {name:'Decline analytics',exact:true}).click();
@@ -31,6 +31,8 @@ test('no analytics before consent or after decline; allow is persistent and sani
   const config = await page.evaluate(() => Array.from(window.dataLayer.find(x => x[0] === 'config')));
   expect(config[1]).toBe('G-WNM4XQ40B7');
   expect(config[2].page_location).toBe('https://pradharakotambage.com/');
+  expect(config[2].campaign_source).toBe('whatsapp');
+  expect(config[2].campaign_name).toBe('guide_october');
   expect(config[2].allow_google_signals).toBe(false);
   await page.reload();
   await expect.poll(() => tags.length).toBe(2);
@@ -46,8 +48,9 @@ test('no analytics before consent or after decline; allow is persistent and sani
 test('mobile Sinhala choices fit and expiry asks again', async ({ page }) => {
   await setup(page);
   await page.setViewportSize({width:375,height:667});
-  await page.goto('https://pradharakotambage.com/si/dispute-resolution/what-is-mediation/');
+  await page.goto('https://pradharakotambage.com/si/dispute-resolution/');
   await expect(page.getByRole('button',{name:'අවසර නොදෙන්න',exact:true})).toBeVisible();
+  await expect(page.getByRole('button',{name:'විශ්ලේෂණ සැකසුම්',exact:true})).toBeAttached();
   const box = await page.locator('.analytics-choice').boundingBox();
   expect(box.x).toBeGreaterThanOrEqual(0);
   expect(box.x+box.width).toBeLessThanOrEqual(375);

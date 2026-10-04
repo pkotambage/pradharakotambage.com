@@ -187,7 +187,15 @@ if (articleContent) {
     window.gtag('js', new Date());
     let referrer = '';
     try { referrer = new URL(document.referrer).origin + '/'; } catch (_) {}
+    // Only conventional, non-personal campaign labels survive URL sanitisation.
+    const campaign = {};
+    const query = new URLSearchParams(location.search);
+    [['utm_source', 'campaign_source'], ['utm_medium', 'campaign_medium'], ['utm_campaign', 'campaign_name']].forEach(([key, field]) => {
+      const value = query.get(key);
+      if (value && /^[a-zA-Z0-9_-]{1,100}$/.test(value)) campaign[field] = value;
+    });
     window.gtag('config', measurementId, {
+      ...campaign,
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       page_location: location.origin + location.pathname,
@@ -244,7 +252,8 @@ if (articleContent) {
   });
   panel.append(actions);
   document.body.append(panel);
-  document.querySelectorAll('.site-footer .footer-links').forEach((links) => {
+  document.querySelectorAll('.site-footer').forEach((footer) => {
+    const links = footer.querySelector('.footer-links') || footer;
     const separator = document.createElement('span');
     separator.textContent = '·';
     separator.setAttribute('aria-hidden', 'true');
