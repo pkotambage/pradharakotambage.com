@@ -370,3 +370,15 @@ a:hover { text-decoration: underline; }
   .article-search-panel { padding: 18px; }
   .article-search-controls input { flex-basis: 100%; }
 }
+
+/* Equal, optional analytics choices, with a persistent footer control. */
+.analytics-choice{position:fixed;z-index:1000;bottom:16px;left:16px;right:16px;margin:auto;max-width:760px;max-height:70vh;overflow:auto;padding:20px 24px;background:#fffdf9;color:#17324d;border:1px solid #c8d4cd;border-radius:8px;box-shadow:0 5px 28px #17324d30}
+.analytics-choice[hidden]{display:none}
+.analytics-choice p{margin:0 0 14px;line-height:1.6}
+.analytics-choice a{color:#17594f;text-decoration:underline}
+.analytics-actions{display:flex;flex-wrap:wrap;gap:12px}
+.analytics-actions button{font:inherit;font-weight:600;background:#f3f8f5;color:#17324d;border:1px solid #456b60;border-radius:4px;padding:10px 16px;cursor:pointer}
+.analytics-actions button:hover{background:#e3ece7}
+.analytics-actions button:focus-visible,.analytics-settings:focus-visible{outline:3px solid #a55d38;outline-offset:3px}
+.analytics-settings{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+@media(max-width:500px){.analytics-choice{bottom:8px;left:8px;right:8px;padding:16px}.analytics-actions button{flex:1}}

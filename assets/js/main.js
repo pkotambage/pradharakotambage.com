@@ -157,3 +157,111 @@ if (articleContent) {
     }
   });
 }
+
+
+// Optional GA4: no Google script or analytics request before an explicit choice.
+(() => {
+  const measurementId = 'G-WNM4XQ40B7';
+  const storageKey = 'pk-analytics-choice-v1';
+  const maxAge = 180 * 24 * 60 * 60 * 1000;
+  let started = false;
+  let choice = null;
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    if (saved && ['allow', 'deny'].includes(saved.value) && Date.now() - saved.time < maxAge) choice = saved.value;
+  } catch (_) { /* Storage is optional; a fresh choice is required when unavailable. */ }
+  window['ga-disable-' + measurementId] = choice !== 'allow';
+
+  function startAnalytics() {
+    if (started) return;
+    // Keep development and preview traffic out of the production property.
+    if (!['pradharakotambage.com', 'www.pradharakotambage.com'].includes(location.hostname)) return;
+    started = true;
+    window['ga-disable-' + measurementId] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', {
+      analytics_storage: 'granted', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied'
+    });
+    window.gtag('js', new Date());
+    let referrer = '';
+    try { referrer = new URL(document.referrer).origin + '/'; } catch (_) {}
+    window.gtag('config', measurementId, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      page_location: location.origin + location.pathname,
+      page_referrer: referrer,
+      cookie_expires: 15552000,
+      cookie_update: false
+    });
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+    document.head.append(script);
+  }
+
+  function clearAnalyticsCookies() {
+    document.cookie.split(';').forEach((cookie) => {
+      const name = cookie.split('=')[0].trim();
+      if (name !== '_ga' && !name.startsWith('_ga_')) return;
+      ['', location.hostname, '.' + location.hostname, 'pradharakotambage.com', '.pradharakotambage.com'].forEach((domain) => {
+        document.cookie = name + '=; Max-Age=0; path=/; SameSite=Lax' + (domain ? '; domain=' + domain : '');
+      });
+    });
+  }
+
+  const sinhala = document.documentElement.lang.toLowerCase().startsWith('si');
+  const panel = document.createElement('section');
+  panel.className = 'analytics-choice';
+  panel.setAttribute('aria-label', sinhala ? 'වෙබ් අඩවි විශ්ලේෂණ සැකසුම්' : 'Analytics preferences');
+  panel.hidden = choice !== null;
+  panel.innerHTML = sinhala
+    ? '<p><strong>වෙබ් අඩවි භාවිතය පිළිබඳ විශ්ලේෂණය</strong><br>ඔබ අවසර දුන්නොත් පමණක්, මෙම වෙබ් අඩවිය භාවිත කරන ආකාරය තේරුම් ගැනීමට Google Analytics භාවිත කරමු. ඔබගේ තේරීම පසුව වෙනස් කළ හැක. <a href="/privacy/">රහස්‍යතා තොරතුරු (English)</a></p>'
+    : '<p><strong>Optional website analytics</strong><br>With your permission, we use Google Analytics to understand how this website is used. You can change your choice at any time. <a href="/privacy/">Privacy details</a></p>';
+  const actions = document.createElement('div');
+  actions.className = 'analytics-actions';
+  const settingsButtons = [];
+  function saveChoice(value) {
+    const wasStarted = started;
+    choice = value;
+    try { localStorage.setItem(storageKey, JSON.stringify({ value, time: Date.now() })); } catch (_) {}
+    panel.hidden = true;
+    if (value === 'allow') startAnalytics();
+    else {
+      window['ga-disable-' + measurementId] = true;
+      clearAnalyticsCookies();
+      if (wasStarted) { location.reload(); return; }
+    }
+    settingsButtons[0]?.focus();
+  }
+  [['deny', sinhala ? 'අවසර නොදෙන්න' : 'Decline analytics'], ['allow', sinhala ? 'අවසර දෙන්න' : 'Allow analytics']].forEach(([value, label]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.addEventListener('click', () => saveChoice(value));
+    actions.append(button);
+  });
+  panel.append(actions);
+  document.body.append(panel);
+  document.querySelectorAll('.site-footer .footer-links').forEach((links) => {
+    const separator = document.createElement('span');
+    separator.textContent = '·';
+    separator.setAttribute('aria-hidden', 'true');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'analytics-settings';
+    button.textContent = sinhala ? 'විශ්ලේෂණ සැකසුම්' : 'Analytics settings';
+    button.addEventListener('click', () => { panel.hidden = false; actions.querySelector('button').focus(); });
+    settingsButtons.push(button);
+    links.append(separator, button);
+  });
+  window.addEventListener('storage', (event) => {
+    if (event.key === storageKey || event.key === null) {
+      window['ga-disable-' + measurementId] = true;
+      location.reload();
+    }
+  });
+  if (choice === 'allow') startAnalytics();
+  else clearAnalyticsCookies();
+})();
