@@ -31,7 +31,7 @@ class SiteValidationTests(unittest.TestCase):
         errors, warnings, totals = validator.validate(self.root)
         self.assertEqual(errors, [])
         self.assertEqual(totals['pages'], len(before))
-        self.assertTrue(all(w.startswith('T13:') for w in warnings))
+        self.assertEqual(warnings, [])
         self.assertEqual(before, {p: p.read_bytes() for p in before})
 
     def test_broken_links_assets_fragments_and_jsonld_fail(self):

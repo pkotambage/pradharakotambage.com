@@ -187,11 +187,7 @@ def validate(root):
             back = any(a.get('hreflang') == source_language and a.get('href') == BASE + current
                        for a in counterpart.links('alternate'))
             if not back:
-                # This exact existing section issue is tracked as T13; article failures are never exempt.
-                if current == '/si/dispute-resolution/' and url == BASE + '/dispute-resolution/' and lang == 'en':
-                    warnings.add('T13: English Dispute Resolution section lacks reciprocal language metadata.')
-                else:
-                    errors.append(f'{current}: missing reciprocal hreflang from {url}')
+                errors.append(f'{current}: missing reciprocal hreflang from {url}')
 
     for css in (root / 'assets').rglob('*.css'):
         check_css(css, css.read_text(encoding='utf-8'))

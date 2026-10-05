@@ -60,9 +60,8 @@ Use `--root PATH` to check a complete isolated site copy. External website
 availability, Google indexing, accessibility and full structured-data eligibility
 are separate review tasks; this validator does not claim to establish them.
 
-The existing T13 issue on the two Dispute Resolution section pages is reported as
-one narrowly scoped warning. Broken article language pairs always fail. Remove
-the exception when T13 fixes the section metadata.
+Reciprocal language metadata is required for both articles and section pages.
+Missing return links fail validation; the former T13 section exception has been removed.
 
 GitHub's **Validate website** workflow runs the same command on pull requests and
 branch pushes. Check its result before merging, and run the command before a
