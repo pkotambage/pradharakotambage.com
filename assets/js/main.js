@@ -15,9 +15,32 @@ if (siteNav && !siteNav.querySelector('.article-search-nav')) {
 }
 
 if (menuToggle && siteNav) {
+  const mobileMenu = window.matchMedia('(max-width: 1280px)');
+  let lastFocused = document.activeElement;
+  function setMenu(open, returnFocus = false) {
+    siteNav.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    if (returnFocus) menuToggle.focus();
+  }
   menuToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    setMenu(!siteNav.classList.contains('open'));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileMenu.matches && siteNav.classList.contains('open')) {
+      event.preventDefault();
+      setMenu(false, true);
+    }
+  });
+  document.addEventListener('focusin', (event) => {
+    lastFocused = event.target;
+    if (mobileMenu.matches && !siteNav.contains(event.target) && event.target !== menuToggle) setMenu(false);
+  });
+  mobileMenu.addEventListener('change', () => {
+    // A breakpoint can hide and blur the focused element before this callback.
+    const focusHidden = mobileMenu.matches && siteNav.contains(lastFocused);
+    if (!mobileMenu.matches && lastFocused === menuToggle) siteNav.querySelector('a')?.focus();
+    setMenu(false, focusHidden);
   });
 }
 

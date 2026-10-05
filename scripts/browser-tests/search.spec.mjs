@@ -28,10 +28,11 @@ test('search form, English/Sinhala filtering, hidden cards, empty results and Cl
   await page.getByRole('button', { name: 'Search', exact: true }).click();
   await expect(page).toHaveURL(/\/legal-guides\/all\/\?q=mediation$/);
   await expect(page.locator('#guide-search')).toHaveValue('mediation');
-  await expectResults(page, 4);
+  await expectResults(page, 7);
   await expect(page.locator('#guide-results .library-guide').filter({ visible: true }).getByRole('heading')).toContainText([
     'Mediation Is Assisted Negotiation', 'What Is Mediation?', 'Preparing for Mediation',
-    "Sri Lanka's New Civil and Commercial Mediation Law"
+    "Sri Lanka's New Civil and Commercial Mediation Law",
+    'From Destructive to Constructive Conflict', 'Listening as a Communication Tool', 'Understanding Conflict'
   ]);
   await page.locator('#guide-search').fill('මුදල්');
   await expectResults(page, 7);

@@ -20,6 +20,22 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Keyboard access: the first Tab reveals a direct route past the header. */
+.skip-link {
+  position: fixed; top: 12px; left: 12px; z-index: 1000;
+  transform: translateY(-200%); padding: 12px 18px;
+  max-width: calc(100% - 24px); background: var(--ink); color: white;
+  font-weight: 700; border-radius: 3px;
+}
+.skip-link:focus { transform: translateY(0); }
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--ink); outline-offset: 4px;
+  box-shadow: 0 0 0 4px var(--paper);
+}
+#main-content { scroll-margin-top: 110px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 body {
   margin: 0;
   color: var(--charcoal);

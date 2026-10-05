@@ -902,6 +902,111 @@
         "topic"
       ],
       "sinhala_label": null
+    },
+    {
+      "id": "destructive-constructive-conflict-empowerment-acknowledgement",
+      "title": "From Destructive to Constructive Conflict: Empowerment and Acknowledgement",
+      "category": "dispute-resolution",
+      "topic_order": 19,
+      "description": "How mediation can help conflict move from rigidity and blame toward clarity, flexibility, empowerment and acknowledgement.",
+      "published": "2026-10-04",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/destructive-constructive-conflict-empowerment-acknowledgement/",
+          "title": "From Destructive to Constructive Conflict: Empowerment and Acknowledgement",
+          "description": "How mediation can help conflict move from rigidity and blame toward clarity, flexibility, empowerment and acknowledgement."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "conflict",
+        "listening",
+        "communication",
+        "empowerment",
+        "acknowledgement"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-is-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "How mediation can help conflict move from rigidity and blame toward clarity, flexibility, empowerment and acknowledgement."
+    },
+    {
+      "id": "listening-communication-tool-mediation",
+      "title": "Listening as a Communication Tool in Mediation",
+      "category": "dispute-resolution",
+      "topic_order": 20,
+      "description": "Why listening matters in mediation, including listening without an agenda, non-verbal communication, summarising, reframing and mirroring.",
+      "published": "2026-10-04",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/listening-communication-tool-mediation/",
+          "title": "Listening as a Communication Tool in Mediation",
+          "description": "Why listening matters in mediation, including listening without an agenda, non-verbal communication, summarising, reframing and mirroring."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "conflict",
+        "listening",
+        "communication",
+        "empowerment",
+        "acknowledgement"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-is-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Why listening matters in mediation, including listening without an agenda, non-verbal communication, summarising, reframing and mirroring."
+    },
+    {
+      "id": "understanding-conflict-beyond-disagreement",
+      "title": "Understanding Conflict: Looking Beyond the Disagreement",
+      "category": "dispute-resolution",
+      "topic_order": 21,
+      "description": "A practical mediation perspective on personal, relational, structural and cultural dimensions of conflict, and the interests beneath positions.",
+      "published": "2026-10-04",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/understanding-conflict-beyond-disagreement/",
+          "title": "Understanding Conflict: Looking Beyond the Disagreement",
+          "description": "A practical mediation perspective on personal, relational, structural and cultural dimensions of conflict, and the interests beneath positions."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "conflict",
+        "listening",
+        "communication",
+        "empowerment",
+        "acknowledgement"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-is-mediation.webp",
+        "alt": "",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "A practical mediation perspective on personal, relational, structural and cultural dimensions of conflict, and the interests beneath positions."
     }
   ]
 }

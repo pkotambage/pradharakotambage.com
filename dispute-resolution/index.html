@@ -179,6 +179,7 @@
   </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../" aria-label="Pradhara Kotambage home">
@@ -186,11 +187,11 @@
         <span class="brand-subtitle">Legal Knowledge &amp; Dispute Resolution</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="menu-toggle" aria-controls="site-navigation" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
         <a href="../">Home</a>
         <a href="../about/">About</a>
         <a href="../legal-guides/">Legal Guides</a>
@@ -202,7 +203,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="resolution-hero">
       <div class="container resolution-hero-inner">
         <div>
