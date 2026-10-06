@@ -46,15 +46,13 @@ def article_paths():
 
 
 def materialize_related(text):
-    # Legacy paragraph -> static callout.
-    pattern = re.compile(
-        r'<p>\s*<strong>Related guides?:?</strong>\s*(.*?)</p>',
-        re.I | re.S,
+    # Repair an over-broad early migration artifact if encountered.
+    text = re.sub(
+        r'<div class="article-callout related-guides-inline"><p><strong>Related guides</strong></p><p></p></div>\s*',
+        '',
+        text,
+        flags=re.I,
     )
-    def repl(match):
-        body = re.sub(r'\s·\s', '<br>', match.group(1).strip())
-        return '<div class="article-callout related-guides-inline"><p><strong>Related guides</strong></p><p>' + body + '</p></div>'
-    text = pattern.sub(repl, text)
 
     # Materialize links that were previously added at runtime.
     for title, href in PUBLISHED.items():
@@ -88,6 +86,13 @@ def materialize_related(text):
             f'<p>{LABOUR_SI}</p>',
             f'<p><a href="../labour-tribunal-reinstatement-compensation/">{LABOUR_SI}</a> — පළ කර ඇත</p>',
         )
+
+    call_si = '“Call එකේදී එයා ණය පිළිගත්තා” — Call Recordings වලින් මොකද වෙන්නේ?'
+    text = re.sub(
+        rf'<span class=["\']related-coming["\']>\s*<strong>{re.escape(call_si)}</strong>\s*</span>',
+        f'<a class="related-link" href="../call-recordings-admission-of-debt/">{call_si}</a>',
+        text,
+    )
     return text
 
 
