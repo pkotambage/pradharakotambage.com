@@ -1,0 +1,89 @@
+name: T16 verified project backup
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  backup-and-restore-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Install Chromium for validation
+        run: npx playwright install --with-deps chromium
+
+      - name: Build backup manifest
+        shell: bash
+        run: |
+          mkdir -p backup-staging/project
+          printf "backup_created_utc=%s\n" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > backup-staging/backup-manifest.txt
+          printf "repository=%s\n" "${GITHUB_REPOSITORY}" >> backup-staging/backup-manifest.txt
+          printf "commit=%s\n" "${GITHUB_SHA}" >> backup-staging/backup-manifest.txt
+          printf "branch=%s\n" "${GITHUB_REF_NAME}" >> backup-staging/backup-manifest.txt
+          printf "custom_domain=%s\n" "$(cat CNAME)" >> backup-staging/backup-manifest.txt
+
+      - name: Copy deployable project
+        shell: bash
+        run: |
+          rsync -a ./ backup-staging/project/ \
+            --exclude '.git/' \
+            --exclude 'node_modules/' \
+            --exclude 'test-results/' \
+            --exclude 'playwright-report/' \
+            --exclude 'backup-staging/' \
+            --exclude '*.env' \
+            --exclude '.env*' \
+            --exclude '*.pem' \
+            --exclude '*.key'
+
+      - name: Create verified archive
+        shell: bash
+        run: |
+          tar -C backup-staging -czf pradharakotambage-com-backup.tar.gz project backup-manifest.txt
+          sha256sum pradharakotambage-com-backup.tar.gz > pradharakotambage-com-backup.tar.gz.sha256
+
+      - name: Restore into isolated directory
+        shell: bash
+        run: |
+          mkdir restored
+          tar -xzf pradharakotambage-com-backup.tar.gz -C restored
+          test -f restored/project/index.html
+          test -f restored/project/CNAME
+          test -f restored/project/package.json
+          test -f restored/project/scripts/validate-site.py
+
+      - name: Validate restored copy
+        shell: bash
+        run: |
+          cd restored/project
+          npm ci
+          npx playwright install --with-deps chromium
+          npm run validate
+
+      - name: Upload verified backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-project-backup
+          path: |
+            pradharakotambage-com-backup.tar.gz
+            pradharakotambage-com-backup.tar.gz.sha256
+          retention-days: 90
