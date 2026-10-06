@@ -26,14 +26,20 @@ class ArticleFinishingTests(unittest.TestCase):
                 )
         self.assertEqual(failures, [], "\n".join(failures))
 
-    def test_legacy_related_guide_runtime_patterns_are_materialized(self):
+    def test_runtime_related_link_artifacts_are_materialized(self):
         failures = []
+        published_placeholders = (
+            "How Long Can You Wait Before Taking Legal Action to Recover a Debt?",
+            "“Call එකේදී එයා ණය පිළිගත්තා” — Call Recordings වලින් මොකද වෙන්නේ?",
+        )
+        malformed = '<div class="article-callout related-guides-inline"><p><strong>Related guides</strong></p><p></p></div>'
         for path in article_paths():
             text = path.read_text(encoding="utf-8")
-            if re.search(r'<p>\s*<strong>Related guides?:?</strong>', text, re.I):
-                failures.append(f"{path.relative_to(ROOT)}: legacy Related guides paragraph")
-            if 'class="related-coming"' in text or "class='related-coming'" in text:
-                failures.append(f"{path.relative_to(ROOT)}: legacy related-coming placeholder")
+            if malformed in text:
+                failures.append(f"{path.relative_to(ROOT)}: empty nested related-guide callout")
+            for title in published_placeholders:
+                if 'related-coming' in text and title in text:
+                    failures.append(f"{path.relative_to(ROOT)}: published guide still marked coming soon: {title}")
         self.assertEqual(failures, [], "\n".join(failures))
 
     def test_main_js_no_longer_injects_article_content(self):
