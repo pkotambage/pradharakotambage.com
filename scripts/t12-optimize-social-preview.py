@@ -32,7 +32,7 @@ for path in ROOT.rglob("*"):
     for old, replacement in replacements.items():
         new = new.replace(old, replacement)
 
-    if path.suffix.lower() == ".html" and "property=\"og:image\"" in new and "assets/images/social-preview.jpg" in new:
+    if path.suffix.lower() in {".html", ".tpl"} and "property=\"og:image\"" in new and "assets/images/social-preview.jpg" in new:
         if 'property="og:image:width"' not in new:
             marker = '<meta property="og:image" content="https://pradharakotambage.com/assets/images/social-preview.jpg">'
             extra = marker + '\n  <meta property="og:image:type" content="image/jpeg">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">'
