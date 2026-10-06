@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/t12-optimize-social-preview.py"\n      - ".github/workflows/t12-optimize-social-preview.yml"
+      - "scripts/t12-optimize-social-preview.py"
+      - ".github/workflows/t12-optimize-social-preview.yml"
 
 permissions:
   contents: write
