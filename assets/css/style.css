@@ -409,3 +409,17 @@ html[lang="si"] h1, html[lang="si"] h2, html[lang="si"] h3 { letter-spacing: 0; 
   .brand { max-width: calc(100% - 60px); }
   .brand-name, .brand-subtitle { overflow-wrap: anywhere; }
 }
+
+
+/* T08: preserve 200% text enlargement without horizontal page overflow. */
+.library-page,
+.contact-hero,
+.contact-main { overflow-wrap: anywhere; }
+.library-page .language-links { flex-wrap: wrap; }
+.contact-hero h1,
+.contact-name,
+.contact-value,
+.contact-value a { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 480px) {
+  .contact-card, .note-card { padding-left: 22px !important; padding-right: 22px !important; }
+}
