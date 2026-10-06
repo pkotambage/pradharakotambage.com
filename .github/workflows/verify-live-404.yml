@@ -1,16 +1,18 @@
 name: Verify live 404
 
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "404.html"
+      - ".github/workflows/verify-live-404.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   verify-live-404:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -20,6 +22,7 @@ jobs:
           url="https://pradharakotambage.com/t11-deliberately-missing-page-check/"
           body="$(mktemp)"
           status="$(curl --silent --show-error --location --output "$body" --write-out "%{http_code}" "$url")"
+          echo "HTTP status: $status"
           test "$status" = "404"
           grep -Fq "We could not find that page." "$body"
           grep -Fq 'href="/legal-guides/"' "$body"
