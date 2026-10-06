@@ -11,11 +11,11 @@ with Image.open(src) as im:
     im.save(dst, "JPEG", quality=86, optimize=True, progressive=True, subsampling="4:2:0")
 
 replacements = {
-    "https://pradharakotambage.com/assets/images/social-preview.png":
+    "https://pradharakotambage.com/assets/images/social-preview.jpg":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
-    "https://pradharakotambage.com/assets/images/family-law-amicable-separation.svg":
+    "https://pradharakotambage.com/assets/images/social-preview.jpg":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
-    "https://pradharakotambage.com/assets/images/family-law-uncontested-divorce.svg":
+    "https://pradharakotambage.com/assets/images/social-preview.jpg":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
 }
 
