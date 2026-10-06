@@ -2,6 +2,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
+THIS_SCRIPT = Path(__file__).resolve()
 src = ROOT / "assets/images/social-preview.png"
 dst = ROOT / "assets/images/social-preview.jpg"
 
@@ -11,27 +12,26 @@ with Image.open(src) as im:
     im.save(dst, "JPEG", quality=86, optimize=True, progressive=True, subsampling="4:2:0")
 
 replacements = {
-    "https://pradharakotambage.com/assets/images/social-preview.jpg":
+    "https://pradharakotambage.com/assets/images/social-preview.png":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
-    "https://pradharakotambage.com/assets/images/social-preview.jpg":
+    "https://pradharakotambage.com/assets/images/family-law-amicable-separation.svg":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
-    "https://pradharakotambage.com/assets/images/social-preview.jpg":
+    "https://pradharakotambage.com/assets/images/family-law-uncontested-divorce.svg":
         "https://pradharakotambage.com/assets/images/social-preview.jpg",
 }
 
-text_suffixes = {".html", ".tpl", ".py", ".json"}
+text_suffixes = {".html", ".tpl", ".json"}
 changed = []
 for path in ROOT.rglob("*"):
     if not path.is_file() or path.suffix.lower() not in text_suffixes:
         continue
-    if ".git" in path.parts:
+    if ".git" in path.parts or path.resolve() == THIS_SCRIPT:
         continue
     text = path.read_text(encoding="utf-8")
     new = text
     for old, replacement in replacements.items():
         new = new.replace(old, replacement)
 
-    # Add explicit dimensions/type for pages using the standardized raster card.
     if path.suffix.lower() == ".html" and "property=\"og:image\"" in new and "assets/images/social-preview.jpg" in new:
         if 'property="og:image:width"' not in new:
             marker = '<meta property="og:image" content="https://pradharakotambage.com/assets/images/social-preview.jpg">'
