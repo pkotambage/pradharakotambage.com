@@ -256,10 +256,10 @@ a:hover { text-decoration: underline; }
   background: linear-gradient(180deg, #fbf8f2 0%, #f5efe5 100%);
   border-top: 1px solid rgba(23,50,77,.06);
 }
-.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .feature-panel {
-  padding: 46px 48px;
-  min-height: 330px;
+  padding: 40px 36px;
+  min-height: 320px;
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
@@ -283,6 +283,10 @@ a:hover { text-decoration: underline; }
   bottom: -65px;
   opacity: .32;
 }
+.guides-panel { background: linear-gradient(135deg, #f3e3d8, #fbf1e9); border-color: #e5cfc0; }
+.guides-panel::before { background: var(--terracotta); }
+.guides-panel::after { background: #d9a58b; }
+.guides-panel .eyebrow { color: #8b5745; }
 .practice-panel { background: linear-gradient(135deg, #d8eaf1, #edf5f6); border-color: #c8dde5; }
 .practice-panel::before { background: #648ca5; }
 .practice-panel::after { background: #8eb5c8; }
@@ -290,7 +294,8 @@ a:hover { text-decoration: underline; }
 .resolution-panel::before { background: var(--teal); }
 .resolution-panel::after { background: #8daf8f; }
 .resolution-panel .eyebrow { color: #446a59; }
-.feature-panel h2 { font-size: 2.35rem; margin-bottom: 18px; }
+.pathway-heading { margin-bottom: 28px; }
+.feature-panel h2 { font-size: 2rem; margin-bottom: 18px; }
 .feature-panel p:not(.eyebrow) { max-width: 560px; }
 
 .secondary-section { padding-top: 44px; background: linear-gradient(180deg, #f6efe4, #efe4d5); }
