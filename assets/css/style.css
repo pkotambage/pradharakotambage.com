@@ -68,7 +68,7 @@ a:hover { text-decoration: underline; }
 .site-nav { display: flex; align-items: center; gap: 14px; font-size: .93rem; }
 .site-nav a { color: #172b3a; white-space: nowrap; }
 .site-nav a.active { padding-bottom: 8px; border-bottom: 2px solid var(--terracotta); }
-.menu-toggle { display: none; border: 0; background: transparent; padding: 8px; }
+.menu-toggle { display: none; border: 0; background: transparent; padding: 8px; min-width: 44px; min-height: 44px; }
 .menu-toggle span { display: block; width: 25px; height: 2px; background: var(--ink); margin: 5px 0; }
 
 .hero {
@@ -336,7 +336,7 @@ a:hover { text-decoration: underline; }
   .menu-toggle { display: block; margin-left: auto; }
   .site-nav { display: none; position: absolute; top: 92px; left: 0; right: 0; background: var(--ivory); padding: 22px 20px 30px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 16px; }
   .site-nav.open { display: flex; }
-  .site-nav a.active { border-bottom: 0; padding-bottom: 0; font-weight: 700; color: var(--terracotta); }
+  .site-nav a { display: flex; align-items: center; width: 100%; min-height: 44px; white-space: normal; overflow-wrap: anywhere; }\n  .site-nav a.active { border-bottom: 0; padding-bottom: 0; font-weight: 700; color: var(--terracotta); }
   .hero-grid { grid-template-columns: 1fr .9fr; }
   .book-stack { right: 24px; width: 290px; }
   .plant { right: 240px; }
@@ -398,3 +398,14 @@ a:hover { text-decoration: underline; }
 .analytics-actions button:focus-visible,.analytics-settings:focus-visible{outline:3px solid #a55d38;outline-offset:3px}
 .analytics-settings{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 @media(max-width:500px){.analytics-choice{bottom:8px;left:8px;right:8px;padding:16px}.analytics-actions button{flex:1}}
+
+
+/* T08: narrow-screen safety and Sinhala readability */
+img, svg, video { max-width: 100%; }
+html[lang="si"] body { line-height: 1.75; }
+html[lang="si"] h1, html[lang="si"] h2, html[lang="si"] h3 { letter-spacing: 0; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .container { width: min(calc(100% - 24px), var(--max)); }
+  .brand { max-width: calc(100% - 60px); }
+  .brand-name, .brand-subtitle { overflow-wrap: anywhere; }
+}
