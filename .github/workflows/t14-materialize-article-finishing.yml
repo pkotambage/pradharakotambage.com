@@ -1,0 +1,34 @@
+name: T14 materialize article finishing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/t14-materialize-article-finishing.py"
+      - ".github/workflows/t14-materialize-article-finishing.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Materialize finishing blocks
+        run: python scripts/t14-materialize-article-finishing.py
+      - name: Commit migrated article HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add legal-guides dispute-resolution si/legal-guides si/dispute-resolution
+          if git diff --cached --quiet; then
+            echo "No article changes"
+            exit 0
+          fi
+          git commit -m "Materialize article finishing blocks in HTML"
+          git pull --rebase origin main
+          git push
