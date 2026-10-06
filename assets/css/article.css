@@ -137,3 +137,16 @@
   .article-content { font-size: 1rem; }
   .article-callout, .related-block { padding: 21px 22px; }
 }
+
+
+/* T08: Sinhala article readability on mobile and enlarged text */
+html[lang="si"] .article-hero h1 { line-height: 1.24; letter-spacing: 0; overflow-wrap: anywhere; }
+html[lang="si"] .article-dek { line-height: 1.75; }
+html[lang="si"] .article-content { line-height: 1.9; }
+html[lang="si"] .article-content h2 { line-height: 1.32; letter-spacing: 0; overflow-wrap: anywhere; }
+html[lang="si"] .article-content h3 { line-height: 1.38; letter-spacing: 0; overflow-wrap: anywhere; }
+.breadcrumbs, .article-language-switch, .source-note { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .article-shell { width: min(calc(100% - 24px), 900px); }
+  .article-callout, .related-block, .author-note, .article-disclaimer { overflow-wrap: anywhere; }
+}
