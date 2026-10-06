@@ -352,7 +352,8 @@ h1, h2, h3 { text-wrap: balance; }
   .menu-toggle { display: block; margin-left: auto; }
   .site-nav { display: none; position: absolute; top: 92px; left: 0; right: 0; background: var(--ivory); padding: 22px 20px 30px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 16px; }
   .site-nav.open { display: flex; }
-  .site-nav a { display: flex; align-items: center; width: 100%; min-height: 44px; white-space: normal; overflow-wrap: anywhere; }\n  .site-nav a.active { border-bottom: 0; padding-bottom: 0; font-weight: 700; color: var(--terracotta); }
+  .site-nav a { display: flex; align-items: center; width: 100%; min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
+  .site-nav a.active { border-bottom: 0; padding-bottom: 0; font-weight: 700; color: var(--terracotta); }
   .hero-grid { grid-template-columns: 1fr .9fr; }
   .book-stack { right: 24px; width: 290px; }
   .plant { right: 240px; }
