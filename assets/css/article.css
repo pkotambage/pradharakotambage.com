@@ -179,3 +179,6 @@ html[lang="si"] .article-content h3 { line-height: 1.38; letter-spacing: 0; over
   .article-content blockquote { padding: 18px 20px; }
   .author-note { margin-top: 42px; }
 }
+
+/* Shared article feature images. */
+.article-feature-image{width:min(calc(100% - 40px),900px);margin:38px auto 0}.article-feature-image img{display:block;width:100%;height:auto;max-height:480px;aspect-ratio:3/2;object-fit:cover;border-radius:8px;background:#e7f0f2}@media(max-width:700px){.article-feature-image{margin-top:24px}.article-feature-image img{max-height:320px}}

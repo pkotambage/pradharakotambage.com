@@ -75,12 +75,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-is-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for Mediation Is Assisted Negotiation",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null,
       "recent_sinhala_label": "සමථකරණය යනු සහාය ඇතිව සිදු කරන සාකච්ඡාවකි",
@@ -204,12 +206,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-to-do-after-receiving-letter-of-demand.webp",
-        "alt": "",
+        "alt": "Illustration for What to Do After Receiving a Letter of Demand in Sri Lanka",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -262,12 +266,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/how-to-respond-to-letter-of-demand.webp",
-        "alt": "",
+        "alt": "Illustration for How Should You Respond to a Letter of Demand in Sri Lanka?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -304,12 +310,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/someone-owes-you-money.webp",
-        "alt": "",
+        "alt": "Illustration for Someone Owes You Money: What Legal Options Are Available in Sri Lanka?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -347,12 +355,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-happens-after-civil-case-filed.webp",
-        "alt": "",
+        "alt": "Illustration for What Actually Happens After a Civil Case Is Filed in Sri Lanka?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -409,12 +419,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/whatsapp-messages-prove-debt.webp",
-        "alt": "",
+        "alt": "Illustration for Can WhatsApp Messages Be Used to Prove a Debt?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -462,12 +474,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/call-recordings-admission-of-debt.webp",
-        "alt": "",
+        "alt": "Illustration for “He Admitted the Debt on the Phone” – What About Call Recordings?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -504,12 +518,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/no-written-agreement-loan-recovery.webp",
-        "alt": "",
+        "alt": "Illustration for I Lent Money Without a Written Agreement. Can I Still Recover It?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -546,12 +562,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/old-cheque-still-useful.webp",
-        "alt": "",
+        "alt": "Illustration for I Have a Cheque That Is One or Two Years Old – Is It Still Useful?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -588,12 +606,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/debtor-asked-for-more-time.webp",
-        "alt": "",
+        "alt": "Illustration for The Debtor Has Asked for More Time – Should You Agree?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -638,12 +658,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/how-long-to-recover-debt.webp",
-        "alt": "",
+        "alt": "Illustration for How Long Can You Wait Before Trying to Recover a Debt?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -680,12 +702,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/oral-agreements-land-property.webp",
-        "alt": "",
+        "alt": "Illustration for Why Oral Agreements Can Be Dangerous When Land or Property Is Involved",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -725,12 +749,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/unfair-termination-proper-procedure.webp",
-        "alt": "",
+        "alt": "Illustration for What Can You Do If Your Employer Terminates You Unfairly or Without Proper Procedure?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -770,12 +796,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/labour-tribunal-reinstatement-compensation.webp",
-        "alt": "",
+        "alt": "Illustration for Reinstatement or Compensation: What Can a Labour Tribunal Order?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -813,12 +841,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-is-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for What Is Mediation?",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -856,12 +886,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/preparing-for-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for Preparing for Mediation",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -894,12 +926,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/civil-commercial-mediation-act-sri-lanka.webp",
-        "alt": "",
+        "alt": "Illustration for Sri Lanka's New Civil and Commercial Mediation Law",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null
     },
@@ -927,12 +961,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-is-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for From Destructive to Constructive Conflict: Empowerment and Acknowledgement",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null,
       "recent_sinhala_label": null,
@@ -962,12 +998,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-is-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for Listening as a Communication Tool in Mediation",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null,
       "recent_sinhala_label": null,
@@ -997,12 +1035,14 @@
       ],
       "image": {
         "src": "/assets/images/guides/what-is-mediation.webp",
-        "alt": "",
+        "alt": "Illustration for Understanding Conflict: Looking Beyond the Disagreement",
         "width": "720",
         "height": "480"
       },
       "illustrated_in": [
-        "topic"
+        "topic",
+        "directory",
+        "recent"
       ],
       "sinhala_label": null,
       "recent_sinhala_label": null,
