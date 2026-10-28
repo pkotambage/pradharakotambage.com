@@ -33,32 +33,39 @@ if (siteNav && menuToggle) {
     function addDropdown(anchor, id, items, name) {
       const group = document.createElement('div');
       group.className = 'nav-group';
-      anchor.classList.add('nav-parent-link');
-      anchor.textContent = name;
+      // The whole label (including its visible chevron) is now one control.
+      // The original HTML anchor remains the no-JavaScript fallback.
       const button = document.createElement('button');
       button.type = 'button';
-      button.className = 'nav-submenu-toggle';
+      button.className = 'nav-parent-button';
       button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-controls', id);
-      button.setAttribute('aria-label', isSinhala ? name + ' උප මෙනුව විවෘත කරන්න' : 'Open ' + name + ' submenu');
-      button.innerHTML = '<span class="nav-chevron" aria-hidden="true"></span>';
+      button.setAttribute('aria-label', isSinhala ? name + ' උප මෙනුව' : name + ' menu');
+      const label = document.createElement('span');
+      label.textContent = name;
+      const chevron = document.createElement('span');
+      chevron.className = 'nav-chevron';
+      chevron.setAttribute('aria-hidden', 'true');
+      button.append(label, chevron);
+      if (anchor.classList.contains('active')) button.classList.add('active');
+
       const panel = document.createElement('div');
       panel.className = 'nav-submenu';
       panel.id = id;
       panel.hidden = true;
-      items.forEach(([label, href]) => {
+      items.forEach(([text, href], index) => {
         const link = document.createElement('a');
         link.href = href;
-        link.textContent = label;
+        link.textContent = text;
+        if (index === 0) link.classList.add('nav-submenu-overview');
         if (currentPath === href) {
           link.classList.add('active');
           link.setAttribute('aria-current', 'page');
         }
         panel.append(link);
       });
-      group.append(anchor, button, panel);
-      const record = { group, button, panel };
-      closedMenus.push(record);
+      group.append(button, panel);
+      closedMenus.push({ group, button, panel });
       button.addEventListener('click', () => {
         const opening = panel.hidden;
         closeSubmenus();
@@ -73,7 +80,8 @@ if (siteNav && menuToggle) {
     const prefix = isSinhala ? '/si' : '';
     const disputeRoot = prefix + '/dispute-resolution/';
     const guideItems = [
-      [isSinhala ? 'සියලු නීති ලිපි / All Guides' : 'All Legal Guides', '/legal-guides/all/'],
+      [isSinhala ? 'නීති ලිපි ප්‍රධාන පිටුව' : 'Legal Guides Overview', '/legal-guides/'],
+      [isSinhala ? 'සියලු ලිපි සොයන්න / All Articles' : 'Browse All Articles', '/legal-guides/all/'],
       ['Law in Practice | නීතිය ප්‍රායෝගිකව', '/law-in-practice/'],
       [isSinhala ? 'සිවිල් නඩු / Civil Litigation' : 'Civil Litigation', '/legal-guides/topics/civil-litigation/'],
       [isSinhala ? 'පවුල් නීතිය / Family Law' : 'Family Law', '/legal-guides/topics/family-personal-law/'],
