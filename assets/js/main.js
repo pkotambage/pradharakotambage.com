@@ -156,6 +156,7 @@ if (siteNav && menuToggle) {
     // The main navigation has five items, plus the icon-only search control.
     siteNav.replaceChildren(home, about, guidesMenu, disputeMenu, contact, searchControl);
     siteNav.classList.add('nav-enhanced');
+    menuToggle.classList.add('nav-toggle-enhanced');
     const mobileMenu = window.matchMedia('(max-width: 1100px)');
     function setMobileMenu(open, returnFocus = false) {
       siteNav.classList.toggle('open', open);
