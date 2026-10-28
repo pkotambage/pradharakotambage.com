@@ -1,47 +1,213 @@
+// Shared, progressively enhanced navigation.
+// Original HTML links remain readable if JavaScript is disabled.
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 
-// Make article search reachable from every page's main navigation.
-if (siteNav && !siteNav.querySelector('.article-search-nav')) {
-  const searchLink = document.createElement('a');
-  searchLink.className = 'article-search-nav';
-  searchLink.href = '/legal-guides/all/';
-  searchLink.textContent = 'Search articles';
-  if (window.location.pathname.replace(/index\.html$/, '') === '/legal-guides/all/') {
-    searchLink.classList.add('active');
-    searchLink.setAttribute('aria-current', 'page');
-  }
-  siteNav.append(searchLink);
-}
+if (siteNav && menuToggle) {
+  const isSinhala = document.documentElement.lang.toLowerCase().startsWith('si');
+  const currentPath = window.location.pathname.replace(/index\.html$/, '');
+  const original = Array.from(siteNav.querySelectorAll(':scope > a'));
+  const pathOf = (anchor) => {
+    try { return new URL(anchor.getAttribute('href'), window.location.href).pathname.replace(/index\.html$/, ''); }
+    catch (_) { return ''; }
+  };
+  const find = (match) => original.find((a) => match(pathOf(a)));
+  const home = find((p) => p === '/');
+  const about = find((p) => p === '/about/');
+  const guides = find((p) => p === '/legal-guides/');
+  const dispute = find((p) => p === '/dispute-resolution/' || p === '/si/dispute-resolution/');
+  const contact = find((p) => p === '/contact/');
 
-if (menuToggle && siteNav) {
-  const mobileMenu = window.matchMedia('(max-width: 1280px)');
-  let lastFocused = document.activeElement;
-  function setMenu(open, returnFocus = false) {
-    siteNav.classList.toggle('open', open);
-    menuToggle.setAttribute('aria-expanded', String(open));
-    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    if (returnFocus) menuToggle.focus();
-  }
-  menuToggle.addEventListener('click', () => {
-    setMenu(!siteNav.classList.contains('open'));
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && mobileMenu.matches && siteNav.classList.contains('open')) {
-      event.preventDefault();
-      setMenu(false, true);
+  // Keep every existing top-level link as the no-script fallback.
+  if (home && about && guides && dispute && contact) {
+    const closedMenus = [];
+    const closeSubmenus = (except) => {
+      closedMenus.forEach(({ group, button, panel }) => {
+        if (group === except) return;
+        group.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+        panel.hidden = true;
+      });
+    };
+
+    function addDropdown(anchor, id, items, name) {
+      const group = document.createElement('div');
+      group.className = 'nav-group';
+      anchor.classList.add('nav-parent-link');
+      anchor.textContent = name;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'nav-submenu-toggle';
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-controls', id);
+      button.setAttribute('aria-label', isSinhala ? name + ' උප මෙනුව විවෘත කරන්න' : 'Open ' + name + ' submenu');
+      button.innerHTML = '<span class="nav-chevron" aria-hidden="true"></span>';
+      const panel = document.createElement('div');
+      panel.className = 'nav-submenu';
+      panel.id = id;
+      panel.hidden = true;
+      items.forEach(([label, href]) => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        if (currentPath === href) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+        panel.append(link);
+      });
+      group.append(anchor, button, panel);
+      const record = { group, button, panel };
+      closedMenus.push(record);
+      button.addEventListener('click', () => {
+        const opening = panel.hidden;
+        closeSubmenus();
+        panel.hidden = !opening;
+        group.classList.toggle('is-open', opening);
+        button.setAttribute('aria-expanded', String(opening));
+        if (opening) closeSearch();
+      });
+      return group;
     }
-  });
-  document.addEventListener('focusin', (event) => {
-    lastFocused = event.target;
-    if (mobileMenu.matches && !siteNav.contains(event.target) && event.target !== menuToggle) setMenu(false);
-  });
-  mobileMenu.addEventListener('change', () => {
-    // A breakpoint can hide and blur the focused element before this callback.
-    const focusHidden = mobileMenu.matches && siteNav.contains(lastFocused);
-    if (!mobileMenu.matches && lastFocused === menuToggle) siteNav.querySelector('a')?.focus();
-    setMenu(false, focusHidden);
-  });
+
+    const prefix = isSinhala ? '/si' : '';
+    const disputeRoot = prefix + '/dispute-resolution/';
+    const guideItems = [
+      [isSinhala ? 'සියලු නීති ලිපි / All Guides' : 'All Legal Guides', '/legal-guides/all/'],
+      ['Law in Practice | නීතිය ප්‍රායෝගිකව', '/law-in-practice/'],
+      [isSinhala ? 'සිවිල් නඩු / Civil Litigation' : 'Civil Litigation', '/legal-guides/topics/civil-litigation/'],
+      [isSinhala ? 'පවුල් නීතිය / Family Law' : 'Family Law', '/legal-guides/topics/family-personal-law/'],
+      [isSinhala ? 'ඉඩම් හා දේපළ / Land & Property' : 'Land & Property', '/legal-guides/topics/land-property/'],
+      [isSinhala ? 'ගිවිසුම් හා මුදල් අයකර ගැනීම' : 'Contracts & Recovery', '/legal-guides/topics/contracts-recovery/'],
+      [isSinhala ? 'නීති සම්පත් / Legal Resources' : 'Legal Resources', '/legal-resources/']
+    ];
+    const disputeItems = [
+      [isSinhala ? 'සියලු ආරවුල් නිරාකරණ ලිපි' : 'Dispute Resolution Overview', disputeRoot],
+      [isSinhala ? 'සමථකරණය යනු කුමක්ද?' : 'What Is Mediation?', disputeRoot + 'what-is-mediation/'],
+      [isSinhala ? 'සමථකරණයකට සූදානම් වීම' : 'Preparing for Mediation', disputeRoot + 'preparing-for-mediation/'],
+      [isSinhala ? '2026 සිවිල් හා වාණිජ සමථකරණ පනත' : 'Civil & Commercial Mediation Act', disputeRoot + 'civil-commercial-mediation-act-sri-lanka/'],
+      [isSinhala ? 'සහාය සහිත සාකච්ඡාවක් ලෙස සමථකරණය' : 'Mediation Is Assisted Negotiation', disputeRoot + 'mediation-assisted-negotiation/']
+    ];
+    if (currentPath.startsWith('/legal-guides/') || currentPath.startsWith('/law-in-practice/') || currentPath.startsWith('/legal-resources/')) {
+      guides.classList.add('active');
+    }
+    if (currentPath.startsWith('/dispute-resolution/') || currentPath.startsWith('/si/dispute-resolution/')) {
+      dispute.classList.add('active');
+    }
+
+    const guidesMenu = addDropdown(guides, 'nav-legal-guides-submenu', guideItems, isSinhala ? 'නීති ලිපි' : 'Legal Guides');
+    const disputeMenu = addDropdown(dispute, 'nav-dispute-resolution-submenu', disputeItems, isSinhala ? 'ආරවුල් නිරාකරණය' : 'Dispute Resolution');
+
+    const searchControl = document.createElement('div');
+    searchControl.className = 'site-search-control';
+    const searchButton = document.createElement('button');
+    searchButton.type = 'button';
+    searchButton.className = 'site-search-toggle';
+    searchButton.setAttribute('aria-expanded', 'false');
+    searchButton.setAttribute('aria-controls', 'site-search-panel');
+    searchButton.setAttribute('aria-label', isSinhala ? 'ලිපි සොයන්න' : 'Search articles');
+    searchButton.title = isSinhala ? 'ලිපි සොයන්න' : 'Search articles';
+    searchButton.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"></circle><path d="m16.3 16.3 5 5"></path></svg>';
+
+    const searchPanel = document.createElement('form');
+    searchPanel.id = 'site-search-panel';
+    searchPanel.className = 'site-search-panel';
+    searchPanel.setAttribute('role', 'search');
+    searchPanel.setAttribute('aria-label', isSinhala ? 'නීති ලිපි සෙවීම' : 'Search legal articles');
+    searchPanel.action = '/legal-guides/all/';
+    searchPanel.method = 'get';
+    searchPanel.hidden = true;
+    const searchLabel = document.createElement('label');
+    searchLabel.htmlFor = 'site-search-query';
+    searchLabel.textContent = isSinhala ? 'සිංහල හෝ ඉංග්‍රීසි ලිපි සොයන්න' : 'Find English or Sinhala articles';
+    const searchRow = document.createElement('div');
+    searchRow.className = 'site-search-row';
+    const searchInput = document.createElement('input');
+    searchInput.id = 'site-search-query';
+    searchInput.type = 'search';
+    searchInput.name = 'q';
+    searchInput.autocomplete = 'off';
+    searchInput.maxLength = 150;
+    searchInput.required = true;
+    searchInput.placeholder = 'Search articles / ලිපි සොයන්න';
+    const submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.textContent = isSinhala ? 'සොයන්න' : 'Search';
+    searchRow.append(searchInput, submitButton);
+    searchPanel.append(searchLabel, searchRow);
+    searchControl.append(searchButton, searchPanel);
+
+    function closeSearch(returnFocus = false) {
+      const wasOpen = !searchPanel.hidden;
+      searchPanel.hidden = true;
+      searchButton.setAttribute('aria-expanded', 'false');
+      searchControl.classList.remove('is-open');
+      if (returnFocus && wasOpen) searchButton.focus();
+    }
+    searchButton.addEventListener('click', () => {
+      const opening = searchPanel.hidden;
+      closeSubmenus();
+      searchPanel.hidden = !opening;
+      searchButton.setAttribute('aria-expanded', String(opening));
+      searchControl.classList.toggle('is-open', opening);
+      if (opening) searchInput.focus();
+    });
+
+    // The main navigation has five items, plus the icon-only search control.
+    siteNav.replaceChildren(home, about, guidesMenu, disputeMenu, contact, searchControl);
+    siteNav.classList.add('nav-enhanced');
+    const mobileMenu = window.matchMedia('(max-width: 1100px)');
+    function setMobileMenu(open, returnFocus = false) {
+      siteNav.classList.toggle('open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      if (!open) {
+        closeSubmenus();
+        closeSearch();
+      }
+      if (returnFocus) menuToggle.focus();
+    }
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!siteNav.classList.contains('open'));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      const openedSubmenu = closedMenus.find(({ panel }) => !panel.hidden);
+      if (!searchPanel.hidden) {
+        event.preventDefault();
+        closeSearch(true);
+      } else if (openedSubmenu) {
+        event.preventDefault();
+        closeSubmenus();
+        openedSubmenu.button.focus();
+      } else if (mobileMenu.matches && siteNav.classList.contains('open')) {
+        event.preventDefault();
+        setMobileMenu(false, true);
+      }
+    });
+    document.addEventListener('pointerdown', (event) => {
+      if (!siteNav.contains(event.target)) {
+        closeSubmenus();
+        closeSearch();
+      }
+    });
+    document.addEventListener('focusin', (event) => {
+      if (!siteNav.contains(event.target)) {
+        closeSubmenus();
+        closeSearch();
+        if (mobileMenu.matches && event.target !== menuToggle) setMobileMenu(false);
+        return;
+      }
+      if (!searchControl.contains(event.target)) closeSearch();
+      closedMenus.forEach(({ group }) => {
+        if (!group.contains(event.target)) closeSubmenus(group);
+      });
+    });
+    mobileMenu.addEventListener('change', () => {
+      const focusInMenu = siteNav.contains(document.activeElement);
+      setMobileMenu(false, focusInMenu && mobileMenu.matches);
+    });
+  }
 }
 
 // Connect the official Facebook page from the site-wide footer.
