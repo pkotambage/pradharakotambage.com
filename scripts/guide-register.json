@@ -909,6 +909,11 @@
           "url": "/dispute-resolution/civil-commercial-mediation-act-sri-lanka/",
           "title": "Sri Lanka’s New Civil and Commercial Mediation Law: What Does It Mean for Resolving Disputes?",
           "description": "A practical guide to Sri Lanka’s Mediation (Civil and Commercial Disputes) Act, No. 13 of 2026, including confidentiality, prescription and enforcement."
+        },
+        "si": {
+          "url": "/si/dispute-resolution/civil-commercial-mediation-act-sri-lanka/",
+          "title": "ශ්‍රී ලංකාවේ නව සිවිල් හා වාණිජ ආරවුල් සමථකරණ නීතිය: ආරවුල් විසඳීමට එයින් ඇති බලපෑම කුමක්ද?",
+          "description": "2026 අංක 13 දරන සමථකරණ (සිවිල් සහ වාණිජ ආරවුල්) පනත, රහස්‍යභාවය, කාලාවරෝධය, නිරවුල් කිරීමේ ගිවිසුම් සහ අධිකරණයෙන් බලාත්මක කිරීම පිළිබඳ ප්‍රායෝගික සිංහල පැහැදිලි කිරීමක්."
         }
       },
       "keywords": [
@@ -922,7 +927,10 @@
         "සමථකරණ",
         "සාකච්ඡා",
         "ආරවුල්",
-        "ආරවුල"
+        "ආරවුල",
+        "සිවිල් හා වාණිජ සමථකරණ පනත",
+        "කාලාවරෝධය",
+        "නිරවුල් නොවීමේ සහතිකය"
       ],
       "image": {
         "src": "/assets/images/guides/civil-commercial-mediation-act-sri-lanka.webp",
