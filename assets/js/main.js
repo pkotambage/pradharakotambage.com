@@ -107,7 +107,7 @@ if (siteNav && menuToggle) {
     searchButton.setAttribute('aria-controls', 'site-search-panel');
     searchButton.setAttribute('aria-label', isSinhala ? 'ලිපි සොයන්න' : 'Search articles');
     searchButton.title = isSinhala ? 'ලිපි සොයන්න' : 'Search articles';
-    searchButton.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"></circle><path d="m16.3 16.3 5 5"></path></svg>';
+    searchButton.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"></circle><path d="m16.3 16.3 5 5"></path></svg><span class="site-search-toggle-label">' + (isSinhala ? 'ලිපි සොයන්න' : 'Search articles') + '</span>';
 
     const searchPanel = document.createElement('form');
     searchPanel.id = 'site-search-panel';
@@ -199,9 +199,9 @@ if (siteNav && menuToggle) {
         return;
       }
       if (!searchControl.contains(event.target)) closeSearch();
-      closedMenus.forEach(({ group }) => {
-        if (!group.contains(event.target)) closeSubmenus(group);
-      });
+      const focusedGroup = closedMenus.find(({ group }) => group.contains(event.target));
+      if (focusedGroup) closeSubmenus(focusedGroup.group);
+      else closeSubmenus();
     });
     mobileMenu.addEventListener('change', () => {
       const focusInMenu = siteNav.contains(document.activeElement);
