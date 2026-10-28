@@ -10,17 +10,21 @@ test('compact desktop navigation, dropdowns, search and keyboard dismissal', asy
   await expect(nav).toBeVisible();
   await expect(nav.locator(':scope > *')).toHaveCount(6);
   await expect(nav.getByRole('link', { name: 'Law in Practice | නීතිය ප්‍රායෝගිකව' })).toBeHidden();
+  await expect(nav.getByRole('link', { name: 'Legal Guides', exact: true })).toHaveCount(0);
 
-  const guidesButton = page.getByRole('button', { name: 'Open Legal Guides submenu' });
+  const guidesButton = page.getByRole('button', { name: 'Legal Guides menu' });
   await guidesButton.click();
   await expect(guidesButton).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('#nav-legal-guides-submenu')).toBeVisible();
+  await expect(page).toHaveURL(/\/$/); // Clicking the entire label opens the menu without navigating.
+  await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveAttribute('href', '/legal-guides/');
   await expect(page.locator('#nav-legal-guides-submenu a[href="/law-in-practice/"]')).toBeVisible();
 
-  const disputeButton = page.getByRole('button', { name: 'Open Dispute Resolution submenu' });
+  const disputeButton = page.getByRole('button', { name: 'Dispute Resolution menu' });
   await disputeButton.click();
   await expect(page.locator('#nav-legal-guides-submenu')).toBeHidden();
   await expect(page.locator('#nav-dispute-resolution-submenu')).toBeVisible();
+  await expect(page.locator('#nav-dispute-resolution-submenu a:first-child')).toHaveAttribute('href', '/dispute-resolution/');
   await page.keyboard.press('Escape');
   await expect(page.locator('#nav-dispute-resolution-submenu')).toBeHidden();
   await expect(disputeButton).toBeFocused();
@@ -45,7 +49,7 @@ test('Sinhala mobile navigation keeps mediation links and search accessible', as
   await page.locator('.menu-toggle').click();
   await expect(nav).toBeVisible();
 
-  await page.getByRole('button', { name: 'ආරවුල් නිරාකරණය උප මෙනුව විවෘත කරන්න' }).click();
+  await page.getByRole('button', { name: 'ආරවුල් නිරාකරණය උප මෙනුව' }).click();
   await expect(page.locator('#nav-dispute-resolution-submenu a[href="/si/dispute-resolution/civil-commercial-mediation-act-sri-lanka/"]')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('#nav-dispute-resolution-submenu')).toBeHidden();
