@@ -216,8 +216,16 @@ def validate(root):
         register = builder.load_register(root)
         registered = {builder.local_file(root, e['url'], article=True)
                       for g in register['guides'] for e in g['editions'].values()}
-        if articles != registered:
-            errors.append('Published Article inventory differs from guide register')
+        # Law in Practice articles are valid site articles, but the guide register
+        # governs only Legal Guides and Dispute Resolution article directories.
+        managed_prefixes = ('legal-guides/', 'dispute-resolution/',
+                            'si/legal-guides/', 'si/dispute-resolution/')
+        managed_articles = {p for p in articles
+                            if p.relative_to(root).as_posix().startswith(managed_prefixes)}
+        if managed_articles != registered:
+            missing = sorted(str(p.relative_to(root)) for p in registered - managed_articles)
+            extra = sorted(str(p.relative_to(root)) for p in managed_articles - registered)
+            errors.append(f'Published guide Article inventory differs from register: missing={missing}, extra={extra}')
         for g in register['guides']:
             for language, edition in g['editions'].items():
                 page = pages[builder.local_file(root, edition['url'], article=True)]
