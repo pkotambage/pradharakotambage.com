@@ -1055,6 +1055,96 @@
       "sinhala_label": null,
       "recent_sinhala_label": null,
       "topic_description": "A practical mediation perspective on personal, relational, structural and cultural dimensions of conflict, and the interests beneath positions."
+    },
+    {
+      "id": "foreign-judgments-sri-lanka",
+      "title": "Can a Foreign Court Judgment Be Recognised in Sri Lanka?",
+      "category": "civil-litigation",
+      "topic_order": -1,
+      "description": "Can an overseas court judgment be recognised or enforced in Sri Lanka? A practical guide to Act No. 49 of 2024.",
+      "published": "2026-11-04",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/foreign-judgments-sri-lanka/",
+          "title": "Can a Foreign Court Judgment Be Recognised in Sri Lanka?",
+          "description": "Won a court case overseas? Learn when foreign judgments can be recognised or enforced in Sri Lanka under Act No. 49 of 2024."
+        }
+      },
+      "keywords": [
+        "foreign judgment",
+        "foreign judgments",
+        "foreign court",
+        "court order",
+        "judgment enforcement",
+        "overseas court",
+        "international",
+        "commercial",
+        "civil litigation",
+        "Sri Lanka",
+        "Act 49 of 2024",
+        "විදේශීය",
+        "නඩු තීන්දුව",
+        "අධිකරණ"
+      ],
+      "image": {
+        "src": "/assets/images/guides/what-happens-after-civil-case-filed.webp",
+        "alt": "Illustration for recognition of foreign court judgments in Sri Lanka",
+        "width": "720",
+        "height": "480"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "How to recognise or enforce qualifying overseas court judgments in Sri Lanka."
+    },
+    {
+      "id": "foreign-divorce-recognition-sri-lanka",
+      "title": "How to Get a Foreign Divorce Recognised in Sri Lanka",
+      "category": "family-personal-law",
+      "topic_order": -1,
+      "description": "Married in Sri Lanka but divorced overseas? Learn when and how a foreign divorce may be recognised.",
+      "published": "2026-11-04",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/foreign-divorce-recognition-sri-lanka/",
+          "title": "How to Get a Foreign Divorce Recognised in Sri Lanka",
+          "description": "Divorced in Canada, Australia or the UK? Learn how to get a foreign divorce recognised in Sri Lanka, including documents, court procedure and legal requirements."
+        }
+      },
+      "keywords": [
+        "foreign divorce",
+        "recognise foreign divorce",
+        "recognition",
+        "divorce",
+        "overseas divorce",
+        "Canada",
+        "Australia",
+        "UK",
+        "marriage",
+        "remarry",
+        "Sri Lanka",
+        "දික්කසාද",
+        "විදේශීය දික්කසාද",
+        "විවාහ"
+      ],
+      "image": {
+        "src": "/assets/images/family-law-amicable-separation.svg",
+        "alt": "Family law illustration for recognition of a foreign divorce",
+        "width": "720",
+        "height": "420"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Documents, eligibility and court steps to have an overseas divorce recognised in Sri Lanka."
     }
   ]
 }
