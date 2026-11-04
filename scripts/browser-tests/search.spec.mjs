@@ -38,8 +38,8 @@ test('search form, English/Sinhala filtering, hidden cards, empty results and Cl
   await expectResults(page, 7);
   await expect(page.getByRole('heading', { name: 'Someone Owes You Money: What Legal Options Are Available in Sri Lanka?' })).toBeVisible();
   await page.locator('#guide-search').fill('දික්කසාද');
-  await expectResults(page, 2);
-  await expect(page.locator('#guide-results img').filter({ visible: true })).toHaveCount(2);
+  await expectResults(page, 3);
+  await expect(page.locator('#guide-results img').filter({ visible: true })).toHaveCount(3);
   await page.locator('#guide-search').fill('zzzznotfound');
   await expectResults(page, 0);
   await page.getByRole('button', { name: 'Search', exact: true }).click();

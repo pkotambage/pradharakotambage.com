@@ -26,7 +26,9 @@ for (const path of ['/', '/legal-guides/all/', '/si/dispute-resolution/what-is-m
     await expect(toggle).toBeFocused();
     await expect(toggle).toHaveAccessibleName('Open navigation');
     await page.keyboard.press('Space');
-    await nav.locator('a').last().focus();
+    // The search button follows the final link in the enhanced navigation.
+    // Tab beyond the last focusable navigation control, not the last anchor.
+    await nav.locator('.site-search-toggle').focus();
     await page.keyboard.press('Tab');
     await expect(nav).toBeHidden();
     await expect(toggle).not.toBeFocused();
