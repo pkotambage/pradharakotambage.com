@@ -38,7 +38,8 @@ for (const width of [360, 390]) {
     expect(toggleBox?.height ?? 0).toBeGreaterThanOrEqual(44);
 
     await toggle.click();
-    const links = page.locator('#site-navigation a');
+    // Closed dropdown panels contain hidden links; check actual visible tap targets.
+    const links = page.locator('#site-navigation a:visible');
     await expect(links.first()).toBeVisible();
 
     for (let i = 0; i < await links.count(); i++) {
