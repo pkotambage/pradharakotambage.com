@@ -23,7 +23,7 @@
  .library-list {display:grid; gap:12px}
  .library-guide {border-left:4px solid #527c77}
  .illustrated-guide {display:grid; grid-template-columns:190px minmax(0,1fr); gap:23px; align-items:center; padding:16px 20px}
- .guide-art {display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:3px; background:#e7f0f2}
+ .guide-art {display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:3px; background:#e7f0f2}
  .guide-copy {min-width:0}
  .language-links {display:flex; gap:18px; margin-top:16px; font-weight:700}
  .language-links a {text-decoration:underline; text-underline-offset:3px}
