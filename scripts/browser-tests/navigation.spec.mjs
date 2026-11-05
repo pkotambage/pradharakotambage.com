@@ -8,8 +8,9 @@ test('compact desktop navigation, dropdowns, search and keyboard dismissal', asy
 
   const nav = page.locator('.site-nav.nav-enhanced');
   await expect(nav).toBeVisible();
-  await expect(nav.locator(':scope > *')).toHaveCount(6);
-  await expect(nav.getByRole('link', { name: 'Law in Practice | නීතිය ප්‍රායෝගිකව' })).toBeHidden();
+  await expect(nav.locator(':scope > *')).toHaveCount(7);
+  await expect(nav.locator('a.nav-law-in-practice')).toBeVisible();
+  await expect(nav.locator('a.nav-law-in-practice')).toHaveAttribute('href', 'law-in-practice/');
   await expect(nav.getByRole('link', { name: 'Legal Guides', exact: true })).toHaveCount(0);
 
   const guidesButton = page.getByRole('button', { name: 'Legal Guides menu' });
@@ -18,7 +19,7 @@ test('compact desktop navigation, dropdowns, search and keyboard dismissal', asy
   await expect(page.locator('#nav-legal-guides-submenu')).toBeVisible();
   await expect(page).toHaveURL(/\/$/); // Clicking the entire label opens the menu without navigating.
   await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveAttribute('href', '/legal-guides/');
-  await expect(page.locator('#nav-legal-guides-submenu a[href="/law-in-practice/"]')).toBeVisible();
+  await expect(page.locator('#nav-legal-guides-submenu a[href="/law-in-practice/"]')).toHaveCount(0);
 
   const disputeButton = page.getByRole('button', { name: 'Dispute Resolution menu' });
   await disputeButton.click();
@@ -36,6 +37,10 @@ test('compact desktop navigation, dropdowns, search and keyboard dismissal', asy
   await page.locator('#site-search-panel button[type="submit"]').click();
   await expect(page).toHaveURL(/\/legal-guides\/all\/\?q=/);
   await expect(page.locator('#guide-search')).toHaveValue('දික්කසාද');
+  // The restored Law in Practice tab is a direct link, not a dropdown option.
+  await nav.locator('a.nav-law-in-practice').click();
+  await expect(page).toHaveURL(/\/law-in-practice\/$/);
+  await expect(page.locator('.site-nav.nav-enhanced > a.nav-law-in-practice')).toHaveClass(/active/);
   expect(errors).toEqual([]);
 });
 
