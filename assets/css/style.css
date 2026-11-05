@@ -458,8 +458,12 @@ html[lang="si"] h1, html[lang="si"] h2, html[lang="si"] h3 { letter-spacing: 0; 
 }
 
 
-/* Compact site-wide navigation: five primary links plus a search icon. */
+/* Compact site-wide navigation: six primary links (including Law in Practice) plus search. */
 .site-nav.nav-enhanced { gap: 12px; margin-left: auto; font-size: .91rem; }
+/* Keep the desktop navigation compact while retaining the bilingual link on mobile. */
+@media (min-width: 1101px) {
+  .site-nav.nav-enhanced > a.nav-law-in-practice span[lang="si"] { display: none; }
+}
 .site-nav.nav-enhanced > a,
 .site-nav.nav-enhanced .nav-parent-button { display: inline-flex; align-items: center; min-height: 44px; }
 .site-nav.nav-enhanced > a.active,
