@@ -45,7 +45,8 @@ class DirectoryBuildTests(unittest.TestCase):
         for text in ('mediation-assisted-negotiation', 'divorce-without-unnecessary-conflict', 'mutual-consent-divorce-sri-lanka'):
             self.assertIn(text, directory)
         self.assertIn('/si/dispute-resolution/mediation-assisted-negotiation/', directory)
-        self.assertIn('family-law-amicable-separation.svg', family)
+        self.assertIn('/assets/images/articles/divorce-without-unnecessary-conflict.webp', family)
+        self.assertEqual(len({g['image']['src'] for g in register['guides']}), len(register['guides']))
         first = {p: p.read_bytes() for p in (self.root / 'legal-guides').rglob('index.html')}
         self.assertEqual(self.run_build().returncode, 0)
         self.assertEqual(first, {p: p.read_bytes() for p in first})

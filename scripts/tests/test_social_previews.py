@@ -33,16 +33,27 @@ class SocialPreviewTests(unittest.TestCase):
         for path in ROOT.rglob("*.html"):
             text = path.read_text(encoding="utf-8")
             head = text.split("</head>", 1)[0]
-            if "assets/images/social-preview.jpg" not in head:
+            match = re.search(r'<meta property="og:image" content="([^"]+)">', head)
+            if not match:
+                continue
+            image_url = match.group(1)
+            if image_url.endswith("/assets/images/social-preview.jpg"):
+                image_type, width, height = "image/jpeg", "1200", "630"
+            elif image_url.endswith(".webp"):
+                image_type, width, height = "image/webp", "1280", "720"
+                image_path = ROOT / "assets/images" / image_url.split("/assets/images/", 1)[-1]
+                if not image_path.is_file():
+                    offenders.append(f"{path.relative_to(ROOT)}: missing social image {image_url}")
+            else:
                 continue
             for required in (
-                '<meta property="og:image:type" content="image/jpeg">',
-                '<meta property="og:image:width" content="1200">',
-                '<meta property="og:image:height" content="630">',
+                f'<meta property="og:image:type" content="{image_type}">',
+                f'<meta property="og:image:width" content="{width}">',
+                f'<meta property="og:image:height" content="{height}">',
             ):
                 if required not in head:
                     offenders.append(f"{path.relative_to(ROOT)}: missing {required}")
-        self.assertEqual(offenders, [], "\n".join(offenders))
+        self.assertEqual(offenders, [], "\\n".join(offenders))
 
     def test_generator_templates_use_new_shared_card(self):
         offenders = []
