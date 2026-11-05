@@ -15,11 +15,12 @@ if (siteNav && menuToggle) {
   const home = find((p) => p === '/');
   const about = find((p) => p === '/about/');
   const guides = find((p) => p === '/legal-guides/');
+  const lawInPractice = find((p) => p === '/law-in-practice/');
   const dispute = find((p) => p === '/dispute-resolution/' || p === '/si/dispute-resolution/');
   const contact = find((p) => p === '/contact/');
 
   // Keep every existing top-level link as the no-script fallback.
-  if (home && about && guides && dispute && contact) {
+  if (home && about && guides && lawInPractice && dispute && contact) {
     const closedMenus = [];
     const closeSubmenus = (except) => {
       closedMenus.forEach(({ group, button, panel }) => {
@@ -82,7 +83,6 @@ if (siteNav && menuToggle) {
     const guideItems = [
       [isSinhala ? 'නීති ලිපි ප්‍රධාන පිටුව' : 'Legal Guides Overview', '/legal-guides/'],
       [isSinhala ? 'සියලු ලිපි සොයන්න / All Articles' : 'Browse All Articles', '/legal-guides/all/'],
-      ['Law in Practice | නීතිය ප්‍රායෝගිකව', '/law-in-practice/'],
       [isSinhala ? 'සිවිල් නඩු / Civil Litigation' : 'Civil Litigation', '/legal-guides/topics/civil-litigation/'],
       [isSinhala ? 'පවුල් නීතිය / Family Law' : 'Family Law', '/legal-guides/topics/family-personal-law/'],
       [isSinhala ? 'ඉඩම් හා දේපළ / Land & Property' : 'Land & Property', '/legal-guides/topics/land-property/'],
@@ -96,9 +96,14 @@ if (siteNav && menuToggle) {
       [isSinhala ? '2026 සිවිල් හා වාණිජ සමථකරණ පනත' : 'Civil & Commercial Mediation Act', disputeRoot + 'civil-commercial-mediation-act-sri-lanka/'],
       [isSinhala ? 'සහාය සහිත සාකච්ඡාවක් ලෙස සමථකරණය' : 'Mediation Is Assisted Negotiation', disputeRoot + 'mediation-assisted-negotiation/']
     ];
-    if (currentPath.startsWith('/legal-guides/') || currentPath.startsWith('/law-in-practice/') || currentPath.startsWith('/legal-resources/')) {
+    if (currentPath.startsWith('/legal-guides/') || currentPath.startsWith('/legal-resources/')) {
       guides.classList.add('active');
     }
+    if (currentPath.startsWith('/law-in-practice/')) {
+      lawInPractice.classList.add('active');
+    }
+    lawInPractice.classList.add('nav-law-in-practice');
+    lawInPractice.title = 'Law in Practice | නීතිය ප්‍රායෝගිකව';
     if (currentPath.startsWith('/dispute-resolution/') || currentPath.startsWith('/si/dispute-resolution/')) {
       dispute.classList.add('active');
     }
@@ -161,8 +166,8 @@ if (siteNav && menuToggle) {
       if (opening) searchInput.focus();
     });
 
-    // The main navigation has five items, plus the icon-only search control.
-    siteNav.replaceChildren(home, about, guidesMenu, disputeMenu, contact, searchControl);
+    // Six primary items, including a dedicated Law in Practice tab, plus search.
+    siteNav.replaceChildren(home, about, guidesMenu, lawInPractice, disputeMenu, contact, searchControl);
     siteNav.classList.add('nav-enhanced');
     menuToggle.classList.add('nav-toggle-enhanced');
     const mobileMenu = window.matchMedia('(max-width: 1100px)');
