@@ -43,6 +43,7 @@ test('no analytics before consent or after decline; allow is persistent and sani
   await page.reload();
   expect(tags).toHaveLength(2);
   expect((await context.cookies()).filter(x=>x.name.startsWith('_ga'))).toEqual([]);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
 
 test('mobile Sinhala choices fit and expiry asks again', async ({ page }) => {
@@ -58,4 +59,6 @@ test('mobile Sinhala choices fit and expiry asks again', async ({ page }) => {
   await page.reload();
   await expect(page.locator('.analytics-choice')).toBeVisible();
   expect(await page.evaluate(() => Boolean(window.gtag))).toBe(false);
+  // Complete or safely release in-flight proxy requests before browser teardown.
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
