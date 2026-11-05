@@ -484,7 +484,9 @@ html[lang="si"] h1, html[lang="si"] h2, html[lang="si"] h3 { letter-spacing: 0; 
 .site-nav .nav-submenu a:hover,
 .site-nav .nav-submenu a:focus-visible { color: var(--ink); background: #eaf1ed; text-decoration: none; }
 .site-nav .nav-submenu a.active { color: #93502f; background: #f8eee7; font-weight: 700; border: 0; padding: 9px 12px; }
-.site-nav .nav-submenu .nav-submenu-overview { font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--line); margin-bottom: 5px; padding-bottom: 12px; }
+.site-nav .nav-submenu .nav-submenu-overview { font-weight: 700; color: var(--ink); }
+.site-nav .nav-submenu .nav-submenu-directory { font-weight: 700; color: var(--ink); }
+.site-nav .nav-submenu .nav-submenu-topics-start { border-top: 1px solid var(--line); margin-top: 7px; padding-top: 14px; }
 .site-nav .site-search-control { position: relative; display: flex; align-items: center; }
 .site-nav .site-search-toggle { min-width: 44px; }
 .site-nav .site-search-toggle svg { width: 22px; height: 22px; flex: 0 0 auto; }
