@@ -59,6 +59,9 @@ if (siteNav && menuToggle) {
         link.href = href;
         link.textContent = text;
         if (index === 0) link.classList.add('nav-submenu-overview');
+        // Make the two discovery routes clear and separate from topic shortcuts.
+        if (id === 'nav-legal-guides-submenu' && index === 1) link.classList.add('nav-submenu-directory');
+        if (id === 'nav-legal-guides-submenu' && index === 2) link.classList.add('nav-submenu-topics-start');
         if (currentPath === href) {
           link.classList.add('active');
           link.setAttribute('aria-current', 'page');
@@ -81,8 +84,8 @@ if (siteNav && menuToggle) {
     const prefix = isSinhala ? '/si' : '';
     const disputeRoot = prefix + '/dispute-resolution/';
     const guideItems = [
-      [isSinhala ? 'නීති ලිපි ප්‍රධාන පිටුව' : 'Legal Guides Overview', '/legal-guides/'],
-      [isSinhala ? 'සියලු ලිපි සොයන්න / All Articles' : 'Browse All Articles', '/legal-guides/all/'],
+      [isSinhala ? 'නීති විෂය අනුව සොයන්න' : 'Explore by Legal Topic', '/legal-guides/'],
+      [isSinhala ? 'සියලු ලිපි සොයන්න' : 'Search All Articles', '/legal-guides/all/'],
       [isSinhala ? 'සිවිල් නඩු / Civil Litigation' : 'Civil Litigation', '/legal-guides/topics/civil-litigation/'],
       [isSinhala ? 'පවුල් නීතිය / Family Law' : 'Family Law', '/legal-guides/topics/family-personal-law/'],
       [isSinhala ? 'ඉඩම් හා දේපළ / Land & Property' : 'Land & Property', '/legal-guides/topics/land-property/'],
