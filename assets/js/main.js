@@ -212,9 +212,15 @@ if (siteNav && menuToggle) {
       if (focusedGroup) closeSubmenus(focusedGroup.group);
       else closeSubmenus();
     });
+    // A viewport change can hide the focused desktop navigation and cause
+    // the browser to drop focus before the mobile media query fires again.
+    // Remember whether focus was inside that menu to restore it safely.
+    let desktopMenuHadFocus = false;
     mobileMenu.addEventListener('change', () => {
       const focusInMenu = siteNav.contains(document.activeElement);
-      setMobileMenu(false, focusInMenu && mobileMenu.matches);
+      const returnFocus = mobileMenu.matches && (focusInMenu || desktopMenuHadFocus);
+      desktopMenuHadFocus = !mobileMenu.matches && focusInMenu;
+      setMobileMenu(false, returnFocus);
     });
   }
 }
