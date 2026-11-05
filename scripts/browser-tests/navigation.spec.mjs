@@ -63,6 +63,8 @@ test('Sinhala mobile navigation keeps mediation links and search accessible', as
   await page.getByRole('button', { name: 'නීති ලිපි උප මෙනුව' }).click();
   await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveText('නීති විෂය අනුව සොයන්න');
   await expect(page.locator('#nav-legal-guides-submenu a:nth-child(2)')).toHaveText('සියලු ලිපි සොයන්න');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#nav-legal-guides-submenu')).toBeHidden();
   await page.getByRole('button', { name: 'ආරවුල් නිරාකරණය උප මෙනුව' }).click();
   await expect(page.locator('#nav-dispute-resolution-submenu a[href="/si/dispute-resolution/civil-commercial-mediation-act-sri-lanka/"]')).toBeVisible();
   await page.keyboard.press('Escape');
