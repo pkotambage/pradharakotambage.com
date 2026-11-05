@@ -52,6 +52,9 @@ test('Sinhala mobile navigation keeps mediation links and search accessible', as
   page.on('pageerror', (error) => errors.push(error.message));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/si/dispute-resolution/civil-commercial-mediation-act-sri-lanka/');
+  // Dismiss the optional consent banner before testing lower mobile menu items:
+  // the banner otherwise legitimately intercepts taps near the bottom of the screen.
+  await page.locator('.analytics-choice .analytics-actions button').first().click();
   const nav = page.locator('.site-nav.nav-enhanced');
   await expect(nav).toBeHidden();
   await page.locator('.menu-toggle').click();
