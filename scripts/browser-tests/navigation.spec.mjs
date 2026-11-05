@@ -19,6 +19,9 @@ test('compact desktop navigation, dropdowns, search and keyboard dismissal', asy
   await expect(page.locator('#nav-legal-guides-submenu')).toBeVisible();
   await expect(page).toHaveURL(/\/$/); // Clicking the entire label opens the menu without navigating.
   await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveAttribute('href', '/legal-guides/');
+  await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveText('Explore by Legal Topic');
+  await expect(page.locator('#nav-legal-guides-submenu a:nth-child(2)')).toHaveAttribute('href', '/legal-guides/all/');
+  await expect(page.locator('#nav-legal-guides-submenu a:nth-child(2)')).toHaveText('Search All Articles');
   await expect(page.locator('#nav-legal-guides-submenu a[href="/law-in-practice/"]')).toHaveCount(0);
 
   const disputeButton = page.getByRole('button', { name: 'Dispute Resolution menu' });
@@ -54,6 +57,9 @@ test('Sinhala mobile navigation keeps mediation links and search accessible', as
   await page.locator('.menu-toggle').click();
   await expect(nav).toBeVisible();
 
+  await page.getByRole('button', { name: 'නීති ලිපි උප මෙනුව' }).click();
+  await expect(page.locator('#nav-legal-guides-submenu a:first-child')).toHaveText('නීති විෂය අනුව සොයන්න');
+  await expect(page.locator('#nav-legal-guides-submenu a:nth-child(2)')).toHaveText('සියලු ලිපි සොයන්න');
   await page.getByRole('button', { name: 'ආරවුල් නිරාකරණය උප මෙනුව' }).click();
   await expect(page.locator('#nav-dispute-resolution-submenu a[href="/si/dispute-resolution/civil-commercial-mediation-act-sri-lanka/"]')).toBeVisible();
   await page.keyboard.press('Escape');
