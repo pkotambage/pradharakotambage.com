@@ -28,6 +28,13 @@
       "topic_template": "guides-family-topic.html.tpl"
     },
     {
+      "id": "inheritance-succession",
+      "name": "Inheritance & Succession",
+      "sinhala_name": "උරුමය හා දේපළ අනුප්‍රාප්තිය",
+      "description": "Practical guides to property after death, inheritance, wills, probate and administration.",
+      "topic_template": "guides-inheritance-topic.html.tpl"
+    },
+    {
       "id": "contracts-recovery",
       "name": "Contracts & Recovery",
       "sinhala_name": "ගිවිසුම් හා මුදල් අයකර ගැනීම",
@@ -1145,6 +1152,472 @@
       "sinhala_label": null,
       "recent_sinhala_label": null,
       "topic_description": "Documents, eligibility and court steps to have an overseas divorce recognised in Sri Lanka."
+    },
+    {
+      "id": "succession-law-sri-lanka",
+      "title": "What Happens to a Person's Property After Death in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 0,
+      "description": "A clear introduction to inheritance, last wills and the legal steps families may need to take.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/succession-law-sri-lanka/",
+          "title": "What Happens to a Person's Property After Death in Sri Lanka?",
+          "description": "Understand what happens to property after death in Sri Lanka, including inheritance rights, last wills and estate administration."
+        }
+      },
+      "keywords": [
+        "succession",
+        "inheritance",
+        "estate",
+        "property after death",
+        "Sri Lanka",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/succession-law-sri-lanka.svg",
+        "alt": "Illustration for What Happens to a Person's Property After Death in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "A clear introduction to inheritance, last wills and the legal steps families may need to take.",
+      "series_level": "main"
+    },
+    {
+      "id": "intestate-succession-sri-lanka",
+      "title": "Who Inherits Property When Someone Dies Without a Will in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 3,
+      "description": "Understand the shares of a surviving spouse, children and other family members under the general law.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/intestate-succession-sri-lanka/",
+          "title": "Who Inherits Property When Someone Dies Without a Will in Sri Lanka?",
+          "description": "Learn who inherits property when someone dies without a will in Sri Lanka, including the rights of spouses, children and other relatives."
+        }
+      },
+      "keywords": [
+        "intestate",
+        "inheritance",
+        "wife",
+        "husband",
+        "children",
+        "shares",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/intestate-succession-sri-lanka.svg",
+        "alt": "Illustration for Who Inherits Property When Someone Dies Without a Will in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Understand the shares of a surviving spouse, children and other family members under the general law.",
+      "series_level": "main"
+    },
+    {
+      "id": "last-will-inheritance-sri-lanka",
+      "title": "What Happens When Someone Dies Leaving a Last Will in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 5,
+      "description": "Learn what a will does, who can benefit, and why an executor may need probate.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/last-will-inheritance-sri-lanka/",
+          "title": "What Happens When Someone Dies Leaving a Last Will in Sri Lanka?",
+          "description": "Find out what happens when someone dies leaving a last will in Sri Lanka, including beneficiaries, executors and probate."
+        }
+      },
+      "keywords": [
+        "last will",
+        "testator",
+        "executor",
+        "beneficiary",
+        "testate succession",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/last-will-inheritance-sri-lanka.svg",
+        "alt": "Illustration for What Happens When Someone Dies Leaving a Last Will in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Learn what a will does, who can benefit, and why an executor may need probate.",
+      "series_level": "main"
+    },
+    {
+      "id": "probate-estate-administration-sri-lanka",
+      "title": "Probate, Letters of Administration and Certificates of Heirship in Sri Lanka: What Is the Difference?",
+      "category": "inheritance-succession",
+      "topic_order": 8,
+      "description": "Three important legal documents explained in everyday language.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/probate-estate-administration-sri-lanka/",
+          "title": "Probate, Letters of Administration and Certificates of Heirship in Sri Lanka: What Is the Difference?",
+          "description": "Understand the differences between probate, letters of administration and certificates of heirship under Sri Lankan law."
+        }
+      },
+      "keywords": [
+        "probate",
+        "letters of administration",
+        "certificate of heirship",
+        "district court",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/probate-estate-administration-sri-lanka.svg",
+        "alt": "Illustration for Probate, Letters of Administration and Certificates of Heirship in Sri Lanka: What Is the Difference?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Three important legal documents explained in everyday language.",
+      "series_level": "main"
+    },
+    {
+      "id": "deceased-person-estate-property-sri-lanka",
+      "title": "What Property Forms Part of a Deceased Person's Estate in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 1,
+      "description": "Before calculating inheritance shares, find out which assets the deceased actually owned.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/deceased-person-estate-property-sri-lanka/",
+          "title": "What Property Forms Part of a Deceased Person's Estate in Sri Lanka?",
+          "description": "Learn which assets form part of a deceased person's estate, including jointly owned property, bank deposits, gifts and debts."
+        }
+      },
+      "keywords": [
+        "estate property",
+        "joint ownership",
+        "nomination",
+        "gift",
+        "debt",
+        "mortgage",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/deceased-person-estate-property-sri-lanka.svg",
+        "alt": "Illustration for What Property Forms Part of a Deceased Person's Estate in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Before calculating inheritance shares, find out which assets the deceased actually owned.",
+      "series_level": "sub"
+    },
+    {
+      "id": "inheritance-laws-sri-lanka",
+      "title": "Does Everyone Inherit Property Under the Same Law in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 2,
+      "description": "Why similar families may inherit different shares under Sri Lanka's legal systems.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/inheritance-laws-sri-lanka/",
+          "title": "Does Everyone Inherit Property Under the Same Law in Sri Lanka?",
+          "description": "Understand the differences between general inheritance law, Kandyan law, Thesawalamai and Muslim law in Sri Lanka."
+        }
+      },
+      "keywords": [
+        "Kandyan",
+        "Thesawalamai",
+        "Muslim law",
+        "general law",
+        "personal law",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/inheritance-laws-sri-lanka.svg",
+        "alt": "Illustration for Does Everyone Inherit Property Under the Same Law in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Why similar families may inherit different shares under Sri Lanka's legal systems.",
+      "series_level": "sub"
+    },
+    {
+      "id": "inheritance-rights-family-members-sri-lanka",
+      "title": "Can Parents, Brothers, Sisters and Grandchildren Inherit Property in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 4,
+      "description": "Practical examples of inheritance rights beyond the surviving spouse and children.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/inheritance-rights-family-members-sri-lanka/",
+          "title": "Can Parents, Brothers, Sisters and Grandchildren Inherit Property in Sri Lanka?",
+          "description": "Learn when parents, siblings and grandchildren can inherit property under Sri Lanka's general intestate succession law."
+        }
+      },
+      "keywords": [
+        "parents",
+        "siblings",
+        "brothers",
+        "sisters",
+        "grandchildren",
+        "inheritance",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/inheritance-rights-family-members-sri-lanka.svg",
+        "alt": "Illustration for Can Parents, Brothers, Sisters and Grandchildren Inherit Property in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Practical examples of inheritance rights beyond the surviving spouse and children.",
+      "series_level": "sub"
+    },
+    {
+      "id": "make-valid-last-will-sri-lanka",
+      "title": "How to Make a Legally Valid Last Will in Sri Lanka",
+      "category": "inheritance-succession",
+      "topic_order": 6,
+      "description": "The legal formalities, documents and choices that matter when making a will.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/make-valid-last-will-sri-lanka/",
+          "title": "How to Make a Legally Valid Last Will in Sri Lanka",
+          "description": "Understand how to make a legally valid last will in Sri Lanka, including witnessing, notarial requirements and executors."
+        }
+      },
+      "keywords": [
+        "make a will",
+        "notary",
+        "witness",
+        "signature",
+        "thumb impression",
+        "executor",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/make-valid-last-will-sri-lanka.svg",
+        "alt": "Illustration for How to Make a Legally Valid Last Will in Sri Lanka",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "The legal formalities, documents and choices that matter when making a will.",
+      "series_level": "sub"
+    },
+    {
+      "id": "challenge-last-will-sri-lanka",
+      "title": "Can a Last Will Be Challenged in Court in Sri Lanka?",
+      "category": "inheritance-succession",
+      "topic_order": 7,
+      "description": "Unfairness alone is not enough. Understand the grounds and evidence that matter.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/challenge-last-will-sri-lanka/",
+          "title": "Can a Last Will Be Challenged in Court in Sri Lanka?",
+          "description": "Learn when a last will can be challenged in Sri Lanka, including forgery, undue influence, capacity and court procedures."
+        }
+      },
+      "keywords": [
+        "challenge will",
+        "forgery",
+        "undue influence",
+        "testamentary capacity",
+        "probate objection",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/challenge-last-will-sri-lanka.svg",
+        "alt": "Illustration for Can a Last Will Be Challenged in Court in Sri Lanka?",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "Unfairness alone is not enough. Understand the grounds and evidence that matter.",
+      "series_level": "sub"
+    },
+    {
+      "id": "how-to-obtain-probate-sri-lanka",
+      "title": "How to Obtain Probate in Sri Lanka: A Step-by-Step Guide",
+      "category": "inheritance-succession",
+      "topic_order": 9,
+      "description": "What an executor should know about proving a will in the District Court.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/how-to-obtain-probate-sri-lanka/",
+          "title": "How to Obtain Probate in Sri Lanka: A Step-by-Step Guide",
+          "description": "A practical guide to obtaining probate in Sri Lanka, including the application, notice procedure, court order and executor's duties."
+        }
+      },
+      "keywords": [
+        "probate application",
+        "executor",
+        "district court",
+        "notice",
+        "inventory",
+        "oath",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/how-to-obtain-probate-sri-lanka.svg",
+        "alt": "Illustration for How to Obtain Probate in Sri Lanka: A Step-by-Step Guide",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "What an executor should know about proving a will in the District Court.",
+      "series_level": "sub"
+    },
+    {
+      "id": "letters-of-administration-sri-lanka",
+      "title": "How to Obtain Letters of Administration in Sri Lanka: A Step-by-Step Guide",
+      "category": "inheritance-succession",
+      "topic_order": 10,
+      "description": "A practical court-procedure guide for families dealing with an estate without a will.",
+      "published": "2026-11-06",
+      "editions": {
+        "en": {
+          "url": "/legal-guides/letters-of-administration-sri-lanka/",
+          "title": "How to Obtain Letters of Administration in Sri Lanka: A Step-by-Step Guide",
+          "description": "Learn how to obtain letters of administration in Sri Lanka, identify legal heirs and follow the District Court procedure."
+        }
+      },
+      "keywords": [
+        "letters of administration",
+        "intestate estate",
+        "administrator",
+        "certificate of heirship",
+        "district court",
+        "Sri Lanka",
+        "inheritance",
+        "succession",
+        "උරුමය",
+        "දේපළ"
+      ],
+      "image": {
+        "src": "/assets/images/articles/letters-of-administration-sri-lanka.svg",
+        "alt": "Illustration for How to Obtain Letters of Administration in Sri Lanka: A Step-by-Step Guide",
+        "width": "1280",
+        "height": "720"
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": null,
+      "topic_description": "A practical court-procedure guide for families dealing with an estate without a will.",
+      "series_level": "sub"
     }
   ]
 }
