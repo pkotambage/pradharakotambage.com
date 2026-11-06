@@ -23,7 +23,7 @@
       "sections": [
         [
           "What Is Succession?",
-          "<p>Succession is the process through which a deceased person's property passes to those legally entitled to receive it. The property and relevant financial obligations left behind are generally called the <strong>deceased's estate</strong>.</p><p>An estate may include houses, land, vehicles, bank accounts, investments, company shares and valuable belongings. However, a person can generally pass on only property or legal interests that actually belonged to them. If they owned half a house, the other half does not become part of their estate simply because they died.</p>"
+          "<p>Succession is the process through which a deceased person's property passes to those legally entitled to receive it. The property and relevant financial obligations left behind are generally called the <strong>deceased's estate</strong>.</p><p>An estate may include houses, land, vehicles, bank accounts, investments, company shares and valuable belongings. However, a person can generally pass on only property or legal interests that actually belonged to them. If they owned half a house, the other half does not become part of their estate simply because they died.</p><p>Some assets may need separate examination because of nominations, insurance arrangements or other legally recognised interests. The first step is to find out exactly what property the deceased owned.</p>"
         ],
         [
           "What Happens If There Is No Last Will?",
@@ -43,7 +43,7 @@
         ],
         [
           "Does the Family Have to Go to Court?",
-          "<p>Depending on the estate, probate, letters of administration or certificates of heirship may be necessary. These documents address authority to administer the estate or recognition of the heirs. A legal right to inherit does not automatically mean a person can immediately sell the inherited land.</p>"
+          "<p>Depending on the estate, probate, letters of administration or certificates of heirship may be necessary. These documents address authority to administer the estate or recognition of the heirs. A legal right to inherit does not automatically mean a person can immediately sell the inherited land.</p><p>The Civil Procedure Code regulates important testamentary proceedings. Court documentation and the right to inherit are related, but they are not the same question.</p>"
         ],
         [
           "What Should the Family Do First?",
@@ -58,7 +58,8 @@
         "Matrimonial Rights and Inheritance Ordinance, Part III",
         "Wills Ordinance, as amended",
         "Civil Procedure Code, Chapter XXXVIII"
-      ]
+      ],
+      "intro": "When someone dies, what happens to the house they lived in, the land they owned, and the money in their bank accounts? Does everything belong to the surviving husband or wife? Are the children entitled to equal shares? What happens if the person never made a last will? These are questions many Sri Lankan families face, often during an already difficult time. The answers depend on succession law."
     },
     {
       "slug": "intestate-succession-sri-lanka",
@@ -87,7 +88,7 @@
         ],
         [
           "Do Sons and Daughters Inherit Equally?",
-          "<p>Under general law, children ordinarily inherit equally. The eldest son does not automatically receive more, and a married daughter does not lose her general-law inheritance rights because of marriage. If a mother dies leaving three children and no spouse, the children ordinarily receive one-third each. Adoption, parentage and special-law questions can require separate examination.</p>"
+          "<p>Under general law, children ordinarily inherit equally. The eldest son does not automatically receive more, and a married daughter does not lose her general-law inheritance rights because of marriage. If a mother dies leaving three children and no spouse, the children ordinarily receive one-third each. Adoption, parentage and special-law questions can require separate examination.</p><p>A daughter does not lose these rights simply because she married. The legal position may need separate examination where adoption, legal parentage or a special succession law is involved.</p>"
         ],
         [
           "What If One Child Died Before the Parent?",
@@ -95,7 +96,7 @@
         ],
         [
           "What If the Deceased Had No Children?",
-          "<p>Parents may inherit where there are no descendants; siblings may also inherit in certain circumstances. If a person leaves a spouse, no descendants and two surviving parents, the spouse ordinarily receives one-half, with the parents sharing the remainder. The rules are more detailed if only one parent survives or there are full and half-siblings.</p>"
+          "<p>Parents may inherit where there are no descendants; siblings may also inherit in certain circumstances. If a person leaves a spouse, no descendants and two surviving parents, the spouse ordinarily receives one-half, with the parents sharing the remainder. The rules are more detailed if only one parent survives or there are full and half-siblings.</p><p>Where only one parent survives, the relevant parent may share with certain brothers or sisters under section 25 of the Ordinance. Full and half-siblings can be treated differently. The whole family relationship should therefore be established before distributing property.</p>"
         ],
         [
           "What If Only a Husband or Wife Survives?",
@@ -107,7 +108,7 @@
         ],
         [
           "What Should the Family Do?",
-          "<p>Identify all potential heirs, inspect deeds and family records, establish the applicable law and consider whether a court grant or certificate is necessary. Where there are debts or disagreements about shares, obtain advice before distributing or transferring property.</p>"
+          "<p>Identify all potential heirs, inspect deeds and family records, establish the applicable law and consider whether a court grant or certificate is necessary. Where there are debts or disagreements about shares, obtain advice before distributing or transferring property.</p><p>A birth certificate, marriage certificate, death certificate and any adoption order may be relevant. Disagreements should be addressed before an heir attempts to sell more than the share legally belonging to them.</p>"
         ],
         [
           "Conclusion",
@@ -117,7 +118,8 @@
       "legal": [
         "Matrimonial Rights and Inheritance Ordinance, sections 21–36",
         "Applicable special succession laws"
-      ]
+      ],
+      "intro": "Imagine that a father dies leaving a wife, two children and a house. He never made a last will. Who owns the house now? Does the wife receive everything? Do the children have equal rights? Can the eldest son claim a larger share? Under Sri Lanka's general inheritance law, the answers may be different from what family members expect."
     },
     {
       "slug": "last-will-inheritance-sri-lanka",
@@ -137,11 +139,11 @@
       "sections": [
         [
           "What Is a Last Will?",
-          "<p>A last will is a legal document stating how a person's property should pass after death. The person making it is the <strong>testator</strong>; those receiving benefits are <strong>beneficiaries</strong>; and the person appointed to administer the estate is an <strong>executor</strong>.</p><p>For example, a father may leave a house to his wife, land to a child and money to another beneficiary.</p>"
+          "<p>A last will is a legal document stating how a person's property should pass after death. The person making it is the <strong>testator</strong>; those receiving benefits are <strong>beneficiaries</strong>; and the person appointed to administer the estate is an <strong>executor</strong>.</p><p>For example, a father may leave a house to his wife, land to a child and money to another beneficiary.</p><p>A will may give specified assets to particular beneficiaries, name percentages of the estate, or include other lawful directions. Unlike a lifetime transfer of property, its testamentary directions generally take effect when the testator dies.</p>"
         ],
         [
           "Can a Parent Leave Everything to One Child?",
-          "<p>Under the Wills Ordinance, as amended by Act No. 29 of 2022, a person has broad freedom to choose beneficiaries. The law expressly recognises exclusion of particular relatives, including children, without giving reasons. A will is not automatically invalid because one child receives more than another. But the document must be valid, and the testator cannot ordinarily dispose of property that belongs to someone else.</p>"
+          "<p>Under the Wills Ordinance, as amended by Act No. 29 of 2022, a person has broad freedom to choose beneficiaries. The law expressly recognises exclusion of particular relatives, including children, without giving reasons. A will is not automatically invalid because one child receives more than another. But the document must be valid, and the testator cannot ordinarily dispose of property that belongs to someone else.</p><p>That freedom does not remove the need to show the will was genuine or that the testator had the necessary understanding and acted freely when making it.</p>"
         ],
         [
           "How Is a Valid Will Made?",
@@ -161,7 +163,7 @@
         ],
         [
           "What If the Will Does Not Mention Everything?",
-          "<p>Property not effectively disposed of by a will may pass under the applicable intestacy rules. This is called <strong>partial intestacy</strong>. A carefully drafted provision dealing with the remaining estate can help avoid uncertainty.</p>"
+          "<p>Property not effectively disposed of by a will may pass under the applicable intestacy rules. This is called <strong>partial intestacy</strong>. A carefully drafted provision dealing with the remaining estate can help avoid uncertainty.</p><p>A residuary clause is often used to cover assets not specifically mentioned, including property acquired after the will was made.</p>"
         ],
         [
           "Conclusion",
@@ -172,7 +174,8 @@
         "Wills Ordinance, as amended by Act No. 29 of 2022",
         "Prevention of Frauds Ordinance, as amended by Act No. 30 of 2022",
         "Civil Procedure Code, Chapter XXXVIII"
-      ]
+      ],
+      "intro": "A mother owns a house and several plots of land. Before her death, she makes a last will leaving the house to one daughter and the land to her other children. After her death, someone in the family argues that all the children must receive equal shares. Is that correct? Not necessarily. Sri Lankan law allows a person to decide how their property should be distributed after death through a legally valid last will."
     },
     {
       "slug": "probate-estate-administration-sri-lanka",
@@ -203,7 +206,7 @@
         ],
         [
           "Which Court Should the Family Approach?",
-          "<p>These applications generally come before the appropriate District Court. Jurisdiction depends on statutory connections such as the deceased's residence, the applicant's residence or the location of estate land.</p>"
+          "<p>These applications generally come before the appropriate District Court. Jurisdiction depends on statutory connections such as the deceased's residence, the applicant's residence or the location of estate land.</p><p>Applying in the wrong court or without necessary information can delay dealing with property. Court jurisdiction should be checked before filing.</p>"
         ],
         [
           "Does the Value of the Estate Matter?",
@@ -211,11 +214,11 @@
         ],
         [
           "What If Someone Objects?",
-          "<p>Interested persons may object to an application through the prescribed process, for example disputing a will or the applicant's entitlement to administer the estate. The court may need to resolve disputed facts before issuing the grant.</p>"
+          "<p>Interested persons may object to an application through the prescribed process, for example disputing a will or the applicant's entitlement to administer the estate. The court may need to resolve disputed facts before issuing the grant.</p><p>A person may dispute the identity of an heir, the validity of a will, or who should act as administrator. An objection may require an inquiry and does not automatically establish that the objector is correct.</p>"
         ],
         [
           "Can Inherited Property Be Sold Immediately?",
-          "<p>Not always. Section 545 of the Civil Procedure Code restricts certain transfers. The relevant period, value, existence of a will and available court documents can affect whether a transfer is permitted. Obtain title and succession advice before selling inherited land.</p>"
+          "<p>Not always. Section 545 of the Civil Procedure Code restricts certain transfers. The relevant period, value, existence of a will and available court documents can affect whether a transfer is permitted. Obtain title and succession advice before selling inherited land.</p><p>Even when the family agrees on a sale, the purchaser may need reliable documents proving both the seller's title and any required authority to deal with the deceased's estate.</p>"
         ],
         [
           "Conclusion",
@@ -224,7 +227,8 @@
       ],
       "legal": [
         "Civil Procedure Code, sections 516–545"
-      ]
+      ],
+      "intro": "A father dies leaving a house and money in a bank account. His wife and children know that they may be entitled to inherit. However, when they try to deal with the property, they are told that legal documents are required. They hear three expressions: probate, letters of administration and certificates of heirship. What do they mean, and which one might the family need?"
     },
     {
       "slug": "deceased-person-estate-property-sri-lanka",
@@ -245,7 +249,7 @@
       "sections": [
         [
           "What Is Included in an Estate?",
-          "<p>When someone dies, relatives often ask who should inherit the house or savings. But the first question is <strong>what property actually belonged to the deceased?</strong></p><p>An estate may include land, houses, vehicles, bank balances, investments, company shares, valuables and business rights. Ownership, mortgages, trusts and nominations may change the position.</p>"
+          "<p>When someone dies, relatives often ask who should inherit the house or savings. But the first question is <strong>what property actually belonged to the deceased?</strong></p><p>An estate may include land, houses, vehicles, bank balances, investments, company shares, valuables and business rights. Ownership, mortgages, trusts and nominations may change the position.</p><p>It may also include money owed to the deceased and certain rights connected with a business. Not every asset associated with the deceased forms part of the estate that can be divided immediately. Establish the legal basis of ownership.</p>"
         ],
         [
           "What If the House Belonged to Both Husband and Wife?",
@@ -257,11 +261,11 @@
         ],
         [
           "What About Money in Bank Accounts?",
-          "<p>Some deposits form part of the estate, but a valid nomination can change the treatment. Section 544 of the Civil Procedure Code covers nominations of specified financial assets, including qualifying bank deposits and other interests. A nomination may take effect despite a different instruction in a will.</p><p>For example, a validly nominated daughter may receive a qualifying deposit under the nomination rather than the ordinary division of the estate. Not all accounts are treated alike; the relevant account and nomination must be examined.</p>"
+          "<p>Some deposits form part of the estate, but a valid nomination can change the treatment. Section 544 of the Civil Procedure Code covers nominations of specified financial assets, including qualifying bank deposits and other interests. A nomination may take effect despite a different instruction in a will.</p><p>For example, a validly nominated daughter may receive a qualifying deposit under the nomination rather than the ordinary division of the estate. Not all accounts are treated alike; the relevant account and nomination must be examined.</p><p>In particular, it is important to distinguish between an ordinary bank balance and a financial interest covered by a valid statutory nomination. The relevant account terms and documents must be reviewed.</p>"
         ],
         [
           "What About Insurance and Business Assets?",
-          "<p>Section 554A of the Civil Procedure Code excludes certain insurance money and nominated financial assets from estate property for testamentary proceedings. Company shares owned personally by the deceased may form part of the estate; assets owned by the company itself do not automatically become personal property of the shareholder. Partnership agreements and other documents may also matter.</p>"
+          "<p>Section 554A of the Civil Procedure Code excludes certain insurance money and nominated financial assets from estate property for testamentary proceedings. Company shares owned personally by the deceased may form part of the estate; assets owned by the company itself do not automatically become personal property of the shareholder. Partnership agreements and other documents may also matter.</p><p>A business partnership may require examination of the partnership agreement and the deceased's interest in it. Insurance proceeds may be paid under their own statutory and contractual arrangements.</p>"
         ],
         [
           "Do Debts Affect the Estate?",
@@ -269,7 +273,7 @@
         ],
         [
           "What Documents Should Be Collected?",
-          "<p>Preserve deeds, survey plans, financial and investment records, nomination forms, insurance documents, vehicle registrations, loan agreements and any will. Avoid transferring or disposing of assets before establishing their legal position.</p>"
+          "<p>Preserve deeds, survey plans, financial and investment records, nomination forms, insurance documents, vehicle registrations, loan agreements and any will. Avoid transferring or disposing of assets before establishing their legal position.</p><p>A property investigation or title search may be necessary where the ownership history is uncertain. Avoid assuming that possession of a deed proves exclusive ownership.</p>"
         ],
         [
           "Conclusion",
@@ -279,7 +283,8 @@
       "legal": [
         "Matrimonial Rights and Inheritance Ordinance, sections 21, 22 and 35",
         "Civil Procedure Code, sections 544 and 554A"
-      ]
+      ],
+      "intro": "When someone dies, family members often begin discussing who should inherit the house, land or savings. But before deciding who receives what, there is an important question: what property actually belonged to the deceased? Not everything connected to a deceased person necessarily forms part of the property available for inheritance. Understanding this distinction can help prevent misunderstandings and disputes."
     },
     {
       "slug": "inheritance-laws-sri-lanka",
@@ -299,7 +304,7 @@
       "sections": [
         [
           "Why Are There Different Inheritance Laws?",
-          "<p>Two families may each have a father who died without a will leaving a wife, children and land, yet the same inheritance formula may not apply to both. Sri Lanka's law developed through general law, customary laws and legislation. The principal systems are general law, Kandyan law, Thesawalamai and Muslim law.</p>"
+          "<p>Two families may each have a father who died without a will leaving a wife, children and land, yet the same inheritance formula may not apply to both. Sri Lanka's law developed through general law, customary laws and legislation. The principal systems are general law, Kandyan law, Thesawalamai and Muslim law.</p><p>These rules developed from a combination of general law, customary law and legislation. They should not be treated as interchangeable, and the relevant legal system should be identified at the beginning of the inquiry.</p>"
         ],
         [
           "1. General Law of Inheritance",
@@ -307,11 +312,11 @@
         ],
         [
           "2. Kandyan Law",
-          "<p>Kandyan law contains distinct inheritance rules under legislation including the Kandyan Law Declaration and Amendment Ordinance and the Kandyan Succession Ordinance. It distinguishes certain categories of property, including <strong>paraveni</strong> ancestral or inherited immovable property and acquired property.</p><p>It also contains rules regarding surviving spouses' life interests and, in specific contexts, <em>binna</em> and <em>diga</em> marriages. A life interest generally permits enjoyment or use during a person's lifetime without necessarily granting full ownership. These provisions require individual application, not the automatic use of the general-law one-half spouse rule.</p>"
+          "<p>Kandyan law contains distinct inheritance rules under legislation including the Kandyan Law Declaration and Amendment Ordinance and the Kandyan Succession Ordinance. It distinguishes certain categories of property, including <strong>paraveni</strong> ancestral or inherited immovable property and acquired property.</p><p>It also contains rules regarding surviving spouses' life interests and, in specific contexts, <em>binna</em> and <em>diga</em> marriages. A life interest generally permits enjoyment or use during a person's lifetime without necessarily granting full ownership. These provisions require individual application, not the automatic use of the general-law one-half spouse rule.</p><p>Residence in the Central Province alone does not establish that a deceased person was governed by Kandyan law. Its application must be legally determined.</p>"
         ],
         [
           "3. Thesawalamai",
-          "<p>The Jaffna Matrimonial Rights and Inheritance Ordinance provides important rules for persons governed by Thesawalamai. The origin and category of property, including ancestral interests, may affect inheritance; in some circumstances a link to the father's or mother's side matters.</p><p>Not every Tamil person is automatically governed by Thesawalamai. Its applicability is a legal question, not a conclusion based only on ethnicity, surname or present address.</p>"
+          "<p>The Jaffna Matrimonial Rights and Inheritance Ordinance provides important rules for persons governed by Thesawalamai. The origin and category of property, including ancestral interests, may affect inheritance; in some circumstances a link to the father's or mother's side matters.</p><p>Not every Tamil person is automatically governed by Thesawalamai. Its applicability is a legal question, not a conclusion based only on ethnicity, surname or present address.</p><p>In particular, property associated with different family lines may be dealt with differently under the relevant provisions. It is necessary to examine the person's status as well as the origin and character of the property.</p>"
         ],
         [
           "4. Muslim Law",
@@ -319,7 +324,7 @@
         ],
         [
           "What If the Deceased Left a Will?",
-          "<p>The Wills Ordinance, as amended in 2022, recognises broad testamentary freedom, but a will's validity and legal effects must be considered under the law relevant to the particular circumstances.</p>"
+          "<p>The Wills Ordinance, as amended in 2022, recognises broad testamentary freedom, but a will's validity and legal effects must be considered under the law relevant to the particular circumstances.</p><p>Intestate succession rules should not simply be used to calculate the distribution where a legally effective will disposes of the relevant property.</p>"
         ],
         [
           "What If the Deceased Lived Abroad?",
@@ -341,7 +346,8 @@
         "Jaffna Matrimonial Rights and Inheritance Ordinance",
         "Muslim Intestate Succession Ordinance",
         "Wills Ordinance, as amended"
-      ]
+      ],
+      "intro": "Two Sri Lankan families may experience similar circumstances. In both families, a father dies without leaving a last will. Each father leaves a wife, children and land. But does the law necessarily divide their property in the same way? No. Sri Lanka has different legal systems governing inheritance. This is important to understand before calculating shares in a deceased person's property."
     },
     {
       "slug": "inheritance-rights-family-members-sri-lanka",
@@ -362,7 +368,7 @@
       "sections": [
         [
           "Who Has the First Right to Inherit?",
-          "<p>Under general intestate succession law, children and other descendants take priority over parents, siblings and more distant relatives, subject to the surviving spouse's statutory rights. Certain exceptions and rules of representation apply.</p>"
+          "<p>Under general intestate succession law, children and other descendants take priority over parents, siblings and more distant relatives, subject to the surviving spouse's statutory rights. Certain exceptions and rules of representation apply.</p><p>The statutory order is important: a more distant relative cannot ordinarily inherit alongside a closer category where the law gives that category priority. The surviving spouse's entitlement must also be considered.</p>"
         ],
         [
           "Can Grandchildren Inherit?",
@@ -374,7 +380,7 @@
         ],
         [
           "What If Only One Parent Survives?",
-          "<p>Under section 25 of the Matrimonial Rights and Inheritance Ordinance, one surviving parent may share with qualifying siblings of the deceased. For example, where a person dies leaving no spouse or descendants, but a mother and one full brother, the mother would ordinarily receive half and the brother the other half.</p><p>The result may change where full or half-siblings or descendants of deceased siblings are involved. Section 25 includes a qualification where no qualifying sibling is alive at the deceased's death: in that situation the surviving parent may take the whole relevant portion even if descendants of deceased siblings survive.</p>"
+          "<p>Under section 25 of the Matrimonial Rights and Inheritance Ordinance, one surviving parent may share with qualifying siblings of the deceased. For example, where a person dies leaving no spouse or descendants, but a mother and one full brother, the mother would ordinarily receive half and the brother the other half.</p><p>The result may change where full or half-siblings or descendants of deceased siblings are involved. Section 25 includes a qualification where no qualifying sibling is alive at the deceased's death: in that situation the surviving parent may take the whole relevant portion even if descendants of deceased siblings survive.</p><p>This is why it is important to examine exactly who was alive on the date of death and to distinguish siblings of the whole blood from certain half-siblings.</p>"
         ],
         [
           "Can Brothers and Sisters Inherit?",
@@ -382,7 +388,7 @@
         ],
         [
           "What About Uncles, Aunts and More Distant Relatives?",
-          "<p>More distant relatives may inherit when closer statutory classes have failed. Section 31 deals with remoter ascendants and collateral relatives; further provisions address cases where no qualifying heirs remain. Exact relationships must be established.</p>"
+          "<p>More distant relatives may inherit when closer statutory classes have failed. Section 31 deals with remoter ascendants and collateral relatives; further provisions address cases where no qualifying heirs remain. Exact relationships must be established.</p><p>Where no qualifying relatives remain, the law also makes provision for the ultimate destination of the property. A person's closeness in everyday family life does not alone determine succession rights.</p>"
         ],
         [
           "Can an Adopted Child Inherit?",
@@ -394,7 +400,7 @@
         ],
         [
           "What If the Family Disagrees?",
-          "<p>Gather birth, marriage, adoption and death records, establish all relevant relationships and apply the correct law before asserting shares or transferring property.</p>"
+          "<p>Gather birth, marriage, adoption and death records, establish all relevant relationships and apply the correct law before asserting shares or transferring property.</p><p>Uncertain parentage, missing documents and disputes about a deceased sibling's descendants may require closer investigation. It is safer to establish the family tree and legal entitlement before making property transfers.</p>"
         ],
         [
           "Conclusion",
@@ -405,7 +411,8 @@
         "Matrimonial Rights and Inheritance Ordinance, sections 23–36",
         "Adoption of Children Ordinance, section 6",
         "Relevant special succession legislation"
-      ]
+      ],
+      "intro": "When someone dies without a last will, the surviving husband, wife and children are usually the first family members considered. But what if the deceased had no children? Can their parents inherit? Do brothers and sisters have rights? What happens when a child died before their parent, leaving grandchildren? Sri Lanka's general inheritance law provides rules for these situations."
     },
     {
       "slug": "make-valid-last-will-sri-lanka",
@@ -426,7 +433,7 @@
       "sections": [
         [
           "Who Can Make a Last Will?",
-          "<p>Under the Wills Ordinance, as amended by Act No. 29 of 2022, a person who has reached 18 years of age may make a will within the scope of the legislation. The testator must also have the necessary mental capacity and act voluntarily. A will may be challenged if the person lacked capacity or was subject to legally impermissible pressure.</p>"
+          "<p>Under the Wills Ordinance, as amended by Act No. 29 of 2022, a person who has reached 18 years of age may make a will within the scope of the legislation. The testator must also have the necessary mental capacity and act voluntarily. A will may be challenged if the person lacked capacity or was subject to legally impermissible pressure.</p><p>In particular, a person's capacity must exist when the will is executed. Being at least 18 years old is not the only legal requirement.</p>"
         ],
         [
           "What Property Can Be Included?",
@@ -442,7 +449,7 @@
         ],
         [
           "What Should the Will Contain?",
-          "<ul><li>Clear identification of the testator and beneficiaries.</li><li>Accurate property descriptions.</li><li>The intended gifts or shares.</li><li>A suitable executor.</li><li>Contingencies if a beneficiary dies first.</li><li>A provision for the remaining estate.</li></ul><p>A <strong>residuary clause</strong> deals with property left after specific gifts and liabilities. Without an effective clause, some assets may pass under intestacy.</p>"
+          "<ul><li>Clear identification of the testator and beneficiaries.</li><li>Accurate property descriptions.</li><li>The intended gifts or shares.</li><li>A suitable executor.</li><li>Contingencies if a beneficiary dies first.</li><li>A provision for the remaining estate.</li></ul><p>A <strong>residuary clause</strong> deals with property left after specific gifts and liabilities. Without an effective clause, some assets may pass under intestacy.</p><p>For example, a testator may leave a specific house to a daughter and direct how the balance of the estate should be divided. The will should also deal with what happens if a beneficiary dies before the testator.</p>"
         ],
         [
           "Who Should Be the Executor?",
@@ -454,11 +461,11 @@
         ],
         [
           "Can a Will Be Changed?",
-          "<p>A person may wish to change a will after marriage, having children or acquiring property. A new properly executed will, a <strong>codicil</strong> or another recognised method may be needed. Informal crossing-out or handwritten changes to an executed will may not work. Marriage may also affect an existing will.</p>"
+          "<p>A person may wish to change a will after marriage, having children or acquiring property. A new properly executed will, a <strong>codicil</strong> or another recognised method may be needed. Informal crossing-out or handwritten changes to an executed will may not work. Marriage may also affect an existing will.</p><p>Major changes in family circumstances, including marriage, divorce or the birth of children, are sensible occasions to review existing testamentary arrangements.</p>"
         ],
         [
           "Where Should the Will Be Kept?",
-          "<p>Keep the original securely and ensure the executor or a trusted person knows where it can be located. Missing originals can make probate more difficult.</p>"
+          "<p>Keep the original securely and ensure the executor or a trusted person knows where it can be located. Missing originals can make probate more difficult.</p><p>Where the original cannot be found after death, proving the deceased's wishes can involve additional evidentiary and court difficulties.</p>"
         ],
         [
           "Conclusion",
@@ -469,7 +476,8 @@
         "Wills Ordinance, section 2, as amended by Act No. 29 of 2022",
         "Prevention of Frauds Ordinance, sections 4, 6, 7 and 11, as amended",
         "Notaries Ordinance"
-      ]
+      ],
+      "intro": "Many people believe that making a last will is something to think about only when they become elderly. Others assume that writing down their wishes, signing the paper and keeping it safely at home is enough. However, a last will must meet specific legal requirements to be valid. A properly prepared will can help someone decide how their property should be distributed after death and reduce uncertainty for their family."
     },
     {
       "slug": "challenge-last-will-sri-lanka",
@@ -493,7 +501,7 @@
         ],
         [
           "What If the Person Lacked Mental Capacity?",
-          "<p>A testator must have the required testamentary capacity when making the will. Serious illness or cognitive impairment can raise questions, but old age or physical illness alone does not establish incapacity. Medical evidence and testimony concerning the person's understanding at the time may matter.</p>"
+          "<p>A testator must have the required testamentary capacity when making the will. Serious illness or cognitive impairment can raise questions, but old age or physical illness alone does not establish incapacity. Medical evidence and testimony concerning the person's understanding at the time may matter.</p><p>The central question is the testator's actual understanding when the document was made. Witnesses, medical evidence and the surrounding circumstances may be relevant.</p>"
         ],
         [
           "What If Someone Pressured the Deceased?",
@@ -509,7 +517,7 @@
         ],
         [
           "What If Circumstances Look Suspicious?",
-          "<p>If a major beneficiary organised the will, kept it secret or was unusually involved in execution, the circumstances may deserve scrutiny. Such involvement does not automatically prove invalidity; the evidence must be examined to establish genuine testamentary intentions.</p>"
+          "<p>If a major beneficiary organised the will, kept it secret or was unusually involved in execution, the circumstances may deserve scrutiny. Such involvement does not automatically prove invalidity; the evidence must be examined to establish genuine testamentary intentions.</p><p>For example, unusual secrecy or substantial involvement by a beneficiary may call for closer examination, but neither fact automatically proves a will invalid.</p>"
         ],
         [
           "Who Can Challenge a Will?",
@@ -521,7 +529,7 @@
         ],
         [
           "When Should Objections Be Raised?",
-          "<p>The Civil Procedure Code provides notice and objection procedures during probate. Section 536 provides for caveats in appropriate cases. A <strong>caveat</strong> is a formal procedural step by someone seeking to oppose a grant. Interested persons should act promptly.</p>"
+          "<p>The Civil Procedure Code provides notice and objection procedures during probate. Section 536 provides for caveats in appropriate cases. A <strong>caveat</strong> is a formal procedural step by someone seeking to oppose a grant. Interested persons should act promptly.</p><p>Anyone with a genuine basis to contest the application should preserve documents and seek timely legal assistance instead of relying on informal accusations.</p>"
         ],
         [
           "Can Probate Be Challenged After It Has Been Granted?",
@@ -529,7 +537,7 @@
         ],
         [
           "Can Mediation Help?",
-          "<p>Family members may be able to negotiate practical issues such as occupation or sale of inherited property. Mediation cannot replace a court determination that a disputed will is valid or dispense with statutory steps. Any agreement must respect the rights of affected persons.</p>"
+          "<p>Family members may be able to negotiate practical issues such as occupation or sale of inherited property. Mediation cannot replace a court determination that a disputed will is valid or dispense with statutory steps. Any agreement must respect the rights of affected persons.</p><p>Possible practical arrangements may concern occupation of the family home, sale of jointly inherited land or distribution of sentimental belongings. A mediator cannot by agreement prove a forged instrument genuine or replace statutory probate procedure.</p>"
         ],
         [
           "Conclusion",
@@ -541,7 +549,8 @@
         "Prevention of Frauds Ordinance",
         "Evidence Ordinance",
         "Civil Procedure Code, sections 529, 532, 536–538 and 541"
-      ]
+      ],
+      "intro": "A father dies leaving most of his property to one child. The other children believe the arrangement is unfair. One claims the father was seriously ill when the will was signed. Another suspects the beneficiary pressured him. Can the children challenge the will? Yes, but a will cannot be set aside merely because someone is unhappy with their inheritance. There must be a legally recognised reason."
     },
     {
       "slug": "how-to-obtain-probate-sri-lanka",
@@ -562,7 +571,7 @@
       "sections": [
         [
           "Step 1: Find the Original Last Will",
-          "<p>After a mother dies leaving a will, the family should locate the original document. It may be held by a notary, lawyer, relative or another custodian. Section 516 of the Civil Procedure Code requires a person holding or finding it after death to produce it to the proper District Court as soon as reasonably possible, with the required information.</p>"
+          "<p>After a mother dies leaving a will, the family should locate the original document. It may be held by a notary, lawyer, relative or another custodian. Section 516 of the Civil Procedure Code requires a person holding or finding it after death to produce it to the proper District Court as soon as reasonably possible, with the required information.</p><p>The accompanying affidavit and information about the death and estate should be prepared as required. A family member holding the will should not simply leave it in a drawer indefinitely.</p>"
         ],
         [
           "Step 2: Identify the Executor",
@@ -574,7 +583,7 @@
         ],
         [
           "Step 4: Prepare the Application",
-          "<p>Section 524 requires a petition and affidavit giving relevant details of the will, estate property, heirs and the applicant's entitlement, with evidence of proper execution. The section specifies a period of <strong>three months from the date the will is found</strong> for the application. If there has been delay, obtain legal advice on its implications.</p>"
+          "<p>Section 524 requires a petition and affidavit giving relevant details of the will, estate property, heirs and the applicant's entitlement, with evidence of proper execution. The section specifies a period of <strong>three months from the date the will is found</strong> for the application. If there has been delay, obtain legal advice on its implications.</p><p>A petition is a formal request to court; an affidavit is a sworn written statement. The application should identify the estate and relevant heirs to the applicant's knowledge.</p>"
         ],
         [
           "Step 5: Publish the Required Notice",
@@ -590,11 +599,11 @@
         ],
         [
           "Step 8: Take the Oath and File the Inventory",
-          "<p>Following the relevant order, section 539 requires the executor's prescribed oath within <strong>fifteen days</strong> and an inventory and valuation within <strong>one month after the oath</strong>. The grant issues in accordance with the statutory procedure.</p>"
+          "<p>Following the relevant order, section 539 requires the executor's prescribed oath within <strong>fifteen days</strong> and an inventory and valuation within <strong>one month after the oath</strong>. The grant issues in accordance with the statutory procedure.</p><p>The inventory and valuation record the property subject to administration. They are not mere formalities; the executor must account for their handling of the estate as required by law.</p>"
         ],
         [
           "Step 9: Administer the Estate",
-          "<p>The executor must protect and collect assets, address valid debts, distribute according to the will and maintain records. Section 551 also contains accounting requirements. Probate is authority to administer, not personal ownership.</p>"
+          "<p>The executor must protect and collect assets, address valid debts, distribute according to the will and maintain records. Section 551 also contains accounting requirements. Probate is authority to administer, not personal ownership.</p><p>The executor may also need to complete land-registration or other asset-transfer documents after addressing valid liabilities. The grant is not necessarily the end of the process.</p>"
         ],
         [
           "What If the Original Will Is Missing?",
@@ -615,7 +624,8 @@
       ],
       "legal": [
         "Civil Procedure Code, sections 516–524, 529–541 and 551"
-      ]
+      ],
+      "intro": "A mother dies leaving a last will. In it, she names an executor and states how her house, land and other property should be distributed. The family now wants to know what happens next. In Sri Lanka, the executor may need to obtain probate through the appropriate District Court. Probate is the formal grant through which the will is proved and the executor's authority is recognised."
     },
     {
       "slug": "letters-of-administration-sri-lanka",
@@ -635,7 +645,7 @@
       "sections": [
         [
           "What Are Letters of Administration?",
-          "<p>A father dies without a will, leaving a house, vehicle and bank account. His family may need <strong>letters of administration</strong>: a court grant authorising an administrator to deal with the estate. The administrator gathers assets, deals with debts and distributes the remainder according to law. The grant does not mean that the administrator inherits everything.</p>"
+          "<p>A father dies without a will, leaving a house, vehicle and bank account. His family may need <strong>letters of administration</strong>: a court grant authorising an administrator to deal with the estate. The administrator gathers assets, deals with debts and distributes the remainder according to law. The grant does not mean that the administrator inherits everything.</p><p>The administrator is a representative of the estate, not the person entitled to take every asset. They must deal with the property and liabilities in accordance with the court grant and law.</p>"
         ],
         [
           "Step 1: Identify the Legal Heirs",
@@ -647,7 +657,7 @@
         ],
         [
           "Step 3: Determine Who Should Apply",
-          "<p>Section 526 of the Civil Procedure Code permits an interested person to seek letters of administration. In competing claims, section 523 gives preference to the surviving widow or widower, although the court may depart from it for good cause. A widow appointed administrator does not thereby extinguish her children's inheritance rights.</p>"
+          "<p>Section 526 of the Civil Procedure Code permits an interested person to seek letters of administration. In competing claims, section 523 gives preference to the surviving widow or widower, although the court may depart from it for good cause. A widow appointed administrator does not thereby extinguish her children's inheritance rights.</p><p>For example, a widow may obtain administration even though her three adult children also have inheritance rights. These are separate legal questions.</p>"
         ],
         [
           "Step 4: Check the Estate's Value",
@@ -655,7 +665,7 @@
         ],
         [
           "Step 5: Prepare the Court Application",
-          "<p>Section 528 provides for a petition and affidavit setting out the death, absence of a will, heirs, estate property, liabilities, creditors, applicant's entitlement and agreed shares where relevant. The section specifies <strong>three months from the date of death</strong> for making the application. Seek advice if that period has passed.</p>"
+          "<p>Section 528 provides for a petition and affidavit setting out the death, absence of a will, heirs, estate property, liabilities, creditors, applicant's entitlement and agreed shares where relevant. The section specifies <strong>three months from the date of death</strong> for making the application. Seek advice if that period has passed.</p><p>Where shares are agreed and relevant, the application should include those details. Failure to disclose relevant heirs or creditors may give rise to procedural difficulties.</p>"
         ],
         [
           "Step 6: Notify Other Interested Persons",
@@ -675,11 +685,11 @@
         ],
         [
           "Can the Family Obtain Certificates of Heirship Instead?",
-          "<p>Sections 526 and 531 permit eligible heirs to seek certificates identifying heirs and their agreed shares in appropriate intestate cases. However, the court may determine that active administration and letters are necessary instead.</p>"
+          "<p>Sections 526 and 531 permit eligible heirs to seek certificates identifying heirs and their agreed shares in appropriate intestate cases. However, the court may determine that active administration and letters are necessary instead.</p><p>These certificates may help heirs prove their entitlement to particular inherited interests. But where active administration is required, certificates alone may not be sufficient.</p>"
         ],
         [
           "What If There Are Debts or Disputes?",
-          "<p>Valid creditors must be considered before distribution. Insolvent estates may involve separate statutory provisions. Heirs may object through the prescribed process; lawful negotiation may resolve practical differences but cannot replace required court or land-transfer formalities.</p>"
+          "<p>Valid creditors must be considered before distribution. Insolvent estates may involve separate statutory provisions. Heirs may object through the prescribed process; lawful negotiation may resolve practical differences but cannot replace required court or land-transfer formalities.</p><p>The Civil Procedure Code has provisions for administration of insolvent testamentary estates. Agreements among heirs cannot remove valid creditor rights or compulsory transfer requirements.</p>"
         ],
         [
           "Can Heirs Sell the Property?",
@@ -694,7 +704,8 @@
         "Civil Procedure Code, sections 523, 525–545, and provisions concerning insolvent testamentary estates",
         "Matrimonial Rights and Inheritance Ordinance",
         "Applicable special succession laws"
-      ]
+      ],
+      "intro": "A father dies without leaving a last will. He owned a house, a vehicle and some money in a bank account. His wife and children know that they may be entitled to inherit his property, but they are uncertain how to deal with the estate legally. In such circumstances, the family may need letters of administration issued by the appropriate District Court."
     }
   ]
 }
