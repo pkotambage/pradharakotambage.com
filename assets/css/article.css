@@ -180,10 +180,33 @@ html[lang="si"] .article-content h3 { line-height: 1.38; letter-spacing: 0; over
   .author-note { margin-top: 42px; }
 }
 
-/* Shared article feature images. */
-.article-feature-image{width:min(calc(100% - 40px),900px);margin:38px auto 0}.article-feature-image img{display:block;width:100%;height:auto;max-height:480px;aspect-ratio:3/2;object-fit:cover;border-radius:8px;background:#e7f0f2}@media(max-width:700px){.article-feature-image{margin-top:24px}.article-feature-image img{max-height:320px}}
-
-/* Site-wide responsive artwork framing fix: preserve complete editorial compositions. */
-.article-feature-image { width:min(calc(100% - 40px), 900px); margin:38px auto 0; }
-.article-feature-image img { display:block; width:100%; height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; object-position:center; border-radius:8px; }
-@media(max-width:700px){ .article-feature-image { width:min(calc(100% - 24px),900px); margin-top:24px; } .article-feature-image img { max-height:none; } }
+/* Shared article feature images: one consistently positioned hero below the article heading.
+   Source images are 16:9. Keep the entire source visible rather than enforcing a crop. */
+.article-feature-image {
+  box-sizing: border-box;
+  width: min(calc(100% - 40px), 900px);
+  margin: 32px auto 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f7f1e7;
+}
+.article-feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  border-radius: 0;
+}
+@media (max-width: 700px) {
+  .article-feature-image {
+    width: min(calc(100% - 24px), 900px);
+    margin-top: 22px;
+  }
+}
