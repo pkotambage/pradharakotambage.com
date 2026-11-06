@@ -88,6 +88,7 @@ if (siteNav && menuToggle) {
       [isSinhala ? 'සියලු ලිපි සොයන්න' : 'Search All Articles', '/legal-guides/all/'],
       [isSinhala ? 'සිවිල් නඩු / Civil Litigation' : 'Civil Litigation', '/legal-guides/topics/civil-litigation/'],
       [isSinhala ? 'පවුල් නීතිය / Family Law' : 'Family Law', '/legal-guides/topics/family-personal-law/'],
+      [isSinhala ? 'උරුමය හා දේපළ අනුප්‍රාප්තිය / Inheritance & Succession' : 'Inheritance & Succession', '/legal-guides/topics/inheritance-succession/'],
       [isSinhala ? 'ඉඩම් හා දේපළ / Land & Property' : 'Land & Property', '/legal-guides/topics/land-property/'],
       [isSinhala ? 'ගිවිසුම් හා මුදල් අයකර ගැනීම' : 'Contracts & Recovery', '/legal-guides/topics/contracts-recovery/'],
       [isSinhala ? 'නීති සම්පත් / Legal Resources' : 'Legal Resources', '/legal-resources/']
