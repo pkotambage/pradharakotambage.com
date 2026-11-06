@@ -182,3 +182,8 @@ html[lang="si"] .article-content h3 { line-height: 1.38; letter-spacing: 0; over
 
 /* Shared article feature images. */
 .article-feature-image{width:min(calc(100% - 40px),900px);margin:38px auto 0}.article-feature-image img{display:block;width:100%;height:auto;max-height:480px;aspect-ratio:3/2;object-fit:cover;border-radius:8px;background:#e7f0f2}@media(max-width:700px){.article-feature-image{margin-top:24px}.article-feature-image img{max-height:320px}}
+
+/* Site-wide responsive artwork framing fix: preserve complete editorial compositions. */
+.article-feature-image { width:min(calc(100% - 40px), 900px); margin:38px auto 0; }
+.article-feature-image img { display:block; width:100%; height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; object-position:center; border-radius:8px; }
+@media(max-width:700px){ .article-feature-image { width:min(calc(100% - 24px),900px); margin-top:24px; } .article-feature-image img { max-height:none; } }
