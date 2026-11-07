@@ -40,7 +40,8 @@ class SocialPreviewTests(unittest.TestCase):
             if image_url.endswith("/assets/images/social-preview.jpg"):
                 image_type, width, height = "image/jpeg", "1200", "630"
             elif image_url.endswith(".webp"):
-                image_type, width, height = "image/webp", "1280", "720"
+                image_type = "image/webp"
+                width, height = ("1600", "900") if image_url.endswith("-1600.webp") else ("1280", "720")
                 image_path = ROOT / "assets/images" / image_url.split("/assets/images/", 1)[-1]
                 if not image_path.is_file():
                     offenders.append(f"{path.relative_to(ROOT)}: missing social image {image_url}")
