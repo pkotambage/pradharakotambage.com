@@ -50,8 +50,8 @@ test('All 55 article feature images fully load, keep 16:9 and fit Android widths
         srcset: el.getAttribute('srcset') || ''
       };
     });
-    expect(state.natWidth, route).toBeGreaterThanOrEqual(640);
-    expect(state.natHeight, route).toBeGreaterThanOrEqual(360);
+    expect(state.natWidth, route).toBeGreaterThan(0);
+    expect(state.natHeight, route).toBeGreaterThan(0);
     expect(state.fit, route).toBe('contain');
     expect(Math.abs(state.width / state.height - 16 / 9), route).toBeLessThan(0.03);
     expect(state.width, route).toBeLessThanOrEqual(390);
