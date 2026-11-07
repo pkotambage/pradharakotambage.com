@@ -23,7 +23,7 @@
  .library-list {display:grid; gap:12px}
  .library-guide {border-left:4px solid #527c77}
  .illustrated-guide {display:grid; grid-template-columns:190px minmax(0,1fr); gap:23px; align-items:center; padding:16px 20px}
- .guide-art {display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:3px; background:#e7f0f2}
+ .guide-art {display:block; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; object-position:center; border-radius:3px; background:#e7f0f2}
  .guide-copy {min-width:0}
  .language-links {display:flex; gap:18px; margin-top:16px; font-weight:700}
  .language-links a {text-decoration:underline; text-underline-offset:3px}
@@ -33,6 +33,13 @@
  .library-note {border-left:4px solid #527c77; background:#e7f0f2; padding:16px 20px; margin-top:44px; max-width:830px}
  @media(max-width:700px){.library-page {padding:34px 0 58px}.library-grid{grid-template-columns:1fr}.library-topic,.library-guide{padding:20px}.illustrated-guide{grid-template-columns:1fr;gap:16px;padding:14px}.illustrated-guide .guide-art{max-height:none}}
  .library-guide .guide-published {margin-top:12px; color:#53636b; font-size:.9rem}
+
+ 
+ /* Unified article directory image layout. Source assets are normalized to 16:9. */
+ .library-guide.illustrated-guide {display:grid;grid-template-columns:204px minmax(0,1fr);gap:24px;align-items:center;min-width:0;padding:16px 20px;}
+ .illustrated-guide > .guide-art {display:block;width:100%;height:auto;max-height:none;aspect-ratio:16/9;object-fit:contain;object-position:center;border-radius:6px;background:#e7f0f2;}
+ .illustrated-guide .guide-copy{min-width:0;}
+ @media(max-width:700px){.library-guide.illustrated-guide{grid-template-columns:minmax(0,1fr);gap:16px;padding:14px;}.illustrated-guide > .guide-art{max-width:360px;}}
 </style></head><body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Pradhara Kotambage home"><span class="brand-name">Pradhara Kotambage</span><span class="brand-subtitle">Legal Knowledge &amp; Dispute Resolution</span></a><button class="menu-toggle" aria-controls="site-navigation" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-navigation" aria-label="Main navigation"><a href="/">Home</a><a href="/about/">About</a><a class="active" href="/legal-guides/">Legal Guides</a><a href="/law-in-practice/">Law in Practice <span lang="si">| නීතිය ප්‍රායෝගිකව</span></a><a href="/dispute-resolution/">Dispute Resolution</a><a href="/legal-resources/">Legal Resources</a><a href="/contact/">Contact</a></nav></div></header>
