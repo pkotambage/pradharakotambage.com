@@ -1,0 +1,56 @@
+name: Normalize all article imagery in four stages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/normalize-article-images.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-article-images-main
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Generate and commit four ordered stages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for stage in 1 2 3 4; do
+            echo "::group::Stage $stage"
+            python scripts/normalize-article-images.py --stage "$stage"
+            case "$stage" in
+              1) message="Article images stage 1: remove eight blurred-edge treatments";;
+              2) message="Article images stage 2: restore complete artwork in 26 SVG wrappers";;
+              3) message="Article images stage 3: create WebP masters and responsive variants";;
+              4) message="Article images stage 4: unify thumbnails and Android-responsive images";;
+            esac
+            git add assets/images/articles legal-guides dispute-resolution si law-in-practice scripts/guide-register.json scripts/build-guides.py scripts/templates
+            if ! git diff --cached --quiet; then
+              git commit -m "$message"
+            fi
+            echo "::endgroup::"
+          done
+          python -m py_compile scripts/normalize-article-images.py scripts/build-guides.py
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Verify website file and image consistency
+        run: python scripts/validate-site.py
