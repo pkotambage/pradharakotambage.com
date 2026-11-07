@@ -1,0 +1,66 @@
+name: Finalize responsive article imagery and synchronize guide pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/finalize-responsive-article-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Correct feature-image responsive sizes and rebuild directory pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          root = Path(".")
+          target = "(max-width: 700px) calc(100vw - 24px), (max-width: 940px) calc(100vw - 40px), 900px"
+          count = 0
+          pattern = re.compile(r'(<figure\b[^>]*class="[^"]*article-feature-image[^"]*"[^>]*>)([\s\S]*?)(</figure>)')
+          for page in root.rglob("index.html"):
+              content = page.read_text(encoding="utf-8")
+              if 'class="article-feature-image"' not in content:
+                  continue
+              def fix_figure(match):
+                  middle = re.sub(r'(<img\b[^>]*\bsizes=")[^"]+(")', lambda m: m.group(1) + target + m.group(2), match.group(2))
+                  if middle == match.group(2) and 'sizes="' not in match.group(2):
+                      raise ValueError("Image missing responsive sizes: " + str(page))
+                  return match.group(1) + middle + match.group(3)
+              changed, hits = pattern.subn(fix_figure, content)
+              if hits != 1:
+                  raise ValueError("Expected one article image for " + str(page))
+              count += 1
+              if changed != content:
+                  page.write_text(changed, encoding="utf-8")
+          if count != 55:
+              raise ValueError("Expected 55 article pages, found " + str(count))
+          print("Corrected actual rendered sizes across", count, "article pages")
+          PY
+          python scripts/build-guides.py
+          python scripts/validate-site.py
+      - name: Commit and publish synchronized pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add legal-guides dispute-resolution si law-in-practice
+          if ! git diff --cached --quiet; then
+            git commit -m "Synchronize guide directories and accurately size mobile article imagery"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
