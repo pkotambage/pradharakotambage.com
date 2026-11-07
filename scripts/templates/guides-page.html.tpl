@@ -23,7 +23,7 @@
  .library-list {display:grid; gap:12px}
  .library-guide {border-left:4px solid #527c77}
  .illustrated-guide {display:grid; grid-template-columns:190px minmax(0,1fr); gap:23px; align-items:center; padding:16px 20px}
- .guide-art {display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:3px; background:#e7f0f2}
+ .guide-art {display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:3px; background:#e7f0f2}
  .guide-copy {min-width:0}
  .language-links {display:flex; gap:18px; margin-top:16px; font-weight:700}
  .language-links a {text-decoration:underline; text-underline-offset:3px}
@@ -31,7 +31,7 @@
  .library-search {display:block; width:100%; max-width:680px; padding:14px 16px; font:inherit; border:1px solid #889da6; background:white; color:#17324d; border-radius:3px}
  .library-count {color:#53636b; margin:12px 0 22px}
  .library-note {border-left:4px solid #527c77; background:#e7f0f2; padding:16px 20px; margin-top:44px; max-width:830px}
- @media(max-width:700px){.library-page {padding:34px 0 58px}.library-grid{grid-template-columns:1fr}.library-topic,.library-guide{padding:20px}.illustrated-guide{grid-template-columns:1fr;gap:16px;padding:14px}.illustrated-guide .guide-art{max-height:220px}}
+ @media(max-width:700px){.library-page {padding:34px 0 58px}.library-grid{grid-template-columns:1fr}.library-topic,.library-guide{padding:20px}.illustrated-guide{grid-template-columns:1fr;gap:16px;padding:14px}.illustrated-guide .guide-art{max-height:none}}
  .library-guide .guide-published {margin-top:12px; color:#53636b; font-size:.9rem}
 </style></head><body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

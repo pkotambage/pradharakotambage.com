@@ -102,7 +102,10 @@ def card(g, context):
     search = escape(' '.join(texts).lower(), quote=True)
     illustrated = context in g['illustrated_in']
     im = g['image']
-    art = (f'<img class="guide-art" src="{escape(im["src"], quote=True)}" alt="{escape(im["alt"], quote=True)}" width="{im["width"]}" height="{im["height"]}" loading="lazy" decoding="async">' if illustrated else '')
+    imagebase = im["src"].removesuffix("-1600.webp")
+    srcset = ", ".join(f"{imagebase}-{w}.webp {w}w" for w in (640, 960, 1280, 1600))
+    sizes = "(max-width: 700px) min(360px, calc(100vw - 28px)), 204px"
+    art = (f'<img class="guide-art" src="{escape(im["src"], quote=True)}" srcset="{escape(srcset, quote=True)}" sizes="{escape(sizes, quote=True)}" alt="{escape(im["alt"], quote=True)}" width="{im["width"]}" height="{im["height"]}" loading="lazy" decoding="async">' if illustrated else '')
     url = escape(g['editions']['en']['url'], quote=True)
     label = (g.get('recent_sinhala_label') if context == 'recent' else None) or g.get('sinhala_label')
     si = f'<span class="topic-sinhala" lang="si">{escape(label)}</span>' if label else ''
