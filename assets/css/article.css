@@ -210,3 +210,35 @@ html[lang="si"] .article-content h3 { line-height: 1.38; letter-spacing: 0; over
     margin-top: 22px;
   }
 }
+
+/* Unified, prominent language selector on every bilingual article. */
+.article-hero .article-language-switch.article-language-bar {
+  display:flex; flex-wrap:wrap; align-items:center; gap:9px;
+  width:fit-content; max-width:100%; margin:22px 0 0; padding:12px 15px;
+  border:1px solid #c5d2cf; border-radius:12px; background:#fffdf8;
+  box-shadow:0 2px 10px rgba(23,50,77,.07);
+  font-size:.94rem; line-height:1.4; font-weight:700;
+}
+.article-hero .article-language-switch.article-language-bar .article-language-label {
+  display:inline; padding:0 5px 0 0; border:0; border-radius:0;
+  background:transparent; color:#314c58; font-size:.93rem; font-weight:700;
+}
+.article-hero .article-language-switch.article-language-bar a,
+.article-hero .article-language-switch.article-language-bar .current {
+  display:inline-block; margin:0; padding:7px 13px;
+  border:1px solid #bdc9c7; border-radius:999px;
+  background:#fff; color:#17324d; font-size:.94rem; font-weight:750;
+  text-decoration:none; line-height:1.4;
+}
+.article-hero .article-language-switch.article-language-bar .current {
+  background:#17324d; color:#fff; border-color:#17324d;
+}
+.article-hero .article-language-switch.article-language-bar a:hover,
+.article-hero .article-language-switch.article-language-bar a:focus-visible {
+  background:#e8f0f1; border-color:#527c77;
+  text-decoration:underline; text-underline-offset:3px; outline-offset:3px;
+}
+@media (max-width:500px) {
+  .article-hero .article-language-switch.article-language-bar {width:100%;padding:11px;gap:7px}
+  .article-hero .article-language-switch.article-language-bar .article-language-label {flex-basis:100%}
+}
