@@ -46,11 +46,7 @@ class DirectoryBuildTests(unittest.TestCase):
             self.assertIn(text, directory)
         self.assertIn('/si/dispute-resolution/mediation-assisted-negotiation/', directory)
         self.assertIn('/assets/images/articles/divorce-without-unnecessary-conflict-1600.webp', family)
-        # The comparison guide deliberately reuses the existing mediation illustration.
-        originals = [g for g in register['guides'] if g['id'] != 'negotiation-vs-mediation']
-        self.assertEqual(len({g['image']['src'] for g in originals}), len(originals))
-        images = {g['id']: g['image']['src'] for g in register['guides']}
-        self.assertEqual(images['negotiation-vs-mediation'], images['mediation-assisted-negotiation'])
+        self.assertEqual(len({g['image']['src'] for g in register['guides']}), len(register['guides']))
         first = {p: p.read_bytes() for p in (self.root / 'legal-guides').rglob('index.html')}
         self.assertEqual(self.run_build().returncode, 0)
         self.assertEqual(first, {p: p.read_bytes() for p in first})
