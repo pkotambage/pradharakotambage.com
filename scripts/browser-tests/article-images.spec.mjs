@@ -16,11 +16,11 @@ const articleRoutes = ['legal-guides', 'dispute-resolution', 'law-in-practice', 
   .flatMap(walk)
   .filter(path => readFileSync(join(root, path), 'utf8').includes('class="article-feature-image"'))
   .map(path => '/' + path.replace(/\/index\.html$/, '/') );
-if (articleRoutes.length !== 66) {
-  throw new Error('Expected exactly 66 published article editions, found ' + articleRoutes.length);
+if (articleRoutes.length !== 68) {
+  throw new Error('Expected exactly 68 published article editions, found ' + articleRoutes.length);
 }
 
-test('All 66 article feature images fully load, keep 16:9 and fit Android widths', async ({ browser }) => {
+test('All 68 article feature images fully load, keep 16:9 and fit Android widths', async ({ browser }) => {
   const context = await browser.newContext({
     viewport: { width: 390, height: 844 },
     deviceScaleFactor: 2,

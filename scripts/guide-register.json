@@ -1695,6 +1695,55 @@
       "recent_sinhala_label": null,
       "topic_description": "A practical court-procedure guide for families dealing with an estate without a will.",
       "series_level": "sub"
+    },
+    {
+      "id": "negotiation-vs-mediation",
+      "title": "Negotiation vs Mediation: What Is the Difference, and When Can Each Help?",
+      "category": "dispute-resolution",
+      "topic_order": 8,
+      "description": "Understand the difference between negotiation and mediation, what a mediator adds, and when each approach may help resolve a dispute.",
+      "published": "2026-11-14",
+      "editions": {
+        "en": {
+          "url": "/dispute-resolution/negotiation-vs-mediation/",
+          "title": "Negotiation vs Mediation: What Is the Difference, and When Can Each Help?",
+          "description": "Understand the difference between negotiation and mediation, what a mediator adds, and when each approach may help resolve a dispute."
+        },
+        "si": {
+          "url": "/si/dispute-resolution/negotiation-vs-mediation/",
+          "title": "සාකච්ඡා මාර්ගයෙන් එකඟතාවකට පැමිණීම සහ සමථකරණය: වෙනස කුමක්ද? ඒවා ප්‍රයෝජනවත් වන්නේ කුමන අවස්ථාවේදීද?",
+          "description": "සාකච්ඡා මාර්ගයෙන් එකඟතාවකට පැමිණීම සහ සමථකරණය අතර වෙනස, සමථකරුගේ සහාය සහ ඒවා ප්‍රයෝජනවත් විය හැකි අවස්ථා ගැන දැනගන්න."
+        }
+      },
+      "keywords": [
+        "mediation",
+        "mediator",
+        "negotiation",
+        "settlement",
+        "dispute",
+        "සමථ",
+        "සමථකරණය",
+        "සමථකරණ",
+        "සාකච්ඡා",
+        "ආරවුල්",
+        "ආරවුල",
+        "කේවල්",
+        "comparison"
+      ],
+      "image": {
+        "src": "/assets/images/articles/mediation-assisted-negotiation-1600.webp",
+        "alt": "A mediator facilitating a constructive discussion between two people",
+        "width": 1600,
+        "height": 900
+      },
+      "illustrated_in": [
+        "topic",
+        "directory",
+        "recent"
+      ],
+      "sinhala_label": null,
+      "recent_sinhala_label": "සාකච්ඡා මාර්ගයෙන් එකඟතාවකට පැමිණීම සහ සමථකරණය",
+      "topic_description": "Understand the difference between negotiation and mediation, what a mediator adds, and when each approach may help resolve a dispute."
     }
   ]
 }
